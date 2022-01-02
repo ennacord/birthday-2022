@@ -5,14 +5,23 @@
 </template>
 
 <script>
+import EnnaBirthday from './game';
+
 export default {
   mounted() {
+    // Start game instance
+    // eslint-disable-next-line no-new
+    new EnnaBirthday('game-container');
+
     // Device layout
     if (this.$isMobile) {
       // No scrollbar
       document.getElementsByTagName('html')[0].style.overflowY = 'hidden';
+      // Game mobile class
+      this.$refs['game-container'].classList.add('mobile');
     } else {
-      // ....
+      // Game desktop class
+      this.$refs['game-container'].classList.add('desktop');
     }
   },
 };
