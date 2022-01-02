@@ -58,6 +58,7 @@ module.exports = {
     name: 'Enna 2022',
     themeColor: '#102471',
     workboxOptions: {
+      skipWaiting: true,
       exclude: [
         'CNAME',
         /(.*).css.map/g,
