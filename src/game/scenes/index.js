@@ -1,9 +1,25 @@
 import Phaser from 'phaser';
 
+import PartyScene from './party';
+
 class IndexScene extends Phaser.Scene {
+  loadingText = null;
+
   preload() {
     // Google Fonts
     this.googleFonts.preload(this.load);
+
+    // Loading text
+    const { width, height } = this.sys.game.canvas;
+    this.loadingText = this.add.text(width / 2, height / 2, 'Loading....', {
+      fontSize: 30,
+      color: '#ffffff',
+      stroke: '#003366',
+      strokeThickness: 5,
+    }).setOrigin(0.5, 0.5);
+
+    // Add scenes
+    this.scene.add('party', PartyScene);
   }
 
   async create() {
@@ -13,17 +29,15 @@ class IndexScene extends Phaser.Scene {
       this.googleFonts.configure(),
     ]);
 
-    // Write text with Google font
-    this.add.text(100, 100, 'Hello Worlds!', {
-      fontFamily: 'Londrina Solid',
-      fontSize: 100,
-      color: '#ffffff',
-      stroke: '#003366',
-      strokeThickness: 5,
-    });
+    // Done all preloading
+    this.loadingText.destroy();
 
-    // Go fullscreen if not on desktop browser
-    if (!this.sys.game.device.os.desktop) {
+    // On desktop, start party!
+    // On mobile, need touch to start and go fullscreen before party
+    if (this.sys.game.device.os.desktop) {
+      // Start PARTY!
+      this.scene.start('party');
+    } else {
       // When fullscreen and always lock to landscape
       this.game.scale.once('enterfullscreen', () => {
         // eslint-disable-next-line no-empty
@@ -38,7 +52,21 @@ class IndexScene extends Phaser.Scene {
       this.input.on('pointerdown', () => {
         // Attempt fullscreen
         this.game.scale.startFullscreen();
+        // Delay start next scene
+        setTimeout(() => {
+          this.scene.start('party');
+        }, 300);
       });
+
+      // Click to Start
+      const { width, height } = this.sys.game.canvas;
+      this.loadingText = this.add.text(width / 2, height * 0.7, 'Touch to Start', {
+        fontFamily: 'Londrina Solid',
+        fontSize: 50,
+        color: '#ffffff',
+        stroke: '#003366',
+        strokeThickness: 5,
+      }).setOrigin(0.5, 0.5);
     }
   }
 }
