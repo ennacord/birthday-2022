@@ -88,11 +88,13 @@ class IndexScene extends Phaser.Scene {
       // On click
       this.input.on('pointerdown', () => {
         // Attempt fullscreen
-        this.game.scale.startFullscreen();
+        setTimeout(() => {
+          this.game.scale.startFullscreen();
+        }, 250);
         // Delay start next scene
         setTimeout(() => {
           this.scene.start('party');
-        }, 300);
+        }, 500);
       });
 
       // Click to Start
