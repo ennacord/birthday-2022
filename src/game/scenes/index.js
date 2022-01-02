@@ -2,6 +2,24 @@ import Phaser from 'phaser';
 
 import PartyScene from './party';
 
+import ImgArtworks from '../assets/images/artworks.png';
+import ImgBanner from '../assets/images/banner.png';
+import ImgCake from '../assets/images/cake.png';
+import ImgCrowd1 from '../assets/images/crowd1.png';
+import ImgCrowd2 from '../assets/images/crowd2.png';
+import ImgCrowd3 from '../assets/images/crowd3.png';
+import ImgCrowd4 from '../assets/images/crowd4.png';
+import ImgCrowd5 from '../assets/images/crowd5.png';
+import ImgEnna from '../assets/images/enna.png';
+import ImgGifts from '../assets/images/gifts.png';
+import ImgNina from '../assets/images/nina.png';
+import ImgRadio from '../assets/images/radio.png';
+import ImgReimu from '../assets/images/reimu.png';
+import ImgRoom from '../assets/images/room.png';
+import ImgSwitch from '../assets/images/switch.png';
+import ImgTable from '../assets/images/table.png';
+import ImgTv from '../assets/images/tv.png';
+
 class IndexScene extends Phaser.Scene {
   loadingText = null;
 
@@ -20,6 +38,25 @@ class IndexScene extends Phaser.Scene {
 
     // Add scenes
     this.scene.add('party', PartyScene);
+
+    // Preload assets
+    this.load.image('artworks', ImgArtworks);
+    this.load.image('banner', ImgBanner);
+    this.load.image('cake', ImgCake);
+    this.load.image('crowd1', ImgCrowd1);
+    this.load.image('crowd2', ImgCrowd2);
+    this.load.image('crowd3', ImgCrowd3);
+    this.load.image('crowd4', ImgCrowd4);
+    this.load.image('crowd5', ImgCrowd5);
+    this.load.image('enna', ImgEnna);
+    this.load.image('gifts', ImgGifts);
+    this.load.image('nina', ImgNina);
+    this.load.image('radio', ImgRadio);
+    this.load.image('reimu', ImgReimu);
+    this.load.image('room', ImgRoom);
+    this.load.image('switch', ImgSwitch);
+    this.load.image('table', ImgTable);
+    this.load.image('tv', ImgTv);
   }
 
   async create() {
