@@ -9,9 +9,12 @@ import EnnaBirthday from './game';
 
 export default {
   mounted() {
+    // Get viewport dimensions
+    const { clientWidth: vpWidth, clientHeight: vpHeight } = this.$refs['game-container'];
+
     // Start game instance
     // eslint-disable-next-line no-new
-    new EnnaBirthday('game-container');
+    new EnnaBirthday('game-container', vpWidth, vpHeight);
 
     // Device layout
     if (this.$isMobile) {
