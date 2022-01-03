@@ -1,6 +1,35 @@
 <template>
   <v-app id="app">
     <div id="game-container" ref="game-container"></div>
+    <v-dialog v-model="dialog" id="projects" elevation="0">
+      <v-card tile class="pa-4">
+        <div v-if="openProject === 'cake'" class="text-center">
+          <iframe
+            width="854" height="480"
+            src="https://www.youtube.com/embed/4u1W8iCCPkA"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div v-if="openProject === 'artworks'" class="text-center">
+          <v-img
+            contain
+            src="https://100k.ennaalouette.com/img/mural.4f63dd0c.jpg"
+            height="80vh"
+          ></v-img>
+        </div>
+        <div v-if="openProject === 'banner'" class="text-center">
+          <iframe
+            width="854" height="480"
+            src="https://www.youtube.com/embed/gj4cVOgEGGM"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </v-card>
+    </v-dialog>
   </v-app>
 </template>
 
@@ -8,10 +37,14 @@
 import EnnaBirthday from './game';
 
 export default {
+  data: () => ({
+    dialog: false,
+    openProject: null,
+  }),
   mounted() {
     // Start game instance
     // eslint-disable-next-line no-new
-    new EnnaBirthday('game-container');
+    new EnnaBirthday('game-container', this);
 
     // Device layout
     if (this.$isMobile) {
@@ -41,6 +74,17 @@ body {
   background-color:#858ED1;
   #app {
     background:none;
+  }
+  #projects {
+    .aspectRatio {
+      width:100%;
+      height:100%;
+      div {
+        width: 100%;
+        padding-bottom: 43.75%;
+        background:#fcc;
+      }
+    }
   }
 }
 </style>

@@ -3,7 +3,7 @@ import plugins from './plugins';
 import scene from './scenes';
 
 class EnnaBirthday {
-  constructor(elementId) {
+  constructor(elementId, vue) {
     // Create Phaser game instance
     this.game = new Phaser.Game({
       type: Phaser.AUTO,
@@ -19,6 +19,11 @@ class EnnaBirthday {
       backgroundColor: Phaser.Display.Color.HexStringToColor('#ffffff').color,
       plugins,
       scene,
+      callbacks: {
+        postBoot: () => {
+          this.game.vue = vue;
+        },
+      },
     });
   }
 }
