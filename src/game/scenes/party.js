@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import Cursor2 from '../assets/cursor/cursor2.png';
 
 class PartyScene extends Phaser.Scene {
   images = [];
@@ -30,7 +31,7 @@ class PartyScene extends Phaser.Scene {
 
     // Cake = Birthday Relay
     this.images.cake.obj
-      .setInteractive({ useHandCursor: true, pixelPerfect: true })
+      .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
       .on('pointerdown', () => {
         this.game.vue.dialog = true;
         this.game.vue.openProject = 'cake';
@@ -38,7 +39,7 @@ class PartyScene extends Phaser.Scene {
 
     // Artwork = Drawing Board
     this.images.artworks.obj
-      .setInteractive({ useHandCursor: true, pixelPerfect: true })
+      .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
       .on('pointerdown', () => {
         this.game.vue.dialog = true;
         this.game.vue.openProject = 'artworks';
@@ -46,7 +47,7 @@ class PartyScene extends Phaser.Scene {
 
     // Banner = Message Board
     this.images.banner.obj
-      .setInteractive({ useHandCursor: true, pixelPerfect: true })
+      .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
       .on('pointerdown', () => {
         this.game.vue.dialog = true;
         this.game.vue.openProject = 'banner';

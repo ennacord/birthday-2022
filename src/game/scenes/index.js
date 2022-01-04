@@ -19,6 +19,7 @@ import ImgRoom from '../assets/images/room.png';
 import ImgSwitch from '../assets/images/switch.png';
 import ImgTable from '../assets/images/table.png';
 import ImgTv from '../assets/images/tv.png';
+import Cursor1 from '../assets/cursor/cursor1.png';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -60,6 +61,9 @@ class IndexScene extends Phaser.Scene {
   }
 
   async create() {
+    // Cursor
+    this.input.setDefaultCursor(`url(${Cursor1}), auto`);
+
     // Wait for asyncs to finish
     await Promise.all([
       // Configure Google Fonts and let it load specific fonts
