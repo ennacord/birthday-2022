@@ -54,8 +54,8 @@ class PartyScene extends Phaser.Scene {
 
     this.input.on('pointermove', (pointer) => {
       Object.entries(this.containers).forEach(([level, container]) => {
-        const newX = centerX + ((pointer.x - centerX) * (0.03 * level));
-        const newY = centerY + ((pointer.y - centerY) * (0.015 * level));
+        const newX = centerX - ((pointer.x - centerX) * (0.017 * level));
+        const newY = centerY - ((pointer.y - centerY) * (0.008 * level));
         container.setPosition(newX, newY);
       });
     });
