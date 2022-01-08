@@ -13,10 +13,18 @@ class PartyScene extends Phaser.Scene {
     this.createImage(-2, 0.8, 0.85, 'crowd2');
     this.createImage(-2, 0.22, 0.87, 'crowd1');
     this.createImage(-1, 0.5, 0.85, 'table');
-    this.createImage(-1, 0.5, 0.8, 'cake', (image) => {
+    this.createImage(-1, 0.5, 0.8, 'cake', 'Baking Relay', (image, label) => {
       // Cake = Birthday Relay
       image
         .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
+        .on('pointerover', () => {
+          image.setAngle((Math.random() * 17) - 8);
+          label.setVisible(true);
+        })
+        .on('pointerout', () => {
+          image.setAngle(0);
+          label.setVisible(false);
+        })
         .on('pointerdown', () => {
           this.game.vue.dialog = true;
           this.game.vue.openProject = 'cake';
@@ -31,10 +39,18 @@ class PartyScene extends Phaser.Scene {
     this.createImage(1, 0.2, 0.6, 'reimu');
     this.createImage(1, 1, 0.7, 'tv');
     this.createImage(2, 0.8, 0.55, 'nina');
-    this.createImage(2, 0.5, 0.1, 'banner', (image) => {
+    this.createImage(2, 0.5, 0.1, 'banner', 'View Messages', (image, label) => {
       // Banner = Message Board
       image
         .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
+        .on('pointerover', () => {
+          image.setAngle((Math.random() * 11) - 5);
+          label.setVisible(true);
+        })
+        .on('pointerout', () => {
+          image.setAngle(0);
+          label.setVisible(false);
+        })
         .on('pointerdown', () => {
           this.game.vue.dialog = true;
           this.game.vue.openProject = 'banner';
@@ -42,10 +58,18 @@ class PartyScene extends Phaser.Scene {
     });
     this.createImage(3, 0.5, 0.5, 'room');
     this.createImage(3, 1, 0.5, 'gifts');
-    this.createImage(3, 0.2, 0.45, 'artworks', (image) => {
+    this.createImage(3, 0.2, 0.45, 'artworks', 'Drawings', (image, label) => {
       // Artwork = Drawing Board
       image
         .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
+        .on('pointerover', () => {
+          image.setAngle((Math.random() * 17) - 8);
+          label.setVisible(true);
+        })
+        .on('pointerout', () => {
+          image.setAngle(0);
+          label.setVisible(false);
+        })
         .on('pointerdown', () => {
           this.game.vue.dialog = true;
           this.game.vue.openProject = 'artworks';
@@ -75,7 +99,7 @@ class PartyScene extends Phaser.Scene {
   }
 
   // x and y are values from 0 to 1
-  createImage(level, x, y, texture, cb) {
+  createImage(level, x, y, texture, labelText, cb) {
     const container = this.containers[`${level}`];
     if (!container) {
       console.error(`invalid level: ${level}`);
@@ -96,7 +120,26 @@ class PartyScene extends Phaser.Scene {
     const image = this.add.image(imageX, imageY, texture);
     container.add(image);
 
-    if (cb) cb(image);
+    let label = null;
+    if (labelText) {
+      label = this.createLabel(imageX, imageY, labelText, -10);
+      container.add(label);
+    }
+
+    if (cb) cb(image, label);
+  }
+
+  createLabel(x, y, text, angle = 0) {
+    return this.add.text(x, y, text, {
+      fontFamily: 'Londrina Solid',
+      fontSize: 70,
+      color: '#ffffff',
+      stroke: '#003366',
+      strokeThickness: 5,
+    })
+      .setOrigin(0.5, 0.5)
+      .setAngle(angle)
+      .setVisible(false);
   }
 }
 
