@@ -32,12 +32,76 @@ class PartyScene extends Phaser.Scene {
     });
     this.createImage(-1, 0.3, 0.85, 'crowd3');
     this.createImage(0, 0.15, 0.85, 'crowd4');
-    this.createImage(0, 0.05, 0.7, 'radio');
     this.createImage(0, 0.5, 0.55, 'enna');
+    this.createImage(1, 0.2, 0.6, 'reimu', 'God Sees All', (image, label) => {
+      // Banner = Message Board
+      image
+        .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
+        .on('pointerover', () => {
+          image.setAngle((Math.random() * 11) - 5);
+          label.setVisible(true);
+        })
+        .on('pointerout', () => {
+          image.setAngle(0);
+          label.setVisible(false);
+        })
+        .on('pointerdown', () => {
+          this.game.vue.dialog = true;
+          this.game.vue.openProject = 'banner';
+        });
+    });
+    this.createImage(1, 0.05, 0.7, 'radio', 'AlouCast', (image, label) => {
+      // Banner = Message Board
+      image
+        .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
+        .on('pointerover', () => {
+          image.setAngle((Math.random() * 11) - 5);
+          label.setVisible(true);
+        })
+        .on('pointerout', () => {
+          image.setAngle(0);
+          label.setVisible(false);
+        })
+        .on('pointerdown', () => {
+          this.game.vue.dialog = true;
+          this.game.vue.openProject = 'banner';
+        });
+    });
     this.createImage(1, 0.9, 0.85, 'crowd5');
-    this.createImage(1, 0, 0.4, 'switch');
-    this.createImage(1, 0.2, 0.6, 'reimu');
-    this.createImage(1, 1, 0.7, 'tv');
+    this.createImage(1, 0, 0.4, 'switch', 'Voices', (image, label) => {
+      // Banner = Message Board
+      image
+        .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
+        .on('pointerover', () => {
+          image.setAngle((Math.random() * 11) - 5);
+          label.setVisible(true);
+        })
+        .on('pointerout', () => {
+          image.setAngle(0);
+          label.setVisible(false);
+        })
+        .on('pointerdown', () => {
+          this.game.vue.dialog = true;
+          this.game.vue.openProject = 'banner';
+        });
+    });
+    this.createImage(1, 0.97, 0.7, 'tv', 'Watch TV', (image, label) => {
+      // Banner = Message Board
+      image
+        .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
+        .on('pointerover', () => {
+          image.setAngle((Math.random() * 11) - 5);
+          label.setVisible(true);
+        })
+        .on('pointerout', () => {
+          image.setAngle(0);
+          label.setVisible(false);
+        })
+        .on('pointerdown', () => {
+          this.game.vue.dialog = true;
+          this.game.vue.openProject = 'banner';
+        });
+    });
     this.createImage(2, 0.8, 0.55, 'nina');
     this.createImage(2, 0.5, 0.1, 'banner', 'View Messages', (image, label) => {
       // Banner = Message Board
@@ -57,7 +121,23 @@ class PartyScene extends Phaser.Scene {
         });
     });
     this.createImage(3, 0.5, 0.5, 'room');
-    this.createImage(3, 1, 0.5, 'gifts');
+    this.createImage(3, 0.97, 0.5, 'gifts', 'Gallery', (image, label) => {
+      // Banner = Message Board
+      image
+        .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
+        .on('pointerover', () => {
+          image.setAngle((Math.random() * 11) - 5);
+          label.setVisible(true);
+        })
+        .on('pointerout', () => {
+          image.setAngle(0);
+          label.setVisible(false);
+        })
+        .on('pointerdown', () => {
+          this.game.vue.dialog = true;
+          this.game.vue.openProject = 'banner';
+        });
+    });
     this.createImage(3, 0.2, 0.45, 'artworks', 'Drawings', (image, label) => {
       // Artwork = Drawing Board
       image
