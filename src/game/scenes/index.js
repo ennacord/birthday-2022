@@ -9,6 +9,11 @@ import ImgRoom from '../assets/images/room.png';
 import ImgTable from '../assets/images/table.png';
 import ImgMillie from '../assets/images/millie.png';
 import ImgBalloons from '../assets/images/balloons.png';
+import ImgCouch from '../assets/images/couch.png';
+import ImgChef from '../assets/images/chef.png';
+import ImgRack from '../assets/images/rack.png';
+import ImgRadio from '../assets/images/radio.png';
+import ImgCarpet from '../assets/images/carpet.png';
 import Cursor1 from '../assets/cursor/cursor1.png';
 
 class IndexScene extends Phaser.Scene {
@@ -38,6 +43,11 @@ class IndexScene extends Phaser.Scene {
     this.load.image('reimu', ImgReimu);
     this.load.image('room', ImgRoom);
     this.load.image('table', ImgTable);
+    this.load.image('couch', ImgCouch);
+    this.load.image('chef', ImgChef);
+    this.load.image('rack', ImgRack);
+    this.load.image('radio', ImgRadio);
+    this.load.image('carpet', ImgCarpet);
   }
 
   async create() {

@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import Elements from '../data/elements';
 
 const INTENSITY_X = 0.006;
-const INTENSITY_Y = 0.003;
+const INTENSITY_Y = 0.004;
 
 class PartyScene extends Phaser.Scene {
   movables = {};
@@ -14,7 +14,7 @@ class PartyScene extends Phaser.Scene {
 
     // Create game objects and placements
     Object.entries(Elements)
-      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project }]) => {
+      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
         // Image
         const image = this.add.image((width * x) - centerX, (height * y) - centerY, texture || key)
@@ -22,7 +22,7 @@ class PartyScene extends Phaser.Scene {
         if (scale) image.setScale(scale);
         container.add(image);
         // Interactive object
-        if (text && project) this.interactiveElement(container, image, text, project);
+        if (text && project) this.interactiveElement(container, image, text, project, font);
         // Add to movable list
         this.movables[key] = { container, str };
       });
@@ -37,9 +37,9 @@ class PartyScene extends Phaser.Scene {
     });
   }
 
-  interactiveElement(container, image, text, project) {
+  interactiveElement(container, image, text, project, fontSize) {
     // Label
-    const label = this.createLabel(image.x, image.y, text)
+    const label = this.createLabel(image.x, image.y, text, fontSize)
       .setDepth(2000 + image.depth);
     container.add(label);
     // Interaction
@@ -61,10 +61,10 @@ class PartyScene extends Phaser.Scene {
       });
   }
 
-  createLabel(x, y, text) {
+  createLabel(x, y, text, fontSize) {
     return this.add.text(x, y, text, {
       fontFamily: 'Londrina Solid',
-      fontSize: 70,
+      fontSize: fontSize || 50,
       color: '#ffffff',
       stroke: '#003366',
       strokeThickness: 5,
