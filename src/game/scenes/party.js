@@ -10,10 +10,8 @@ class PartyScene extends Phaser.Scene {
     const centerY = height / 2;
 
     this.createContainers(6, 3);
-    this.createImage(-2, 0.8, 0.85, 'crowd2');
-    this.createImage(-2, 0.22, 0.87, 'crowd1');
     this.createImage(-1, 0.5, 0.85, 'table');
-    this.createImage(-1, 0.5, 0.8, 'cake', 'Baking Relay', (image, label) => {
+    this.createImage(-1, 0.5, 0.7, 'cake', 'Baking Relay', (image, label) => {
       // Cake = Birthday Relay
       image
         .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
@@ -30,80 +28,7 @@ class PartyScene extends Phaser.Scene {
           this.game.vue.openProject = 'cake';
         });
     });
-    this.createImage(-1, 0.3, 0.85, 'crowd3');
-    this.createImage(0, 0.15, 0.85, 'crowd4');
-    this.createImage(0, 0.5, 0.55, 'enna');
-    this.createImage(1, 0.2, 0.6, 'reimu', 'God Sees All', (image, label) => {
-      // Banner = Message Board
-      image
-        .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
-        .on('pointerover', () => {
-          image.setAngle((Math.random() * 11) - 5);
-          label.setVisible(true);
-        })
-        .on('pointerout', () => {
-          image.setAngle(0);
-          label.setVisible(false);
-        })
-        .on('pointerdown', () => {
-          this.game.vue.dialog = true;
-          this.game.vue.openProject = 'banner';
-        });
-    });
-    this.createImage(1, 0.05, 0.7, 'radio', 'AlouCast', (image, label) => {
-      // Banner = Message Board
-      image
-        .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
-        .on('pointerover', () => {
-          image.setAngle((Math.random() * 11) - 5);
-          label.setVisible(true);
-        })
-        .on('pointerout', () => {
-          image.setAngle(0);
-          label.setVisible(false);
-        })
-        .on('pointerdown', () => {
-          this.game.vue.dialog = true;
-          this.game.vue.openProject = 'banner';
-        });
-    });
-    this.createImage(1, 0.9, 0.85, 'crowd5');
-    this.createImage(1, 0, 0.4, 'switch', 'Voices', (image, label) => {
-      // Banner = Message Board
-      image
-        .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
-        .on('pointerover', () => {
-          image.setAngle((Math.random() * 11) - 5);
-          label.setVisible(true);
-        })
-        .on('pointerout', () => {
-          image.setAngle(0);
-          label.setVisible(false);
-        })
-        .on('pointerdown', () => {
-          this.game.vue.dialog = true;
-          this.game.vue.openProject = 'banner';
-        });
-    });
-    this.createImage(1, 0.97, 0.7, 'tv', 'Watch TV', (image, label) => {
-      // Banner = Message Board
-      image
-        .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
-        .on('pointerover', () => {
-          image.setAngle((Math.random() * 11) - 5);
-          label.setVisible(true);
-        })
-        .on('pointerout', () => {
-          image.setAngle(0);
-          label.setVisible(false);
-        })
-        .on('pointerdown', () => {
-          this.game.vue.dialog = true;
-          this.game.vue.openProject = 'banner';
-        });
-    });
-    this.createImage(2, 0.8, 0.55, 'nina');
-    this.createImage(2, 0.5, 0.1, 'banner', 'View Messages', (image, label) => {
+    this.createImage(2, 0.1, 0.24, 'reimu', 'God Sees All', (image, label) => {
       // Banner = Message Board
       image
         .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
@@ -121,7 +46,8 @@ class PartyScene extends Phaser.Scene {
         });
     });
     this.createImage(3, 0.5, 0.5, 'room');
-    this.createImage(3, 0.97, 0.5, 'gifts', 'Gallery', (image, label) => {
+    this.createImage(3, 0.5, 0.1, 'balloons');
+    this.createImage(2, 0.67, 0.49, 'gifts', 'Gallery', (image, label) => {
       // Banner = Message Board
       image
         .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
@@ -138,12 +64,12 @@ class PartyScene extends Phaser.Scene {
           this.game.vue.openProject = 'banner';
         });
     });
-    this.createImage(3, 0.2, 0.45, 'artworks', 'Drawings', (image, label) => {
-      // Artwork = Drawing Board
+    this.createImage(-2, 0.73, 0.75, 'millie', 'God Sees All', (image, label) => {
+      // Banner = Message Board
       image
         .setInteractive({ cursor: `url(${Cursor2}), auto`, pixelPerfect: true })
         .on('pointerover', () => {
-          image.setAngle((Math.random() * 17) - 8);
+          image.setAngle((Math.random() * 11) - 5);
           label.setVisible(true);
         })
         .on('pointerout', () => {
@@ -152,14 +78,14 @@ class PartyScene extends Phaser.Scene {
         })
         .on('pointerdown', () => {
           this.game.vue.dialog = true;
-          this.game.vue.openProject = 'artworks';
+          this.game.vue.openProject = 'banner';
         });
     });
 
     this.input.on('pointermove', (pointer) => {
       Object.entries(this.containers).forEach(([level, container]) => {
-        const newX = centerX - ((pointer.x - centerX) * (0.017 * level));
-        const newY = centerY - ((pointer.y - centerY) * (0.008 * level));
+        const newX = centerX - ((pointer.x - centerX) * (0.006 * level));
+        const newY = centerY - ((pointer.y - centerY) * (0.003 * level));
         container.setPosition(newX, newY);
       });
     });
@@ -188,16 +114,11 @@ class PartyScene extends Phaser.Scene {
 
     const { width, height } = this.sys.game.canvas;
 
-    // make an imaginary container size and make it 0.1 smaller as the level increases
-    const containerSize = {
-      width: width * (1 - (level * 0.1)),
-      height: height * (1 - (level * 0.1)),
-    };
-
-    const imageX = (containerSize.width * x) - (containerSize.width / 2);
-    const imageY = (containerSize.height * y) - (containerSize.height / 2);
+    const imageX = (width * x) - (width / 2);
+    const imageY = (height * y) - (height / 2);
 
     const image = this.add.image(imageX, imageY, texture);
+    if (texture === 'room') image.setScale(1.05);
     container.add(image);
 
     let label = null;
