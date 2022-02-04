@@ -18,6 +18,7 @@ module.exports = {
     text: 'Baking',
     project: 'bakingrelay',
     font: 30,
+    dir: 'left',
   },
   carpet: {
     x: 0.5,
@@ -35,6 +36,7 @@ module.exports = {
     str: 1.7,
     ox: 0.5,
     oy: 0.5,
+    dir: 'top',
   },
   balloons: {
     x: 0.521,
@@ -43,6 +45,7 @@ module.exports = {
     str: 1.8,
     ox: 0.5,
     oy: 0.5,
+    dir: 'top',
   },
   reimu: {
     x: 0.1,
@@ -67,6 +70,7 @@ module.exports = {
     text: 'God Sees All',
     project: 'gsacover',
     font: 35,
+    dir: 'right',
   },
   rack: {
     x: 0.92,
@@ -75,6 +79,7 @@ module.exports = {
     str: 1.7,
     ox: 0.5,
     oy: 0.5,
+    dir: 'right',
   },
   radio: {
     x: 0.962,
@@ -86,6 +91,7 @@ module.exports = {
     text: 'Aloucast',
     project: 'aloucast',
     font: 37,
+    dir: 'top',
   },
   millie: {
     x: 0.71,
@@ -97,5 +103,6 @@ module.exports = {
     oy: 0.9,
     text: 'God Sees All',
     project: 'gsacover',
+    dir: 'bottom',
   },
 };

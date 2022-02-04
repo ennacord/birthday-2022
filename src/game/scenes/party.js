@@ -7,14 +7,19 @@ const INTENSITY_Y = 0.004;
 class PartyScene extends Phaser.Scene {
   movables = {};
 
+  transition = null;
+
   create() {
     const { width, height } = this.sys.game.canvas;
     const centerX = width / 2;
     const centerY = height / 2;
 
+    // Animation transition
+    this.transition = this.tweens.createTimeline();
+
     // Create game objects and placements
     Object.entries(Elements)
-      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font }]) => {
+      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font, dir }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
         // Image
         const image = this.add.image((width * x) - centerX, (height * y) - centerY, texture || key)
@@ -23,17 +28,54 @@ class PartyScene extends Phaser.Scene {
         container.add(image);
         // Interactive object
         if (text && project) this.interactiveElement(container, image, text, project, font);
+        // Transition
+        if (key !== 'room') this.transitionIn(container, dir);
         // Add to movable list
         this.movables[key] = { container, str };
       });
 
-    // Parallax
-    this.input.on('pointermove', (pointer) => {
-      Object.values(this.movables).forEach(({ container, str }) => {
-        const newX = centerX - ((pointer.x - centerX) * (INTENSITY_X * str));
-        const newY = centerY - ((pointer.y - centerY) * (INTENSITY_Y * str));
-        container.setPosition(newX, newY);
-      });
+    this.transition
+      .on('complete', () => {
+        // Parallax
+        this.input.on('pointermove', (pointer) => {
+          Object.values(this.movables).forEach(({ container, str }) => {
+            const newX = centerX - ((pointer.x - centerX) * (INTENSITY_X * str));
+            const newY = centerY - ((pointer.y - centerY) * (INTENSITY_Y * str));
+            container.setPosition(newX, newY);
+          });
+        });
+      })
+      .play();
+  }
+
+  transitionIn(container, dir) {
+    container.setAlpha(0);
+    let directionTween = {};
+    if (dir === 'top') {
+      // eslint-disable-next-line no-param-reassign
+      container.y -= 200;
+      directionTween = { y: '+=200' };
+    } else if (dir === 'left') {
+      // eslint-disable-next-line no-param-reassign
+      container.x -= 200;
+      directionTween = { x: '+=200' };
+    } else if (dir === 'right') {
+      // eslint-disable-next-line no-param-reassign
+      container.x += 200;
+      directionTween = { x: '-=200' };
+    } else if (dir === 'bottom') {
+      // eslint-disable-next-line no-param-reassign
+      container.y += 200;
+      directionTween = { y: '-=200' };
+    }
+    this.transition.add({
+      targets: container,
+      ...directionTween,
+      alpha: { from: 0, to: 1 },
+      ease: 'Cubic',
+      duration: 500,
+      repeat: 0,
+      offset: '-=400',
     });
   }
 
