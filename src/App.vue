@@ -3,23 +3,7 @@
     <div id="game-container" ref="game-container"></div>
     <v-dialog v-model="dialog" id="projects" elevation="0">
       <v-card tile class="pa-4">
-        <div v-if="openProject === 'cake'" class="text-center">
-          <iframe
-            width="854" height="480"
-            src="https://www.youtube.com/embed/4u1W8iCCPkA"
-            frameborder="0"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div v-if="openProject === 'artworks'" class="text-center">
-          <v-img
-            contain
-            src="https://100k.ennaalouette.com/img/mural.4f63dd0c.jpg"
-            height="80vh"
-          ></v-img>
-        </div>
-        <div v-if="openProject === 'banner'" class="text-center">
+        <div v-if="openProject === 'bakingrelay'" class="text-center">
           <iframe
             width="854" height="480"
             src="https://www.youtube.com/embed/gj4cVOgEGGM"
@@ -27,6 +11,49 @@
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
             allowfullscreen>
           </iframe>
+        </div>
+        <div v-if="openProject === 'gsacover'" class="text-center">
+          <iframe
+            width="854" height="480"
+            src="https://www.youtube.com/embed/gj4cVOgEGGM"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div v-if="openProject === 'aloucast'" class="text-center">
+          <iframe
+            width="854" height="480"
+            src="https://www.youtube.com/embed/gj4cVOgEGGM"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div v-if="openProject === 'rickroll'" class="text-center">
+          <iframe
+            width="854" height="480"
+            src="https://www.youtube.com/embed/gj4cVOgEGGM"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div v-if="openProject === 'mural'" class="text-center">
+          <v-img
+            contain
+            src="https://100k.ennaalouette.com/img/mural.4f63dd0c.jpg"
+            height="80vh"
+          ></v-img>
+        </div>
+        <div v-if="openProject === 'messages'" class="text-center">
+          messages
+        </div>
+        <div v-if="openProject === 'gallery'" class="text-center">
+          twitter hashtag gallery
+        </div>
+        <div v-if="openProject === 'quests'" class="text-center">
+          quests
         </div>
       </v-card>
     </v-dialog>

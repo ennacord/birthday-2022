@@ -34,6 +34,7 @@ class PartyScene extends Phaser.Scene {
         this.movables[key] = { container, str };
       });
 
+    // Transition Animation
     this.transition
       .on('complete', () => {
         // Parallax
@@ -46,6 +47,22 @@ class PartyScene extends Phaser.Scene {
         });
       })
       .play();
+
+    // Quests
+    const questIcon = this.add.image(94, height - 94, 'quest')
+      .setScale(1.2)
+      .setDepth(3000)
+      .setInteractive({ pixelPerfect: true })
+      .on('pointerover', () => {
+        questIcon.setAngle((Math.random() * 11) - 5);
+      })
+      .on('pointerout', () => {
+        questIcon.setAngle(0);
+      })
+      .on('pointerdown', () => {
+        this.game.vue.dialog = true;
+        this.game.vue.openProject = 'quests';
+      });
   }
 
   transitionIn(container, dir) {

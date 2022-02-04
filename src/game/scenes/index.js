@@ -16,6 +16,7 @@ import ImgRack from '../assets/images/rack.png';
 import ImgRadio from '../assets/images/radio.png';
 import ImgCarpet from '../assets/images/carpet.png';
 import Cursor1 from '../assets/cursor/cursor1.png';
+import IconQuest from '../assets/images/quest.png';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -50,6 +51,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('rack', ImgRack);
     this.load.image('radio', ImgRadio);
     this.load.image('carpet', ImgCarpet);
+    this.load.image('quest', IconQuest);
   }
 
   async create() {
