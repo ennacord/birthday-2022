@@ -65,7 +65,7 @@ module.exports = {
         /(.*).js.map/g,
       ],
     },
-    assetsVersion: '2022_02_04_01_08',
+    assetsVersion: '2022_02_04_02_01',
     manifestOptions: {
       name: 'Enna 2022',
       short_name: 'Enna 2022',
