@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5e89d6e202b2753bf79c",
+    "revision": "db2f1e4a8995f198560a",
     "url": "/css/app.b379140c.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/favicon.ico"
   },
   {
-    "revision": "80dd02fe6248947b65cce368fceb08d7",
-    "url": "/img/balloons.80dd02fe.png"
+    "revision": "b79b2cbbfee6b3cbff34fef9218bb6a2",
+    "url": "/img/balloons.b79b2cbb.png"
   },
   {
     "revision": "95c153f6a3e080203a9fde63dc5409b9",
@@ -104,6 +104,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/millie.634a01d9.png"
   },
   {
+    "revision": "9e2e24027aef749ce3c69ebaa48f1147",
+    "url": "/img/nina.9e2e2402.png"
+  },
+  {
     "revision": "efe74dbd9f8bac6d458cfcc307175529",
     "url": "/img/rack.efe74dbd.png"
   },
@@ -124,12 +128,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/table.6ac7fcfc.png"
   },
   {
-    "revision": "7af7da096945dcc84f237213c284e1c2",
+    "revision": "050c9de700ff50e3f04d55409adc9e9a",
     "url": "/index.html"
   },
   {
-    "revision": "5e89d6e202b2753bf79c",
-    "url": "/js/app.c24d1c1b.js"
+    "revision": "db2f1e4a8995f198560a",
+    "url": "/js/app.dbf99554.js"
   },
   {
     "revision": "5cfa52f45b18657fa6e3",
