@@ -2,7 +2,7 @@
   <div class="project">
     <div class="project-description">
       <h2>{{title}}</h2>
-      <p v-id="description" class="mt-4">{{description}}</p>
+      <p v-if="description" class="mt-4">{{description}}</p>
       <p v-if="warnings">
         Notices: <strong class="red--text text--darken-3">{{warnings}}</strong>
       </p>
