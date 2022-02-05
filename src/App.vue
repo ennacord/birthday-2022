@@ -4,52 +4,16 @@
     <v-dialog id="projects" v-model="dialog"
       elevation="0" overlay-color="purple darken-4" overlay-opacity="0.85">
       <v-card tile class="pa-4">
-        <ProjectVideo
-          v-if="openProject === 'bakingrelay'"
-          title="Baking Relay"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque eu semper nulla. Suspendisse lectus odio,
-            venenatis vitae enim non, eleifend mollis libero.
-            Nulla nec tempor erat."
-          lead="BONER"
-          credits="Lorem, ipsum dolor, sit amet, consectetur, adipiscing, elit,
-            Pellentesque, eu semper, nulla, Suspendisse, lectus odio,
-            venenatis, vitae, enim non, eleifend, mollis, libero,
-            Nulla, nec tempor, erat"
-          video="https://www.youtube.com/embed/gj4cVOgEGGM"
-          :dialog="dialog"
-        ></ProjectVideo>
-
-        <ProjectVideo
-          v-if="openProject === 'gsacover'"
-          title="God Sees All (Aloupeeps Cover)"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque eu semper nulla. Suspendisse lectus odio,
-            venenatis vitae enim non, eleifend mollis libero.
-            Nulla nec tempor erat."
-          lead="Dippy"
-          credits="Lorem, ipsum dolor, sit amet, consectetur, adipiscing, elit,
-            Pellentesque, eu semper, nulla, Suspendisse, lectus odio,
-            venenatis, vitae, enim non, eleifend, mollis, libero,
-            Nulla, nec tempor, erat"
-          video="https://www.youtube.com/embed/gj4cVOgEGGM"
-        ></ProjectVideo>
-
-        <ProjectVideo
-          v-if="openProject === 'aloucast'"
-          title="AlouCast (Birthday Special)"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque eu semper nulla. Suspendisse lectus odio,
-            venenatis vitae enim non, eleifend mollis libero.
-            Nulla nec tempor erat."
-          lead="Domo Espresso, DarkDisasterKid"
-          credits="Lorem, ipsum dolor, sit amet, consectetur, adipiscing, elit,
-            Pellentesque, eu semper, nulla, Suspendisse, lectus odio,
-            venenatis, vitae, enim non, eleifend, mollis, libero,
-            Nulla, nec tempor, erat"
-          video="https://www.youtube.com/embed/gj4cVOgEGGM"
-        ></ProjectVideo>
-
+        <div v-for="(project, projectKey) in ProjectList" :key="projectKey">
+          <ProjectVideo
+            v-if="openProject === projectKey"
+            :title="project.title"
+            :description="project.description"
+            :lead="project.lead"
+            :credits="project.credits"
+            :video="project.video"
+          ></ProjectVideo>
+        </div>
         <div v-if="openProject === 'mural'" class="project text-center">
           <v-img
             contain
@@ -73,11 +37,13 @@
 <script>
 import ProjectVideo from '@/components/ProjectVideo.vue';
 import EnnaBirthday from './game';
+import ProjectList from '@/data/projects';
 
 export default {
   data: () => ({
     dialog: false,
     openProject: null,
+    ProjectList,
   }),
   mounted() {
     // Start game instance
