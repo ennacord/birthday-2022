@@ -2,11 +2,14 @@
   <div class="project">
     <div class="project-description">
       <h2>{{title}}</h2>
-      <p class="mt-4">{{description}}</p>
-      <p>
+      <p v-id="description" class="mt-4">{{description}}</p>
+      <p v-if="warnings">
+        Notices: <strong class="red--text text--darken-3">{{warnings}}</strong>
+      </p>
+      <p v-if="lead">
         Project Lead: <strong>{{lead}}</strong>
       </p>
-      <p>
+      <p v-if="credits">
         Contributors: <strong>{{credits}}</strong>
       </p>
     </div>
@@ -31,7 +34,7 @@
 
 <script>
 export default {
-  props: ['title', 'description', 'lead', 'credits', 'video'],
+  props: ['title', 'description', 'warnings', 'lead', 'credits', 'video'],
   data: () => ({
     //
   }),
@@ -49,6 +52,7 @@ export default {
     width: 380px;
     bottom: 50px;
     overflow-y:scroll;
+    padding:0px 10px 0px 0px;
   }
   .project-content {
     position:absolute;

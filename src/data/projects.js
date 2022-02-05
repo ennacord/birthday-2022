@@ -2,6 +2,7 @@ module.exports = {
   gsacover: {
     title: 'God Sees All (Aloupeeps Cover)',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu semper nulla. Suspendisse lectus odio, venenatis vitae enim non, eleifend mollis libero. Nulla nec tempor erat.',
+    warnings: 'Music played is a cover of: ChibaNyan, Ehtyria - God Sees All',
     lead: 'Dippy',
     credits: 'Lorem, ipsum dolor, sit amet, consectetur, adipiscing, elit, Pellentesque, eu semper, nulla, Suspendisse, lectus odio, venenatis, vitae, enim non, eleifend, mollis, libero, Nulla, nec tempor, erat',
     video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
@@ -23,6 +24,7 @@ module.exports = {
   rickroll: {
     title: 'Acapella for Enna',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu semper nulla. Suspendisse lectus odio, venenatis vitae enim non, eleifend mollis libero. Nulla nec tempor erat.',
+    warnings: 'Music played is a rendition of: Rick Astley - Never Gonna Give You Up',
     lead: 'Soul Jam',
     credits: 'Lorem, ipsum dolor, sit amet, consectetur, adipiscing, elit, Pellentesque, eu semper, nulla, Suspendisse, lectus odio, venenatis, vitae, enim non, eleifend, mollis, libero, Nulla, nec tempor, erat',
     video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
@@ -37,6 +39,7 @@ module.exports = {
   bdaydance: {
     title: 'Birthday Dance',
     description: '',
+    warnings: 'Music played is Enna Alouette trying to sing: Kanaria - KING',
     lead: 'Soramari',
     credits: 'Soramari, kaochiicos',
     video: 'https://www.youtube.com/embed/gj4cVOgEGGM',

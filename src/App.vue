@@ -9,6 +9,7 @@
             v-if="openProject === projectKey"
             :title="project.title"
             :description="project.description"
+            :warnings="project.warnings"
             :lead="project.lead"
             :credits="project.credits"
             :video="project.video"
