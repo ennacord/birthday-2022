@@ -14,20 +14,14 @@
             :video="project.video"
           ></ProjectVideo>
         </div>
-        <div v-if="openProject === 'mural'" class="project text-center">
-          <v-img
-            contain
-            src="https://100k.ennaalouette.com/img/mural.4f63dd0c.jpg"
-          ></v-img>
+        <div v-if="openProject === 'mural'">
+          <ProjectImage image="https://100k.ennaalouette.com/img/mural.4f63dd0c.jpg" />
         </div>
-        <div v-if="openProject === 'messages'" class="project text-center">
-          messages
+        <div v-if="openProject === 'messages'">
+          <ProjectMessages/>
         </div>
-        <div v-if="openProject === 'gallery'" class="project text-center">
-          twitter hashtag gallery
-        </div>
-        <div v-if="openProject === 'quests'" class="project text-center">
-          quests
+        <div v-if="openProject === 'gallery'">
+          <ProjectTwitter/>
         </div>
       </v-card>
     </v-dialog>
@@ -36,6 +30,9 @@
 
 <script>
 import ProjectVideo from '@/components/ProjectVideo.vue';
+import ProjectImage from '@/components/ProjectImage.vue';
+import ProjectMessages from '@/components/ProjectMessages.vue';
+import ProjectTwitter from '@/components/ProjectTwitter.vue';
 import EnnaBirthday from './game';
 import ProjectList from '@/data/projects';
 
@@ -68,6 +65,9 @@ export default {
   },
   components: {
     ProjectVideo,
+    ProjectImage,
+    ProjectMessages,
+    ProjectTwitter,
   },
 };
 </script>
