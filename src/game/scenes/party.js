@@ -131,7 +131,6 @@ class PartyScene extends Phaser.Scene {
       .setOrigin(0.5, 0.5)
       .setVisible(false);
   }
-
 }
 
 export default PartyScene;
