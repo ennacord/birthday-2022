@@ -55,7 +55,7 @@ module.exports = {
       });
   },
   pwa: {
-    name: 'Enna 2022',
+    name: 'Enna Birthday',
     themeColor: '#102471',
     workboxOptions: {
       skipWaiting: true,
@@ -65,7 +65,7 @@ module.exports = {
         /(.*).js.map/g,
       ],
     },
-    assetsVersion: '2022_02_04_02_01',
+    assetsVersion: '2022_02_05_03_14',
     manifestOptions: {
       name: 'Enna 2022',
       short_name: 'Enna 2022',
