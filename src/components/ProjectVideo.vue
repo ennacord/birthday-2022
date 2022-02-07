@@ -9,7 +9,7 @@
       <p v-if="lead">
         Project Lead: <strong>{{lead}}</strong>
       </p>
-      <p v-if="credits">
+      <p v-if="credits" class="project-credits">
         Contributors: <strong>{{credits}}</strong>
       </p>
     </div>
@@ -53,6 +53,11 @@ export default {
     bottom: 50px;
     overflow-y:scroll;
     padding:0px 10px 0px 0px;
+    .project-credits {
+      strong {
+        white-space:pre-wrap;
+      }
+    }
   }
   .project-content {
     position:absolute;

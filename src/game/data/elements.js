@@ -47,6 +47,9 @@ module.exports = {
     str: 1.7,
     ox: 0.5,
     oy: 0.5,
+    text: 'Rickroll',
+    project: 'rickroll',
+    font: 40,
     dir: 'right',
   },
   couch: {
