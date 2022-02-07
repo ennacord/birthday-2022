@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import Elements from '../data/elements';
+import Aloupeeps from '../objects/aloupeeps';
 
 const INTENSITY_X = 0.008;
 const INTENSITY_Y = 0.005;
@@ -35,6 +36,13 @@ class PartyScene extends Phaser.Scene {
         // Add to movable list
         this.movables[key] = { container, str };
       });
+
+    this.aloupeeps = new Aloupeeps({ scene: this, x: 0, y: 0 });
+    this.aloupeeps.setDepth(40);
+    this.movables.aloupeeps = {
+      container: this.aloupeeps,
+      str: 2,
+    };
 
     // Overlay
     this.input.topOnly = true;
