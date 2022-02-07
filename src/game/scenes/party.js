@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import Elements from '../data/elements';
 
 const INTENSITY_X = 0.008;
-const INTENSITY_Y = 0.004;
+const INTENSITY_Y = 0.005;
 
 class PartyScene extends Phaser.Scene {
   movables = {};
