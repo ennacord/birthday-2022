@@ -24,6 +24,7 @@ module.exports = {
       args[0].title = 'Happy Birthday Enna!';
       // eslint-disable-next-line no-param-reassign
       args[0].meta = {
+        description: 'Aloupeeps celebrate Enna Alouette\'s Birthday in 2022',
         'og:title': 'Happy Birthday Enna!',
         'og:type': 'website',
         'og:description': 'Aloupeeps celebrate Enna Alouette\'s Birthday in 2022',
@@ -65,7 +66,7 @@ module.exports = {
         /(.*).js.map/g,
       ],
     },
-    assetsVersion: '2022_02_05_03_14',
+    assetsVersion: '2022_02_07_03_06',
     manifestOptions: {
       name: 'Enna 2022',
       short_name: 'Enna 2022',

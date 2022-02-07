@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "945d01ac0c9f577c0580",
-    "url": "/css/app.8b4f3862.css"
+    "revision": "b8edc25c8ecbbae5922b",
+    "url": "/css/app.9cd193b3.css"
   },
   {
     "revision": "0310da2d189ad4b4cffd",
@@ -12,32 +12,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/favicon.ico"
   },
   {
-    "revision": "b79b2cbbfee6b3cbff34fef9218bb6a2",
-    "url": "/img/balloons.b79b2cbb.png"
+    "revision": "b21ae1f32f69e42eb1faf68dea43c60d",
+    "url": "/img/balloons.b21ae1f3.png"
   },
   {
     "revision": "95c153f6a3e080203a9fde63dc5409b9",
     "url": "/img/cake.95c153f6.png"
   },
   {
-    "revision": "51baca575097d57e5ee2ebeca9c3ed65",
-    "url": "/img/carpet.51baca57.png"
+    "revision": "c8db5549e04b9fcbbcd8107052970401",
+    "url": "/img/carpet.c8db5549.png"
   },
   {
     "revision": "e5bea21f5465da7c161401af4eae6c90",
     "url": "/img/chef.e5bea21f.png"
   },
   {
-    "revision": "d17d2286413d14e576adf1626441bd4a",
-    "url": "/img/couch.d17d2286.png"
+    "revision": "ac5dac23a3636d7a67d1f1d9f1ef76b7",
+    "url": "/img/couch.ac5dac23.png"
   },
   {
     "revision": "35c9a89264227f87315471bb27648d38",
     "url": "/img/cursor1.35c9a892.png"
   },
   {
-    "revision": "0738424599dbc8732c5ddec4bd473d25",
-    "url": "/img/gifts.07384245.png"
+    "revision": "144f1176f400c0d3b1dd8d366e667c4d",
+    "url": "/img/gifts.144f1176.png"
   },
   {
     "revision": "9363b143d475a2c5b0b03d114499c6da",
@@ -100,44 +100,48 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "634a01d9ece9234cd9702acba1316f2b",
-    "url": "/img/millie.634a01d9.png"
+    "revision": "a139d96fadc3e7892ffa4958629e3095",
+    "url": "/img/millie.a139d96f.png"
   },
   {
-    "revision": "9e2e24027aef749ce3c69ebaa48f1147",
-    "url": "/img/nina.9e2e2402.png"
+    "revision": "7d304e2f3ed56a9ed3643abadd40e4e6",
+    "url": "/img/nina.7d304e2f.png"
   },
   {
     "revision": "139e30502764d2dba99c6af949dd1677",
     "url": "/img/quest.139e3050.png"
   },
   {
-    "revision": "efe74dbd9f8bac6d458cfcc307175529",
-    "url": "/img/rack.efe74dbd.png"
+    "revision": "60d7ea227a168b50fa03f66392973aa7",
+    "url": "/img/rack.60d7ea22.png"
   },
   {
-    "revision": "4b8bbc38240a28a1c56848c54191bf01",
-    "url": "/img/radio.4b8bbc38.png"
+    "revision": "3d6241cfe0ef414a979d1c506c171a3b",
+    "url": "/img/radio.3d6241cf.png"
   },
   {
-    "revision": "1022e689ea1ecc40645bed1c807754d4",
-    "url": "/img/reimu.1022e689.png"
+    "revision": "f04dce022a3cb8d5d4d51bf15627e674",
+    "url": "/img/reimu.f04dce02.png"
   },
   {
-    "revision": "c88a74b6a512ef29ea9bd2dbb74d24c3",
-    "url": "/img/room.c88a74b6.png"
+    "revision": "03d21bae14c935550c84eed8829c5579",
+    "url": "/img/room.03d21bae.png"
+  },
+  {
+    "revision": "7e021b0946a6ba2bd20328858bcf3a10",
+    "url": "/img/roomie.7e021b09.png"
   },
   {
     "revision": "6ac7fcfc9c7ee1afbef1f5cc1e963692",
     "url": "/img/table.6ac7fcfc.png"
   },
   {
-    "revision": "5e97345d068b3c92c022127f4b9e8f0e",
+    "revision": "5210263d48a647e40fe8d80901377f15",
     "url": "/index.html"
   },
   {
-    "revision": "945d01ac0c9f577c0580",
-    "url": "/js/app.d4664c18.js"
+    "revision": "b8edc25c8ecbbae5922b",
+    "url": "/js/app.83110ca2.js"
   },
   {
     "revision": "0310da2d189ad4b4cffd",
