@@ -43,6 +43,11 @@ export default {
     openProject: null,
     ProjectList,
   }),
+  watch: {
+    dialog(val) {
+      if (!val) this.$root.$emit('projectClosed');
+    },
+  },
   mounted() {
     // Start game instance
     // eslint-disable-next-line no-new

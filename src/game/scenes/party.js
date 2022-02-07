@@ -5,6 +5,8 @@ const INTENSITY_X = 0.008;
 const INTENSITY_Y = 0.005;
 
 class PartyScene extends Phaser.Scene {
+  overlay = null;
+
   movables = {};
 
   transition = null;
@@ -34,6 +36,20 @@ class PartyScene extends Phaser.Scene {
         this.movables[key] = { container, str };
       });
 
+    // Overlay
+    this.input.topOnly = true;
+    this.overlay = this.add.rectangle(centerX, centerY, 1920, 937, 0x1a1a1a)
+      .setInteractive()
+      .setAlpha(0.75)
+      .setDepth(4000)
+      .on('pointerdown', () => {})
+      .setVisible(false);
+
+    // Recover from Overlay
+    this.game.vue.$root.$on('projectClosed', () => {
+      this.overlay.setVisible(false);
+    });
+
     // Transition Animation
     this.transition
       .on('complete', () => {
@@ -60,6 +76,7 @@ class PartyScene extends Phaser.Scene {
         questIcon.setAngle(0);
       })
       .on('pointerdown', () => {
+        this.overlay.setVisible(true);
         this.game.vue.dialog = true;
         this.game.vue.openProject = 'quests';
       });
@@ -115,6 +132,7 @@ class PartyScene extends Phaser.Scene {
         label.setVisible(false);
       })
       .on('pointerdown', () => {
+        this.overlay.setVisible(true);
         this.game.vue.dialog = true;
         this.game.vue.openProject = project;
       });
