@@ -1,9 +1,15 @@
 import Phaser from 'phaser';
 import Elements from '../data/elements';
+import AloupeepsData from '../data/aloupeeps';
 import Aloupeeps from '../objects/aloupeeps';
 
 const INTENSITY_X = 0.008;
 const INTENSITY_Y = 0.005;
+const SPRITE_INFO = {
+  dancing: { frames: 11, fps: 12 },
+  geddan: { frames: 23, fps: 15 },
+  specialist: { frames: 33, fps: 14 },
+};
 
 class PartyScene extends Phaser.Scene {
   overlay = null;
@@ -37,12 +43,15 @@ class PartyScene extends Phaser.Scene {
         this.movables[key] = { container, str };
       });
 
-    this.aloupeeps = new Aloupeeps({ scene: this, x: 0, y: 0 });
-    this.aloupeeps.setDepth(40);
-    this.movables.aloupeeps = {
-      container: this.aloupeeps,
-      str: 2,
-    };
+    // Animated Aloupeeps
+    AloupeepsData.forEach(({ sprite, x, y, z, scale, str, flip }, index) => {
+      const ax = (width * x) - centerX;
+      const ay = (height * y) - centerY;
+      this.aloupeeps(`aloupeeps${index}`, sprite, ax, ay, z, scale, str, flip)
+        .container
+        .setDepth(z * 10)
+        .setPosition(centerX, centerY);
+    });
 
     // Overlay
     this.input.topOnly = true;
@@ -156,6 +165,17 @@ class PartyScene extends Phaser.Scene {
     })
       .setOrigin(0.5, 0.5)
       .setVisible(false);
+  }
+
+  aloupeeps(key, sprite, x, y, z, scale = 1, str = 0, flip = false) {
+    // Get sprite info
+    const { frames, fps } = SPRITE_INFO[sprite];
+    // Add movable
+    this.movables[key] = {
+      container: new Aloupeeps({ scene: this, x, y, sprite, frames, fps, scale, flip }),
+      str,
+    };
+    return this.movables[key];
   }
 }
 
