@@ -24,6 +24,8 @@ import IconQuest from '../assets/images/quest.png';
 import Dancing from '../assets/spritesheets/dancing.png';
 import Geddan from '../assets/spritesheets/geddan.png';
 import Specialist from '../assets/spritesheets/specialist.png';
+import particlesPng from '../assets/atlas/particles.png';
+import particlesJson from '../assets/atlas/particles.json';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -67,6 +69,8 @@ class IndexScene extends Phaser.Scene {
     this.load.spritesheet('dancing', Dancing, { frameWidth: 7680 / 12, frameHeight: 201 });
     this.load.spritesheet('geddan', Geddan, { frameWidth: 4320 / 24, frameHeight: 180 });
     this.load.spritesheet('specialist', Specialist, { frameWidth: 6120 / 34, frameHeight: 180 });
+
+    this.load.atlas('particles', particlesPng, particlesJson);
   }
 
   async create() {

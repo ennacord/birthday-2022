@@ -100,6 +100,22 @@ class PartyScene extends Phaser.Scene {
         this.game.vue.dialog = true;
         this.game.vue.openProject = 'quests';
       });
+
+    // Confetti
+    this.add.particles('particles')
+      .setDepth(3500)
+      .createEmitter({
+        frame: ['blue', 'gold', 'green', 'orange', 'pink', 'red', 'violet'],
+        x: { min: 0, max: 1920 },
+        y: { min: -937, max: -30 },
+        scale: { min: 0.1, max: 0.3 },
+        alpha: 0.7,
+        gravityX: -2,
+        gravityY: 50,
+        frequency: 0.08,
+        lifespan: 6000,
+        speed: { min: 1, max: 15 },
+      });
   }
 
   transitionIn(container, dir) {
