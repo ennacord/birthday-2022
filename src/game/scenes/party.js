@@ -39,15 +39,19 @@ class PartyScene extends Phaser.Scene {
       });
 
     // Animated Aloupeeps
-    AloupeepsData.forEach(({ sprite, x, y, z, scale, str, flip, start }, index) => {
+    AloupeepsData.forEach(({
+      sprite, x, y, z, scale, str, flip, ox = 0.5, oy = 0.5, start, text, project, font,
+    }, index) => {
       const ax = (width * x) - centerX;
       const ay = (height * y) - centerY;
-      this.movables[`aloupeeps${index}`] = {
-        container: new Aloupeeps({ scene: this, x: ax, y: ay, sprite, scale, flip, start })
-          .setDepth(z * 10)
-          .setPosition(centerX, centerY),
-        str,
-      };
+      const container = new Aloupeeps({
+        scene: this, x: ax, y: ay, ox, oy, sprite, scale, flip, start
+      })
+        .setDepth(z * 10)
+        .setPosition(centerX, centerY);
+      this.movables[`aloupeeps${index}`] = { container, str };
+      // Interactive object
+      if (text && project) this.interactiveAloupeep(container, text, project, font);
     });
 
     // Overlay
@@ -127,7 +131,7 @@ class PartyScene extends Phaser.Scene {
     });
   }
 
-  interactiveElement(container, image, text, project, fontSize) {
+  interactiveElement(container, image, text, project, fontSize = 30) {
     // Label
     const label = this.createLabel(image.x, image.y, text, fontSize)
       .setDepth(2000 + image.depth);
@@ -143,6 +147,31 @@ class PartyScene extends Phaser.Scene {
       })
       .on('pointerout', () => {
         image.setAngle(0);
+        label.setVisible(false);
+      })
+      .on('pointerdown', () => {
+        this.overlay.setVisible(true);
+        this.game.vue.dialog = true;
+        this.game.vue.openProject = project;
+      });
+  }
+
+  interactiveAloupeep(container, text, project, fontSize) {
+    // Label
+    const label = this.createLabel(container.sprite.x, container.sprite.y, text, fontSize)
+      .setDepth(2000 + container.sprite.depth);
+    container.add(label);
+    // Interaction
+    container.sprite
+      .setInteractive()
+      .on('pointerover', () => {
+        container.sprite.setAngle((Math.random() * 3) - 1);
+        label
+          .setAngle((Math.random() * 11) - 5)
+          .setVisible(true);
+      })
+      .on('pointerout', () => {
+        container.sprite.setAngle(0);
         label.setVisible(false);
       })
       .on('pointerdown', () => {

@@ -1,11 +1,16 @@
 module.exports = [
   {
     sprite: 'dancing',
-    x: 0.8,
+    x: 0.85,
     y: 0.86,
     z: 101.1,
     scale: 1,
     str: 1.8,
+    ox: 0.7,
+    oy: 0.5,
+    text: 'Birthday Messages',
+    project: 'bdayvoices',
+    font: 40,
   },
   {
     sprite: 'geddan',
@@ -32,6 +37,9 @@ module.exports = [
     z: 101.3,
     scale: 1.2,
     str: 1.4,
+    text: 'Credits',
+    project: 'credits',
+    font: 34,
   },
   {
     sprite: 'geddan',
@@ -44,12 +52,17 @@ module.exports = [
   },
   {
     sprite: 'dancing',
-    x: 0.38,
+    x: 0.33,
     y: 0.62,
     z: 100.1,
     scale: 0.8,
     str: 1.8,
     flip: true,
+    ox: 0.7,
+    oy: 0.5,
     start: 350, // ms
+    text: 'Birthday Dance',
+    project: 'bdaydance',
+    font: 33,
   },
 ];

@@ -75,7 +75,7 @@ module.exports = {
     str: 1.5,
     ox: 0.5,
     oy: 0.5,
-    text: 'Messages from Aloupeeps',
+    text: 'Message Cards',
     project: 'messages',
     font: 40,
     dir: 'top',
@@ -158,7 +158,7 @@ module.exports = {
   millie: {
     x: 0.69,
     y: 0.93,
-    z: 99,
+    z: 109,
     str: 1.1,
     ox: 0.5,
     oy: 0.8,

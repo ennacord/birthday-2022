@@ -7,11 +7,12 @@ const SPRITE_INFO = {
 };
 
 export default class Aloupeeps extends Phaser.GameObjects.Container {
-  constructor({ scene, x, y, sprite, start = 0, scale = 1, flip = false }) {
+  constructor({ scene, x, y, ox, oy, sprite, start = 0, scale = 1, flip = false }) {
     super(scene, -200, -200);
     const { frames: end, fps: frameRate } = SPRITE_INFO[sprite];
 
     this.sprite = this.scene.add.sprite(x, y, sprite);
+    if (ox && oy) this.sprite.setOrigin(flip ? 1 - ox : ox, oy);
     if (scale !== 1) this.sprite.setScale(scale);
     if (flip) this.sprite.setFlipX(true);
     this.add(this.sprite);
