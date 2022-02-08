@@ -66,10 +66,10 @@ module.exports = {
         /(.*).js.map/g,
       ],
     },
-    assetsVersion: '2022_02_07_03_06',
+    assetsVersion: '2022_02_08_02_59',
     manifestOptions: {
-      name: 'Enna 2022',
-      short_name: 'Enna 2022',
+      name: 'Enna Birthday',
+      short_name: 'Enna Birthday',
       description: 'Aloupeeps celebrate Enna Alouette\'s Birthday in 2022',
       display: 'standalone',
       orientation: 'landscape',

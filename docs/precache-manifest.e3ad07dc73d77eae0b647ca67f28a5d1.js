@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b8edc25c8ecbbae5922b",
+    "revision": "6649101282d882a3a895",
     "url": "/css/app.9cd193b3.css"
   },
   {
@@ -14,6 +14,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b21ae1f32f69e42eb1faf68dea43c60d",
     "url": "/img/balloons.b21ae1f3.png"
+  },
+  {
+    "revision": "6af175f57376527263c03001c63187d4",
+    "url": "/img/banner.6af175f5.png"
   },
   {
     "revision": "95c153f6a3e080203a9fde63dc5409b9",
@@ -34,6 +38,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "35c9a89264227f87315471bb27648d38",
     "url": "/img/cursor1.35c9a892.png"
+  },
+  {
+    "revision": "adaa274aae429bafe73e6461dac2ac4e",
+    "url": "/img/dancing.adaa274a.png"
+  },
+  {
+    "revision": "0403555fdd8f360dd551491425058715",
+    "url": "/img/geddan.0403555f.png"
   },
   {
     "revision": "144f1176f400c0d3b1dd8d366e667c4d",
@@ -108,6 +120,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/nina.7d304e2f.png"
   },
   {
+    "revision": "f90c19e28af5e463051a9cc3398b1985",
+    "url": "/img/playbtn.f90c19e2.png"
+  },
+  {
     "revision": "139e30502764d2dba99c6af949dd1677",
     "url": "/img/quest.139e3050.png"
   },
@@ -132,23 +148,31 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/roomie.7e021b09.png"
   },
   {
-    "revision": "6ac7fcfc9c7ee1afbef1f5cc1e963692",
-    "url": "/img/table.6ac7fcfc.png"
+    "revision": "7ad808e769a5fff2c8ee07731df67dde",
+    "url": "/img/specialist.7ad808e7.png"
   },
   {
-    "revision": "5210263d48a647e40fe8d80901377f15",
+    "revision": "3117240905540fc29e526f7f1f2ffdf7",
+    "url": "/img/table.31172409.png"
+  },
+  {
+    "revision": "28ad861915e0e3225456d533b59bb7d1",
+    "url": "/img/tv.28ad8619.png"
+  },
+  {
+    "revision": "e5119547071b4ba5e92051fd32149444",
     "url": "/index.html"
   },
   {
-    "revision": "b8edc25c8ecbbae5922b",
-    "url": "/js/app.83110ca2.js"
+    "revision": "6649101282d882a3a895",
+    "url": "/js/app.553f96ec.js"
   },
   {
     "revision": "0310da2d189ad4b4cffd",
     "url": "/js/chunk-vendors.9f6ce622.js"
   },
   {
-    "revision": "f64cba91d1ed5c07f945c59278bc502e",
+    "revision": "81b750f43f1b0768a62e31b70d725118",
     "url": "/manifest.json"
   },
   {
