@@ -45,13 +45,15 @@ class PartyScene extends Phaser.Scene {
       const ax = (width * x) - centerX;
       const ay = (height * y) - centerY;
       const container = new Aloupeeps({
-        scene: this, x: ax, y: ay, ox, oy, sprite, scale, flip, start
+        scene: this, x: ax, y: ay, ox, oy, sprite, scale, flip, start,
       })
         .setDepth(z * 10)
         .setPosition(centerX, centerY);
       this.movables[`aloupeeps${index}`] = { container, str };
       // Interactive object
       if (text && project) this.interactiveAloupeep(container, text, project, font);
+      // Transition
+      this.transitionIn(container, 'top');
     });
 
     // Overlay
@@ -125,9 +127,9 @@ class PartyScene extends Phaser.Scene {
       ...directionTween,
       alpha: { from: 0, to: 1 },
       ease: 'Cubic',
-      duration: 500,
+      duration: 350,
       repeat: 0,
-      offset: '-=400',
+      offset: '-=250',
     });
   }
 
