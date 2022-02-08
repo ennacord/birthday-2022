@@ -13,6 +13,8 @@ class PartyScene extends Phaser.Scene {
 
   transition = null;
 
+  confettiState = true;
+
   create() {
     const { width, height } = this.sys.game.canvas;
     const centerX = width / 2;
@@ -23,7 +25,7 @@ class PartyScene extends Phaser.Scene {
 
     // Create game objects and placements
     Object.entries(ElementsData)
-      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font, dir }]) => {
+      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font, dir, action }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
         // Image
         const image = this.add.image((width * x) - centerX, (height * y) - centerY, texture || key)
@@ -31,7 +33,7 @@ class PartyScene extends Phaser.Scene {
         if (scale) image.setScale(scale);
         container.add(image);
         // Interactive object
-        if (text && project) this.interactiveElement(container, image, text, project, font);
+        if (text) this.interactiveElement(container, image, text, project, font, action);
         // Transition
         if (key !== 'room') this.transitionIn(container, dir);
         // Add to movable list
@@ -102,20 +104,20 @@ class PartyScene extends Phaser.Scene {
       });
 
     // Confetti
-    this.add.particles('particles')
-      .setDepth(3500)
-      .createEmitter({
-        frame: ['blue', 'gold', 'green', 'orange', 'pink', 'red', 'violet'],
-        x: { min: 0, max: 1920 },
-        y: { min: -937, max: -30 },
-        scale: { min: 0.1, max: 0.3 },
-        alpha: 0.7,
-        gravityX: -2,
-        gravityY: 50,
-        frequency: 0.08,
-        lifespan: 6000,
-        speed: { min: 1, max: 15 },
-      });
+    const confettiParticles = this.add.particles('particles')
+      .setDepth(3500);
+    this.confettiEmitter = confettiParticles.createEmitter({
+      frame: ['blue', 'gold', 'green', 'orange', 'pink', 'red', 'violet'],
+      x: { min: 0, max: 1920 },
+      y: { min: -937, max: -30 },
+      scale: { min: 0.1, max: 0.3 },
+      alpha: 0.7,
+      gravityX: -2,
+      gravityY: 50,
+      frequency: 0.08,
+      lifespan: 6000,
+      speed: { min: 1, max: 15 },
+    });
   }
 
   transitionIn(container, dir) {
@@ -149,7 +151,7 @@ class PartyScene extends Phaser.Scene {
     });
   }
 
-  interactiveElement(container, image, text, project, fontSize = 30) {
+  interactiveElement(container, image, text, project, fontSize = 30, action) {
     // Label
     const label = this.createLabel(image.x, image.y, text, fontSize)
       .setDepth(2000 + image.depth);
@@ -168,9 +170,13 @@ class PartyScene extends Phaser.Scene {
         label.setVisible(false);
       })
       .on('pointerdown', () => {
-        this.overlay.setVisible(true);
-        this.game.vue.dialog = true;
-        this.game.vue.openProject = project;
+        if (action) {
+          action.call(this);
+        } else {
+          this.overlay.setVisible(true);
+          this.game.vue.dialog = true;
+          this.game.vue.openProject = project;
+        }
       });
   }
 
@@ -209,6 +215,15 @@ class PartyScene extends Phaser.Scene {
     })
       .setOrigin(0.5, 0.5)
       .setVisible(false);
+  }
+
+  toggleConfetti() {
+    this.confettiState = !this.confettiState;
+    if (this.confettiState) {
+      this.confettiEmitter.start();
+    } else {
+      this.confettiEmitter.stop();
+    }
   }
 }
 

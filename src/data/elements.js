@@ -162,8 +162,12 @@ module.exports = {
     str: 1.1,
     ox: 0.5,
     oy: 0.8,
-    // text: 'God Sees All',
-    // project: 'gsacover',
+    text: 'Confetti',
+    project: null,
+    action() {
+      this.toggleConfetti();
+    },
+    font: 40,
     dir: 'bottom',
   },
   cake: {
