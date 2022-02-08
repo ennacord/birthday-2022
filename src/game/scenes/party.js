@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
-import Elements from '../data/elements';
-import AloupeepsData from '../data/aloupeeps';
+import ElementsData from '@/data/elements';
+import AloupeepsData from '@/data/aloupeeps';
 import Aloupeeps from '../objects/aloupeeps';
 
 const INTENSITY_X = 0.008;
@@ -27,7 +27,7 @@ class PartyScene extends Phaser.Scene {
     this.transition = this.tweens.createTimeline();
 
     // Create game objects and placements
-    Object.entries(Elements)
+    Object.entries(ElementsData)
       .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font, dir }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
         // Image
