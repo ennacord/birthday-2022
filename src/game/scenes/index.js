@@ -3,6 +3,7 @@ import Phaser from 'phaser';
 import PartyScene from './party';
 
 import ImgCake from '../assets/images/cake.png';
+import ImgBanner from '../assets/images/banner.png';
 import ImgGifts from '../assets/images/gifts.png';
 import ImgRoomie from '../assets/images/roomie.png';
 import ImgReimu from '../assets/images/reimu.png';
@@ -13,8 +14,10 @@ import ImgMillie from '../assets/images/millie.png';
 import ImgBalloons from '../assets/images/balloons.png';
 import ImgCouch from '../assets/images/couch.png';
 import ImgChef from '../assets/images/chef.png';
+import ImgPlaybtn from '../assets/images/playbtn.png';
 import ImgRack from '../assets/images/rack.png';
 import ImgRadio from '../assets/images/radio.png';
+import ImgTv from '../assets/images/tv.png';
 import ImgCarpet from '../assets/images/carpet.png';
 import Cursor1 from '../assets/cursor/cursor1.png';
 import IconQuest from '../assets/images/quest.png';
@@ -45,6 +48,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('millie', ImgMillie);
     this.load.image('balloons', ImgBalloons);
     this.load.image('cake', ImgCake);
+    this.load.image('banner', ImgBanner);
     this.load.image('gifts', ImgGifts);
     this.load.image('roomie', ImgRoomie);
     this.load.image('reimu', ImgReimu);
@@ -53,8 +57,10 @@ class IndexScene extends Phaser.Scene {
     this.load.image('table', ImgTable);
     this.load.image('couch', ImgCouch);
     this.load.image('chef', ImgChef);
+    this.load.image('playbtn', ImgPlaybtn);
     this.load.image('rack', ImgRack);
     this.load.image('radio', ImgRadio);
+    this.load.image('tv', ImgTv);
     this.load.image('carpet', ImgCarpet);
     this.load.image('quest', IconQuest);
 
