@@ -14,6 +14,7 @@ module.exports = [
     z: 103.1,
     scale: 0.8,
     str: 1.8,
+    start: 100, // ms
   },
   {
     sprite: 'geddan',
@@ -49,5 +50,6 @@ module.exports = [
     scale: 0.8,
     str: 1.8,
     flip: true,
+    start: 350, // ms
   },
 ];
