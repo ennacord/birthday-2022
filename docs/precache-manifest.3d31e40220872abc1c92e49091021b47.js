@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6649101282d882a3a895",
+    "revision": "936c4eeba78b8b29d1f8",
     "url": "/css/app.9cd193b3.css"
   },
   {
@@ -120,6 +120,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/nina.7d304e2f.png"
   },
   {
+    "revision": "54086e901015dc56b900bd8078090f08",
+    "url": "/img/particles.54086e90.png"
+  },
+  {
     "revision": "f90c19e28af5e463051a9cc3398b1985",
     "url": "/img/playbtn.f90c19e2.png"
   },
@@ -160,12 +164,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/tv.28ad8619.png"
   },
   {
-    "revision": "e5119547071b4ba5e92051fd32149444",
+    "revision": "b6d30318428f173e44b135958fa3d066",
     "url": "/index.html"
   },
   {
-    "revision": "6649101282d882a3a895",
-    "url": "/js/app.553f96ec.js"
+    "revision": "936c4eeba78b8b29d1f8",
+    "url": "/js/app.b39723e9.js"
   },
   {
     "revision": "0310da2d189ad4b4cffd",
