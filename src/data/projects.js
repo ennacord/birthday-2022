@@ -39,10 +39,10 @@ module.exports = {
   },
   bdaydance: {
     title: 'Birthday Dance',
-    description: '',
+    description: 'Enna\'s Birthday present from Soramari and kaochiicos',
     warnings: 'Music played is Enna Alouette trying to sing: Kanaria - KING',
     lead: 'Soramari',
     credits: 'Soramari, kaochiicos',
-    video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
+    video: 'https://www.youtube.com/embed/SVVGD3XM9So',
   },
 };
