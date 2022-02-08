@@ -45,7 +45,10 @@ export default {
   }),
   watch: {
     dialog(val) {
-      if (!val) this.$root.$emit('projectClosed');
+      if (!val) {
+        this.$root.$emit('projectClosed');
+        this.openProject = null;
+      }
     },
   },
   mounted() {
