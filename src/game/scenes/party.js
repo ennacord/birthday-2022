@@ -53,7 +53,7 @@ class PartyScene extends Phaser.Scene {
         .setPosition(centerX, centerY);
       this.movables[`aloupeeps${index}`] = { container, str };
       // Interactive object
-      if (text && project) this.interactiveAloupeep(container, text, project, font);
+      if (text) this.interactiveAloupeep(container, text, project, font);
       // Transition
       this.transitionIn(container, 'top');
     });
@@ -85,23 +85,6 @@ class PartyScene extends Phaser.Scene {
         });
       })
       .play();
-
-    // Quests
-    const questIcon = this.add.image(94, height - 94, 'quest')
-      .setScale(1.2)
-      .setDepth(3000)
-      .setInteractive({ pixelPerfect: true })
-      .on('pointerover', () => {
-        questIcon.setAngle((Math.random() * 11) - 5);
-      })
-      .on('pointerout', () => {
-        questIcon.setAngle(0);
-      })
-      .on('pointerdown', () => {
-        this.overlay.setVisible(true);
-        this.game.vue.dialog = true;
-        this.game.vue.openProject = 'quests';
-      });
 
     // Confetti
     const confettiParticles = this.add.particles('particles')

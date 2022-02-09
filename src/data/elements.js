@@ -179,7 +179,6 @@ module.exports = {
     dir: 'bottom',
   },
   cake: {
-    texture: 'cake',
     x: 0.5,
     y: 0.83,
     z: 111,
@@ -187,6 +186,9 @@ module.exports = {
     str: 0.6,
     ox: 0.5,
     oy: 0.5,
+    text: 'Happy Birthday!',
+    project: 'quests',
+    font: 50,
     dir: 'top',
   },
   table: {

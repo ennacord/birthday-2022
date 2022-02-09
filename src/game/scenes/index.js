@@ -22,7 +22,6 @@ import ImgRadio from '../assets/images/radio.png';
 import ImgTv from '../assets/images/tv.png';
 import ImgCarpet from '../assets/images/carpet.png';
 import Cursor1 from '../assets/cursor/cursor1.png';
-import IconQuest from '../assets/images/quest.png';
 import Dancing from '../assets/spritesheets/dancing.png';
 import Geddan from '../assets/spritesheets/geddan.png';
 import Specialist from '../assets/spritesheets/specialist.png';
@@ -68,7 +67,6 @@ class IndexScene extends Phaser.Scene {
     this.load.image('radio', ImgRadio);
     this.load.image('tv', ImgTv);
     this.load.image('carpet', ImgCarpet);
-    this.load.image('quest', IconQuest);
 
     this.load.spritesheet('dancing', Dancing, { frameWidth: 7680 / 12, frameHeight: 201 });
     this.load.spritesheet('geddan', Geddan, { frameWidth: 4320 / 24, frameHeight: 180 });
