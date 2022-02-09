@@ -148,10 +148,10 @@ class PartyScene extends Phaser.Scene {
       targets: container,
       ...directionTween,
       alpha: { from: 0, to: 1 },
-      ease: 'Cubic',
-      duration: 350,
+      ease: 'Circ.easeOut',
+      duration: 300,
       repeat: 0,
-      offset: '-=250',
+      offset: '-=230',
     });
   }
 
