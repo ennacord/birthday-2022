@@ -175,9 +175,6 @@ module.exports = {
     oy: 0.8,
     text: 'Confetti',
     project: null,
-    action() {
-      this.toggleConfetti();
-    },
     font: 40,
     dir: 'bottom',
   },

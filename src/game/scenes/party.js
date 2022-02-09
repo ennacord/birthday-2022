@@ -25,7 +25,7 @@ class PartyScene extends Phaser.Scene {
 
     // Create game objects and placements
     Object.entries(ElementsData)
-      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font, dir, action }]) => {
+      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font, dir }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
         // Image
         const image = this.add.image((width * x) - centerX, (height * y) - centerY, texture || key)
@@ -33,7 +33,7 @@ class PartyScene extends Phaser.Scene {
         if (scale) image.setScale(scale);
         container.add(image);
         // Interactive object
-        if (text) this.interactiveElement(container, image, text, project, font, action);
+        if (text) this.interactiveElement(container, image, text, project, font);
         // Transition
         if (key !== 'room') this.transitionIn(container, dir);
         // Add to movable list
@@ -119,6 +119,17 @@ class PartyScene extends Phaser.Scene {
       speed: { min: 1, max: 15 },
     });
 
+    // Special - Millie Toggles Confetti
+    this.movables.millie.image
+      .setInteractive({ pixelPerfect: true })
+      .off('pointerdown')
+      .on('pointerdown', () => {
+        this.confettiState = !this.confettiState;
+        this.confettiEmitter.setVisible(this.confettiState);
+        // if (this.confettiState) this.confettiEmitter.start();
+        // else this.confettiEmitter.stop();
+      });
+
     // Special - Painting Color on Hover
     this.movables.painting.image
       .setInteractive({ pixelPerfect: true })
@@ -161,7 +172,7 @@ class PartyScene extends Phaser.Scene {
     });
   }
 
-  interactiveElement(container, image, text, project, fontSize = 30, action) {
+  interactiveElement(container, image, text, project, fontSize = 30) {
     // Label
     const label = this.createLabel(image.x, image.y, text, fontSize)
       .setDepth(2000 + image.depth);
@@ -180,13 +191,9 @@ class PartyScene extends Phaser.Scene {
         label.setVisible(false);
       })
       .on('pointerdown', () => {
-        if (action) {
-          action.call(this);
-        } else {
-          this.overlay.setVisible(true);
-          this.game.vue.dialog = true;
-          this.game.vue.openProject = project;
-        }
+        this.overlay.setVisible(true);
+        this.game.vue.dialog = true;
+        this.game.vue.openProject = project;
       });
   }
 
@@ -225,15 +232,6 @@ class PartyScene extends Phaser.Scene {
     })
       .setOrigin(0.5, 0.5)
       .setVisible(false);
-  }
-
-  toggleConfetti() {
-    this.confettiState = !this.confettiState;
-    if (this.confettiState) {
-      this.confettiEmitter.start();
-    } else {
-      this.confettiEmitter.stop();
-    }
   }
 }
 
