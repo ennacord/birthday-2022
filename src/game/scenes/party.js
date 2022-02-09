@@ -37,7 +37,7 @@ class PartyScene extends Phaser.Scene {
         // Transition
         if (key !== 'room') this.transitionIn(container, dir);
         // Add to movable list
-        this.movables[key] = { container, str };
+        this.movables[key] = { container, str, image };
       });
 
     // Animated Aloupeeps
@@ -118,6 +118,16 @@ class PartyScene extends Phaser.Scene {
       lifespan: 6000,
       speed: { min: 1, max: 15 },
     });
+
+    // Special - Painting Color on Hover
+    this.movables.painting.image
+      .setInteractive({ pixelPerfect: true })
+      .on('pointerover', () => {
+        this.movables.painting.image.setTexture('painting-color');
+      })
+      .on('pointerout', () => {
+        this.movables.painting.image.setTexture('painting');
+      });
   }
 
   transitionIn(container, dir) {

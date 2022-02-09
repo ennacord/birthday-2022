@@ -26,7 +26,7 @@ module.exports = {
     oy: 0.5,
     text: 'Baking',
     project: 'bakingrelay',
-    font: 30,
+    font: 32,
     dir: 'left',
   },
   carpet: {
@@ -87,6 +87,17 @@ module.exports = {
     str: 1.7,
     ox: 0.5,
     oy: 0.5,
+    dir: 'top',
+  },
+  painting: {
+    x: 0.35,
+    y: 0.45,
+    z: 2,
+    str: 1.6,
+    ox: 0.5,
+    oy: 0.65,
+    text: 'Drawing Board',
+    project: 'mural',
     dir: 'top',
   },
   reimu: {
