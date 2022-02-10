@@ -10,6 +10,7 @@ import ImgReimu from '../assets/images/reimu.png';
 import ImgNina from '../assets/images/nina.png';
 import ImgRoom from '../assets/images/room.png';
 import ImgTable from '../assets/images/table.png';
+import ImgAptable from '../assets/images/aptable.png';
 import ImgMillie from '../assets/images/millie.png';
 import ImgPainting from '../assets/images/painting.png';
 import ImgPaintingColor from '../assets/images/painting-color.png';
@@ -60,6 +61,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('nina', ImgNina);
     this.load.image('room', ImgRoom);
     this.load.image('table', ImgTable);
+    this.load.image('aptable', ImgAptable);
     this.load.image('couch', ImgCouch);
     this.load.image('chef', ImgChef);
     this.load.image('playbtn', ImgPlaybtn);
