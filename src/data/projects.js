@@ -15,10 +15,10 @@ module.exports = {
     video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
   },
   bakingrelay: {
-    title: 'Cake-Baking Relay',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu semper nulla. Suspendisse lectus odio, venenatis vitae enim non, eleifend mollis libero. Nulla nec tempor erat.',
+    title: 'Birthday Cake Baking Relay',
+    description: 'A relay type video with the Aloupeeps baking a cake for Enna\'s Birthday',
     lead: 'BONER',
-    credits: 'Lorem, ipsum dolor, sit amet, consectetur, adipiscing, elit, Pellentesque, eu semper, nulla, Suspendisse, lectus odio, venenatis, vitae, enim non, eleifend, mollis, libero, Nulla, nec tempor, erat',
+    credits: 'AllSoonNoDairy, Altina, Arkteezy, Bingu, Boner, Broney Stinson, Crono, Domo Espresso, Jo-さん, Nuit [夜], Petras Emergency Food, Soul Jam, Thapperson Apple, Zer0Pendragon6',
     video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
   },
   rickroll: {
