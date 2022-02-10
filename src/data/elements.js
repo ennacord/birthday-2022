@@ -54,7 +54,7 @@ module.exports = {
     ox: 0.5,
     oy: 0.5,
     text: 'Gallery',
-    project: 'twitterart',
+    project: 'gallery',
     font: 40,
     dir: 'top',
   },
