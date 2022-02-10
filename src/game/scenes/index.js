@@ -22,7 +22,7 @@ import ImgRack from '../assets/images/rack.png';
 import ImgRadio from '../assets/images/radio.png';
 import ImgTv from '../assets/images/tv.png';
 import ImgCarpet from '../assets/images/carpet.png';
-import Cursor1 from '../assets/cursor/cursor1.png';
+import Cursor3 from '../assets/cursor/cursor3.png';
 import Dancing from '../assets/spritesheets/dancing.png';
 import Geddan from '../assets/spritesheets/geddan.png';
 import Specialist from '../assets/spritesheets/specialist.png';
@@ -81,7 +81,7 @@ class IndexScene extends Phaser.Scene {
 
   async create() {
     // Cursor
-    this.input.setDefaultCursor(`url(${Cursor1}), auto`);
+    this.input.setDefaultCursor(`url(${Cursor3}), auto`);
 
     // Wait for asyncs to finish
     await Promise.all([
