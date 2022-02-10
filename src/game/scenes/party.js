@@ -15,10 +15,17 @@ class PartyScene extends Phaser.Scene {
 
   confettiState = true;
 
+  lightState = true;
+
   create() {
     const { width, height } = this.sys.game.canvas;
     const centerX = width / 2;
     const centerY = height / 2;
+
+    // Candle Lights
+    this.lights.setAmbientColor(0x151515);
+    this.lights.addLight(centerX, height * 0.78, 800, 0xffdd88, 4);
+    this.lights.disable();
 
     // Animation transition
     this.transition = this.tweens.createTimeline();
@@ -51,7 +58,7 @@ class PartyScene extends Phaser.Scene {
       })
         .setDepth(z * 10)
         .setPosition(centerX, centerY);
-      this.movables[`aloupeeps${index}`] = { container, str };
+      this.movables[`aloupeeps${index}`] = { container, str, sprite: container.sprite };
       // Interactive object
       if (text) this.interactiveAloupeep(container, text, project, font);
       // Transition
@@ -77,6 +84,7 @@ class PartyScene extends Phaser.Scene {
       .on('complete', () => {
         // Parallax
         this.input.on('pointermove', (pointer) => {
+          if (!this.lightState) return;
           Object.values(this.movables).forEach(({ container, str }) => {
             const newX = centerX - ((pointer.x - centerX) * (INTENSITY_X * str));
             const newY = centerY - ((pointer.y - centerY) * (INTENSITY_Y * str));
@@ -113,10 +121,44 @@ class PartyScene extends Phaser.Scene {
         // else this.confettiEmitter.stop();
       });
 
+    // Special - Reimu Toggles Lights
+    let tempConfettiState = true;
+    this.movables.cake.image
+      .setInteractive({ pixelPerfect: true })
+      .off('pointerdown')
+      .on('pointerdown', () => {
+        this.lightState = !this.lightState;
+        if (this.lightState) {
+          Object.values(this.movables).forEach(({ image, sprite }) => {
+            if (image) image.setPipeline('MultiPipeline');
+            if (sprite) {
+              sprite.setPipeline('MultiPipeline');
+              sprite.anims.restart();
+            }
+          });
+          this.lights.disable();
+          this.confettiState = tempConfettiState;
+          this.confettiEmitter.setVisible(this.confettiState);
+        } else {
+          Object.values(this.movables).forEach(({ image, sprite }) => {
+            if (image) image.setPipeline('Light2D');
+            if (sprite) {
+              sprite.setPipeline('Light2D');
+              sprite.stop();
+            }
+          });
+          this.lights.enable();
+          tempConfettiState = this.confettiState;
+          this.confettiState = false;
+          this.confettiEmitter.setVisible(this.confettiState);
+        }
+      });
+
     // Special - Painting Color on Hover
     this.movables.painting.image
       .setInteractive({ pixelPerfect: true })
       .on('pointerover', () => {
+        if (!this.lightState) return;
         this.movables.painting.image.setTexture('painting-color');
       })
       .on('pointerout', () => {
@@ -164,6 +206,7 @@ class PartyScene extends Phaser.Scene {
     image
       .setInteractive({ pixelPerfect: true })
       .on('pointerover', () => {
+        if (!this.lightState) return;
         image.setAngle((Math.random() * 3) - 1);
         label
           .setAngle((Math.random() * 11) - 5)
@@ -174,6 +217,7 @@ class PartyScene extends Phaser.Scene {
         label.setVisible(false);
       })
       .on('pointerdown', () => {
+        if (!this.lightState) return;
         this.overlay.setVisible(true);
         this.game.vue.dialog = true;
         this.game.vue.openProject = project;
@@ -189,6 +233,7 @@ class PartyScene extends Phaser.Scene {
     container.sprite
       .setInteractive()
       .on('pointerover', () => {
+        if (!this.lightState) return;
         container.sprite.setAngle((Math.random() * 3) - 1);
         label
           .setAngle((Math.random() * 11) - 5)
@@ -199,6 +244,7 @@ class PartyScene extends Phaser.Scene {
         label.setVisible(false);
       })
       .on('pointerdown', () => {
+        if (!this.lightState) return;
         this.overlay.setVisible(true);
         this.game.vue.dialog = true;
         this.game.vue.openProject = project;
