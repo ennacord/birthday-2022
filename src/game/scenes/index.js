@@ -26,6 +26,7 @@ import Cursor1 from '../assets/cursor/cursor1.png';
 import Dancing from '../assets/spritesheets/dancing.png';
 import Geddan from '../assets/spritesheets/geddan.png';
 import Specialist from '../assets/spritesheets/specialist.png';
+import Pwoot from '../assets/spritesheets/pwoot.png';
 import particlesPng from '../assets/atlas/particles.png';
 import particlesJson from '../assets/atlas/particles.json';
 
@@ -73,6 +74,7 @@ class IndexScene extends Phaser.Scene {
     this.load.spritesheet('dancing', Dancing, { frameWidth: 7680 / 12, frameHeight: 201 });
     this.load.spritesheet('geddan', Geddan, { frameWidth: 4320 / 24, frameHeight: 180 });
     this.load.spritesheet('specialist', Specialist, { frameWidth: 6120 / 34, frameHeight: 180 });
+    this.load.spritesheet('pwoot', Pwoot, { frameWidth: 2424 / 12, frameHeight: 202 });
 
     this.load.atlas('particles', particlesPng, particlesJson);
   }

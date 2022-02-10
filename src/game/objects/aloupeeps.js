@@ -4,6 +4,7 @@ const SPRITE_INFO = {
   dancing: { frames: 11, fps: 12 },
   geddan: { frames: 23, fps: 15 },
   specialist: { frames: 33, fps: 14 },
+  pwoot: { frames: 12, fps: 12 },
 };
 
 export default class Aloupeeps extends Phaser.GameObjects.Container {
