@@ -3,8 +3,8 @@ import ElementsData from '@/data/elements';
 import AloupeepsData from '@/data/aloupeeps';
 import Aloupeeps from '../objects/aloupeeps';
 
-const INTENSITY_X = 0.008;
-const INTENSITY_Y = 0.005;
+const INTENSITY_X = 0.009;
+const INTENSITY_Y = 0.006;
 
 class PartyScene extends Phaser.Scene {
   overlay = null;
