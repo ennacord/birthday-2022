@@ -27,8 +27,8 @@ import Dancing from '../assets/spritesheets/dancing.png';
 import Geddan from '../assets/spritesheets/geddan.png';
 import Specialist from '../assets/spritesheets/specialist.png';
 import Pwoot from '../assets/spritesheets/pwoot.png';
-import particlesPng from '../assets/atlas/particles.png';
-import particlesJson from '../assets/atlas/particles.json';
+import confettiPng from '../assets/atlas/confetti.png';
+import confettiJson from '../assets/atlas/confetti.json';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -76,7 +76,7 @@ class IndexScene extends Phaser.Scene {
     this.load.spritesheet('specialist', Specialist, { frameWidth: 6120 / 34, frameHeight: 180 });
     this.load.spritesheet('pwoot', Pwoot, { frameWidth: 2424 / 12, frameHeight: 202 });
 
-    this.load.atlas('particles', particlesPng, particlesJson);
+    this.load.atlas('confetti', confettiPng, confettiJson);
   }
 
   async create() {

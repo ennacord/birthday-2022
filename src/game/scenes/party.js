@@ -104,19 +104,18 @@ class PartyScene extends Phaser.Scene {
       .play();
 
     // Confetti
-    const confettiParticles = this.add.particles('particles')
+    const confettiParticles = this.add.particles('confetti')
       .setDepth(3500);
     this.confettiEmitter = confettiParticles.createEmitter({
-      frame: ['blue', 'gold', 'green', 'orange', 'pink', 'red', 'violet'],
+      frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
       x: { min: 0, max: 1920 },
-      y: { min: -937, max: -30 },
-      scale: { min: 0.1, max: 0.3 },
-      alpha: 0.7,
-      gravityX: -2,
+      y: { min: -300, max: -30 },
+      scale: { min: 0.2, max: 0.5 },
+      gravityX: -3,
       gravityY: 50,
-      frequency: 0.08,
-      lifespan: 6000,
-      speed: { min: 1, max: 15 },
+      frequency: 100,
+      lifespan: 7000,
+      speed: { min: 2, max: 15 },
     });
 
     // Special - Millie Toggles Confetti
