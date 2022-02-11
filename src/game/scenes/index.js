@@ -27,6 +27,10 @@ import Dancing from '../assets/spritesheets/dancing.png';
 import Geddan from '../assets/spritesheets/geddan.png';
 import Specialist from '../assets/spritesheets/specialist.png';
 import Pwoot from '../assets/spritesheets/pwoot.png';
+import Alousus from '../assets/spritesheets/alousus.png';
+import Dazed from '../assets/spritesheets/dazed.png';
+import Doublepeeps from '../assets/spritesheets/doublepeeps.png';
+import NormalDance from '../assets/spritesheets/normaldance.png';
 import confettiPng from '../assets/atlas/confetti.png';
 import confettiJson from '../assets/atlas/confetti.json';
 
@@ -75,6 +79,10 @@ class IndexScene extends Phaser.Scene {
     this.load.spritesheet('geddan', Geddan, { frameWidth: 4320 / 24, frameHeight: 180 });
     this.load.spritesheet('specialist', Specialist, { frameWidth: 6120 / 34, frameHeight: 180 });
     this.load.spritesheet('pwoot', Pwoot, { frameWidth: 2424 / 12, frameHeight: 202 });
+    this.load.spritesheet('alousus', Alousus, { frameWidth: 2600 / 13, frameHeight: 200 });
+    this.load.spritesheet('dazed', Dazed, { frameWidth: 1600 / 8, frameHeight: 200 });
+    this.load.spritesheet('doublepeeps', Doublepeeps, { frameWidth: 2000 / 10, frameHeight: 200 });
+    this.load.spritesheet('normaldance', NormalDance, { frameWidth: 1600 / 8, frameHeight: 200 });
 
     this.load.atlas('confetti', confettiPng, confettiJson);
   }
