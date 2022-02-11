@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cabd529b687cc0d8796f",
-    "url": "/css/app.7eaac2b7.css"
+    "revision": "de414112fcb98d81ac4c",
+    "url": "/css/app.e392f32f.css"
   },
   {
     "revision": "c22266fe7d23f366181d",
@@ -10,6 +10,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f93e7356b3e6d4c4649cd27c3b4e62f2",
     "url": "/favicon.ico"
+  },
+  {
+    "revision": "a7d9388b33d836228d549cfc338becdf",
+    "url": "/img/alousus.a7d9388b.png"
   },
   {
     "revision": "d5cf9c0ec41ef22c38fe35553150a503",
@@ -36,6 +40,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/chef.e405ce5d.png"
   },
   {
+    "revision": "0cc476c23e63c65cd973ea7a60dfefa2",
+    "url": "/img/confetti.0cc476c2.png"
+  },
+  {
     "revision": "ac5dac23a3636d7a67d1f1d9f1ef76b7",
     "url": "/img/couch.ac5dac23.png"
   },
@@ -46,6 +54,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "adaa274aae429bafe73e6461dac2ac4e",
     "url": "/img/dancing.adaa274a.png"
+  },
+  {
+    "revision": "29c11e76f93fc13d0b36d1de27097339",
+    "url": "/img/dazed.29c11e76.png"
+  },
+  {
+    "revision": "bbdb9376bf6871b53bc07bb6d44e5e40",
+    "url": "/img/doublepeeps.bbdb9376.png"
   },
   {
     "revision": "0403555fdd8f360dd551491425058715",
@@ -124,16 +140,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/nina.7d304e2f.png"
   },
   {
+    "revision": "d6c2183c1cb2ec9a2e5a42262eab74eb",
+    "url": "/img/normaldance.d6c2183c.png"
+  },
+  {
     "revision": "6142d4359d83791a7fcab748f9eff073",
     "url": "/img/painting-color.6142d435.png"
   },
   {
     "revision": "b6c3b7f79a10a40da4991e09f8473b13",
     "url": "/img/painting.b6c3b7f7.png"
-  },
-  {
-    "revision": "54086e901015dc56b900bd8078090f08",
-    "url": "/img/particles.54086e90.png"
   },
   {
     "revision": "f90c19e28af5e463051a9cc3398b1985",
@@ -176,12 +192,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/tv.28ad8619.png"
   },
   {
-    "revision": "0112a9e0945273ac58f9afaf3a2f6da5",
+    "revision": "6b9749d7a92856d8af6e8fdfbeb8b8da",
     "url": "/index.html"
   },
   {
-    "revision": "cabd529b687cc0d8796f",
-    "url": "/js/app.2fe21108.js"
+    "revision": "de414112fcb98d81ac4c",
+    "url": "/js/app.a235254f.js"
   },
   {
     "revision": "c22266fe7d23f366181d",
