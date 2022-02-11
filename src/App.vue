@@ -2,6 +2,7 @@
   <v-app id="app">
     <div id="game-container" ref="game-container"></div>
     <v-dialog id="projects" v-model="dialog"
+      :max-width="dialogWidth"
       elevation="0" overlay-color="purple darken-4" overlay-opacity="0.85">
       <v-card tile class="pa-4">
         <div v-for="(project, projectKey) in ProjectList" :key="projectKey">
@@ -24,30 +25,37 @@
         <div v-if="openProject === 'gallery'">
           <ProjectTwitter/>
         </div>
+        <div v-if="openProject === 'credits'">
+          <ProjectCredits/>
+        </div>
       </v-card>
     </v-dialog>
   </v-app>
 </template>
 
 <script>
+import ProjectList from '@/data/projects';
 import ProjectVideo from '@/components/ProjectVideo.vue';
 import ProjectImage from '@/components/ProjectImage.vue';
 import ProjectMessages from '@/components/ProjectMessages.vue';
 import ProjectTwitter from '@/components/ProjectTwitter.vue';
+import ProjectCredits from '@/components/ProjectCredits.vue';
 import EnnaBirthday from './game';
-import ProjectList from '@/data/projects';
 
 export default {
   data: () => ({
     dialog: false,
     openProject: null,
     ProjectList,
+    dialogWidth: '80vw',
   }),
   watch: {
     dialog(val) {
       if (!val) {
         this.$root.$emit('projectClosed');
         this.openProject = null;
+      } else {
+        this.dialogWidth = (this.openProject === 'credits') ? 600 : '86vw';
       }
     },
   },
@@ -77,6 +85,7 @@ export default {
     ProjectImage,
     ProjectMessages,
     ProjectTwitter,
+    ProjectCredits,
   },
 };
 </script>
