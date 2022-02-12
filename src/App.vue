@@ -28,6 +28,9 @@
         <div v-if="openProject === 'credits'">
           <ProjectCredits/>
         </div>
+        <div v-if="openProject === 'quests'">
+          <ProjectQuests :questStatus="questStatus" />
+        </div>
       </v-card>
     </v-dialog>
   </v-app>
@@ -40,6 +43,7 @@ import ProjectImage from '@/components/ProjectImage.vue';
 import ProjectMessages from '@/components/ProjectMessages.vue';
 import ProjectTwitter from '@/components/ProjectTwitter.vue';
 import ProjectCredits from '@/components/ProjectCredits.vue';
+import ProjectQuests from '@/components/ProjectQuests.vue';
 import EnnaBirthday from './game';
 
 export default {
@@ -48,6 +52,18 @@ export default {
     openProject: null,
     ProjectList,
     dialogWidth: '80vw',
+    questStatus: {
+      aloucast: false,
+      rickroll: false,
+      bakingrelay: false,
+      bdayvoices: false,
+      gsacover: false,
+      bdaydance: false,
+      mural: false,
+      messages: false,
+      gallery: false,
+      credits: false,
+    },
   }),
   watch: {
     dialog(val) {
@@ -55,7 +71,10 @@ export default {
         this.$root.$emit('projectClosed');
         this.openProject = null;
       } else {
-        this.dialogWidth = (this.openProject === 'credits') ? 600 : '86vw';
+        if (typeof this.questStatus[this.openProject] !== 'undefined') {
+          this.questStatus[this.openProject] = true;
+        }
+        this.dialogWidth = { credits: 600, quests: 700 }[this.openProject] || '86vw';
       }
     },
   },
@@ -86,6 +105,7 @@ export default {
     ProjectMessages,
     ProjectTwitter,
     ProjectCredits,
+    ProjectQuests,
   },
 };
 </script>
