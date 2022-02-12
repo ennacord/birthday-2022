@@ -63,6 +63,7 @@ export default {
       messages: false,
       gallery: false,
       credits: false,
+      cake: false,
     },
   }),
   watch: {
@@ -71,10 +72,12 @@ export default {
         this.$root.$emit('projectClosed');
         this.openProject = null;
       } else {
-        if (typeof this.questStatus[this.openProject] !== 'undefined') {
-          this.questStatus[this.openProject] = true;
-        }
-        this.dialogWidth = { credits: 600, quests: 700 }[this.openProject] || '86vw';
+        this.dialogWidth = { credits: 660, quests: 700 }[this.openProject] || '90vw';
+      }
+    },
+    openProject(val) {
+      if (typeof this.questStatus[val] !== 'undefined') {
+        this.questStatus[val] = true;
       }
     },
   },

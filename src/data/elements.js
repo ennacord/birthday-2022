@@ -187,7 +187,7 @@ module.exports = {
     ox: 0.5,
     oy: 0.5,
     text: 'Happy Birthday!',
-    project: null,
+    project: 'cake',
     font: 50,
     dir: 'top',
   },

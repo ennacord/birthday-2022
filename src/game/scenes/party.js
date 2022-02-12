@@ -17,6 +17,8 @@ class PartyScene extends Phaser.Scene {
 
   lightState = true;
 
+  cakeUnlocked = false;
+
   create() {
     const { width, height } = this.sys.game.canvas;
     const centerX = width / 2;
@@ -129,12 +131,13 @@ class PartyScene extends Phaser.Scene {
         // else this.confettiEmitter.stop();
       });
 
-    // Special - Reimu Toggles Lights
+    // Special - Cake Toggles Lights
     let tempConfettiState = true;
     this.movables.cake.image
       .setInteractive({ pixelPerfect: true })
       .off('pointerdown')
       .on('pointerdown', () => {
+        if (!this.cakeUnlocked) return;
         this.lightState = !this.lightState;
         if (this.lightState) {
           Object.values(this.movables).forEach(({ image, sprite }) => {
@@ -161,6 +164,11 @@ class PartyScene extends Phaser.Scene {
           this.confettiEmitter.setVisible(this.confettiState);
         }
       });
+
+    // Cake Unlocked
+    this.game.vue.$root.$on('cakeUnlocked', () => {
+      this.cakeUnlocked = true;
+    });
 
     // Special - Painting Color on Hover
     this.movables.painting.image
@@ -214,6 +222,7 @@ class PartyScene extends Phaser.Scene {
     image
       .setInteractive({ pixelPerfect: true })
       .on('pointerover', () => {
+        if (project === 'cake' && !this.cakeUnlocked) return;
         if (!this.lightState) return;
         image.setAngle((Math.random() * 3) - 1);
         label
