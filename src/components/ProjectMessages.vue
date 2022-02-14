@@ -3,7 +3,7 @@
     <div class="project-description">
       <h2>Birthday Cards</h2>
       <p class="mt-4">
-        Many aloupeeps wish Enna Alouette a very happy birthday this year!
+        Many aloupeeps sincerely wish Enna Alouette a very happy birthday this year!
       </p>
     </div>
     <div class="project-close">
@@ -37,7 +37,7 @@ import twemoji from 'twemoji';
 
 export default {
   data: () => ({
-    source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/enna100k.json',
+    source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/enna2022.json',
     cards: [],
     read: {},
   }),
