@@ -57,7 +57,6 @@ export default {
       const data = fetchSource && fetchSource.data ? fetchSource.data : {};
       this.cards = Object.values(data.messages)
         .sort((a, b) => a.time - b.time);
-      this.tweets = Object.values(data.tweets).map((tweet) => String(tweet.id));
       this.$nextTick(() => {
         twemoji.parse(document.body);
       });

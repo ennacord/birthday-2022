@@ -16,7 +16,6 @@
     "vue": "^2.6.14",
     "vue-masonry": "0.13.0",
     "vue-router": "^3.5.3",
-    "vue-tweet-embed": "^2.4.0",
     "vuetify": "^2.6.2",
     "vuex": "^3.6.2"
   },

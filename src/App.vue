@@ -22,9 +22,6 @@
         <div v-if="openProject === 'messages'">
           <ProjectMessages/>
         </div>
-        <div v-if="openProject === 'gallery'">
-          <ProjectTwitter/>
-        </div>
         <div v-if="openProject === 'credits'">
           <ProjectCredits/>
         </div>
@@ -41,7 +38,6 @@ import ProjectList from '@/data/projects';
 import ProjectVideo from '@/components/ProjectVideo.vue';
 import ProjectImage from '@/components/ProjectImage.vue';
 import ProjectMessages from '@/components/ProjectMessages.vue';
-import ProjectTwitter from '@/components/ProjectTwitter.vue';
 import ProjectCredits from '@/components/ProjectCredits.vue';
 import ProjectQuests from '@/components/ProjectQuests.vue';
 import EnnaBirthday from './game';
@@ -61,7 +57,6 @@ export default {
       bdaydance: false,
       mural: false,
       messages: false,
-      gallery: false,
       credits: false,
       cake: false,
     },
@@ -106,7 +101,6 @@ export default {
     ProjectVideo,
     ProjectImage,
     ProjectMessages,
-    ProjectTwitter,
     ProjectCredits,
     ProjectQuests,
   },
