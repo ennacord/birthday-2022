@@ -27,33 +27,33 @@
       <h3 class="purple--text">Birthday Website</h3>
       <ul class="pb-4">
         <li><strong>jetrico</strong> - Project Head, Lead Programmer, The Afterword</li>
-        <li><strong>nobu_okt</strong> - Room Planning, Art Guides</li>
+        <li><strong>Professor Nobu</strong> - Room Planning, Art Guides</li>
         <li><strong>kurokur0kurO</strong> - Programming assist</li>
         <li><strong>Wikidude</strong> - Management assist</li>
         <li>
           Artworks
           <ul>
-            <li><strong>Enna</strong> - garfield</li>
-            <li><strong>Millie</strong> - jetrico</li>
-            <li><strong>Nina</strong> - nobu_okt</li>
-            <li><strong>Reimu</strong> - Frank</li>
-            <li><strong>Cake</strong> - garfield</li>
-            <li><strong>Balloons w/ Aloupeeps</strong> - Jo-さん</li>
-            <li><strong>Chef Aloupeep</strong> - 6InchSenpaiΔ</li>
-            <li><strong>Rack &amp; Radio</strong> - Frank</li>
-            <li><strong>Sofa</strong> - Wikidude</li>
-            <li><strong>Carpet</strong> - Jo-さん</li>
-            <li><strong>Roomie</strong> - 6InchSenpaiΔ</li>
-            <li><strong>Gifts Pile</strong> - MinniJay</li>
-            <li><strong>Animated Aloupeeps (8 variants)</strong> - Leef</li>
-            <li><strong>Walls, Flooring</strong> - nobu_okt</li>
-            <li><strong>100K Silver Play Button</strong> - nobu_okt</li>
-            <li><strong>TV</strong> - nobu_okt</li>
-            <li><strong>Happy Birthday Banner</strong> - nobu_okt</li>
-            <li><strong>Table</strong> - nobu_okt</li>
-            <li><strong>Easel &amp; Painting</strong> - MB</li>
-            <li><strong>Aloupeeps on the table</strong> - 6InchSenpaiΔ</li>
-            <li><strong>Cursor</strong> - Wikidude</li>
+            <li>Enna - <strong>garfield</strong></li>
+            <li>Millie - <strong>jetrico</strong></li>
+            <li>Nina - <strong>Professor Nobu</strong></li>
+            <li>Reimu - <strong>Frank</strong></li>
+            <li>Cake - <strong>garfield</strong></li>
+            <li>Balloons w/ Aloupeeps - <strong>Jo-さん</strong></li>
+            <li>Chef Aloupeep - <strong>6InchSenpaiΔ</strong></li>
+            <li>Rack &amp; Radio - <strong>Frank</strong></li>
+            <li>Sofa - <strong>Wikidude</strong></li>
+            <li>Carpet - <strong>Jo-さん</strong></li>
+            <li>Roomie - <strong>6InchSenpaiΔ</strong></li>
+            <li>Gifts Pile - <strong>MinniJay</strong></li>
+            <li>Animated Aloupeeps (8 variants) - <strong>Leef</strong></li>
+            <li>Walls, Flooring - <strong>Professor Nobu</strong></li>
+            <li>100K Silver Play Button - <strong>Professor Nobu</strong></li>
+            <li>TV - <strong>Professor Nobu</strong></li>
+            <li>Happy Birthday Banner - <strong>Professor Nobu</strong></li>
+            <li>Table - <strong>Professor Nobu</strong></li>
+            <li>Easel &amp; Painting - <strong>MB</strong></li>
+            <li>Aloupeeps on the table - <strong>6InchSenpaiΔ</strong></li>
+            <li>Cursor - <strong>Wikidude</strong></li>
           </ul>
         </li>
       </ul>
@@ -142,7 +142,7 @@
             <li><strong>KakaTan</strong></li>
             <li><strong>Kuroshi</strong></li>
             <li><strong>MugList</strong></li>
-            <li><strong>Nobu</strong></li>
+            <li><strong>Professor Nobu</strong></li>
             <li><strong>Sasu Crow</strong></li>
             <li><strong>Shoiti</strong></li>
             <li><strong>Yui-chan</strong></li>

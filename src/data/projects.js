@@ -34,7 +34,7 @@ module.exports = {
     description: 'The Aloupeeps wishing an Happy Birthday to our dear Songbird.',
     warnings: 'Using this BGM for the video 🎧Happy Birthday Jazz Waltz - E\'s Jammy Jams [Copyright FREE Music]',
     lead: 'Altina (Main Lead, Video Editing), SasuCrow (Sounds mixing)',
-    credits: 'Airi, Altina, Corochan, Crono, Decimater001, EmotionalSupportStrappon, Frank, JeEztli , Jo-さん, KakaTan, Kuroshi, MugList, Nobu, Sasu Crow, Shoiti, Yui-chan, Zer0Pendragon6',
+    credits: 'Airi, Altina, Corochan, Crono, Decimater001, EmotionalSupportStrappon, Frank, JeEztli , Jo-さん, KakaTan, Kuroshi, MugList, Professor Nobu, Sasu Crow, Shoiti, Yui-chan, Zer0Pendragon6',
     video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
   },
   bdaydance: {
