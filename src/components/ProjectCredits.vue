@@ -118,6 +118,7 @@
             <li><strong>Soul Jam</strong></li>
             <li><strong>Thapperson Apple</strong></li>
             <li><strong>Zer0Pendragon6</strong></li>
+            <li><strong>DarkDisasterKid</strong></li>
           </ul>
         </li>
       </ul>

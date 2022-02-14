@@ -18,7 +18,7 @@ module.exports = {
     title: 'Birthday Cake Baking Relay',
     description: 'A relay type video with the Aloupeeps baking a cake for Enna\'s Birthday',
     lead: 'BONER',
-    credits: 'AllSoonNoDairy, Altina, Arkteezy, Bingu, Boner, Broney Stinson, Crono, Domo Espresso, Jo-さん, Nuit [夜], Petras Emergency Food, Soul Jam, Thapperson Apple, Zer0Pendragon6',
+    credits: 'AllSoonNoDairy, Altina, Arkteezy, Bingu, Boner, Broney Stinson, Crono, Domo Espresso, Jo-さん, Nuit [夜], Petras Emergency Food, Soul Jam, Thapperson Apple, Zer0Pendragon6, DarkDisasterKid',
     video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
   },
   rickroll: {
