@@ -55,7 +55,12 @@ class PartyScene extends Phaser.Scene {
         // Transition
         if (key !== 'room') this.transitionIn(container, dir);
         // Add to movable list
-        this.movables[key] = { container, str, image };
+        this.movables[key] = {
+          container,
+          strX: str * INTENSITY_X,
+          strY: str * INTENSITY_Y,
+          image,
+        };
       });
 
     // Animated Aloupeeps
@@ -69,7 +74,12 @@ class PartyScene extends Phaser.Scene {
       })
         .setDepth(z * 10)
         .setPosition(centerX, centerY);
-      this.movables[`aloupeeps${index}`] = { container, str, sprite: container.sprite };
+      this.movables[`aloupeeps${index}`] = {
+        container,
+        strX: str * INTENSITY_X,
+        strY: str * INTENSITY_Y,
+        sprite: container.sprite,
+      };
       // Interactive object
       if (text) this.interactiveAloupeep(container, text, project, font);
       // Transition
@@ -96,9 +106,11 @@ class PartyScene extends Phaser.Scene {
         // Parallax
         this.input.on('pointermove', (pointer) => {
           if (!this.lightState) return;
-          Object.values(this.movables).forEach(({ container, str }) => {
-            const newX = centerX - ((pointer.x - centerX) * (INTENSITY_X * str));
-            const newY = centerY - ((pointer.y - centerY) * (INTENSITY_Y * str));
+          const dx = pointer.x - centerX;
+          const dy = pointer.y - centerY;
+          Object.values(this.movables).forEach(({ container, strX, strY }) => {
+            const newX = centerX - (dx * strX);
+            const newY = centerY - (dy * strY);
             container.setPosition(newX, newY);
           });
         });
