@@ -146,7 +146,7 @@ module.exports = {
     str: 0.3,
     ox: 0.5,
     oy: 0.5,
-    text: 'Aloucast',
+    text: 'Radioshow',
     project: 'aloucast',
     font: 37,
     dir: 'top',
