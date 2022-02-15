@@ -26,7 +26,7 @@ class PartyScene extends Phaser.Scene {
 
     // Candle Lights
     this.lights.setAmbientColor(0x151515);
-    const light = this.lights.addLight(centerX, height * 0.78, 800, 0xffdd88, 4);
+    const light = this.lights.addLight(centerX, height * 0.74, 900, 0xffdd88, 2);
     this.tweens.add({
       targets: [light],
       x: '+=25',
