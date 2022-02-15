@@ -4,8 +4,8 @@ module.exports = {
     description: 'A cover done by the Enna Alouette Fan server for Enna Alouette on her Birthday',
     warnings: 'Music played is a cover of: ChibaNyan, Ehtyria - God Sees All',
     lead: 'Dippy',
-    credits: '\nVocals:\nAiri, Arkazu, Verm, Hiya! Kk, koshka-sova, AllSoonNoDairy, MugList, Ralphy, EksPtt, Sen, DJCVRRY, Dippy, Kuroshi, Altina, troosh, Miike, DarkDisasterKid, Coronetto, TG, obviebear, CPU Violet, SoulJam, Razy, DomoEspresso, Akello\n \n Cover Inst by: Akello\n \n Mixing:\n DJCVRRY\n SasuCrow\n \n MV: Wick (Andy)\n \n Art:\n Keektang\n Leef\n 6InchSenpai\n \n Leads:\n Dippy (Main Lead)\n SasuCrow (sample cutting)\n Domo Espresso (wrangling Dippy)',
-    video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
+    credits: '\nVocals:\nAiri, Arkazu, Verm, Hiya! Kk, koshka-sova, AllSoonNoDairy, MugList, Ralphy, EksPtt, Sen, Dippy, Kuroshi, Altina, troosh, MiikeMQ, DarkDisasterKid, Coronetto, TG, obviebear, CPU Violet, Soul Jam, Razy, Domo Espresso\n \n Cover Inst by: Akello\n \n Mixing:\n DJCVRRY\n SasuCrow\n \n MV: Wick (Andy)\n \n Art:\n Keektang\n Leef\n 6InchSenpai\n MinniJay\n \n Leads:\n Dippy (Main Lead)\n SasuCrow (sample cutting)\n Domo Espresso (wrangling Dippy)',
+    video: 'https://www.youtube.com/embed/cUKC7S6ka3M',
   },
   aloucast: {
     title: 'Aloupeeps Happy Birthday Enna Podcast Special',

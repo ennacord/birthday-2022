@@ -159,15 +159,17 @@
       <ul class="pb-4">
         <li><strong>Dippy</strong> - Project Head</li>
         <li><strong>Akello</strong> - Cover Instrumental</li>
-        <li><strong>SasuCrow</strong> - Mixing, Sample Cutting</li>
         <li><strong>DJCVRRY</strong> - Mixing</li>
+        <li><strong>SasuCrow</strong> - Mixing, Sample Cutting</li>
         <li><strong>Wick (Andy)</strong> - MV</li>
+        <li><strong>Domo Espresso</strong> - wrangling Dippy</li>
         <li>
           Art
           <ul>
             <li><strong>Keektang</strong></li>
             <li><strong>Leef</strong></li>
             <li><strong>6InchSenpai</strong></li>
+            <li><strong>MinniJay</strong></li>
           </ul>
         </li>
         <li>
@@ -183,24 +185,21 @@
             <li><strong>Ralphy</strong></li>
             <li><strong>EksPtt</strong></li>
             <li><strong>Sen</strong></li>
-            <li><strong>DJCVRRY</strong></li>
             <li><strong>Dippy</strong></li>
             <li><strong>Kuroshi</strong></li>
             <li><strong>Altina</strong></li>
             <li><strong>troosh</strong></li>
-            <li><strong>Miike</strong></li>
+            <li><strong>MiikeMQ</strong></li>
             <li><strong>DarkDisasterKid</strong></li>
             <li><strong>Coronetto</strong></li>
             <li><strong>TG</strong></li>
             <li><strong>obviebear</strong></li>
             <li><strong>CPU Violet</strong></li>
-            <li><strong>SoulJam</strong></li>
+            <li><strong>Soul Jam</strong></li>
             <li><strong>Razy</strong></li>
-            <li><strong>DomoEspresso</strong></li>
-            <li><strong>Akello</strong></li>
+            <li><strong>Domo Espresso</strong></li>
           </ul>
         </li>
-        <li><strong>Domo Espresso</strong> - wrangling Dippy</li>
       </ul>
 
       <h3 class="purple--text">Birthday Dance</h3>
