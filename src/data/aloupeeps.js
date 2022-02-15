@@ -73,7 +73,7 @@ module.exports = [
     y: 0.64,
     z: 100.1,
     scale: 1,
-    str: 0.5,
+    str: 1.2,
     flip: true,
     ox: 0.5,
     oy: 0.6,
