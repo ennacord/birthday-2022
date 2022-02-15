@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 
 import PartyScene from './party';
 
+import ImgEnna from '../assets/images/enna.png';
 import ImgCake from '../assets/images/cake.png';
 import ImgBanner from '../assets/images/banner.png';
 import ImgGifts from '../assets/images/gifts.png';
@@ -54,6 +55,7 @@ class IndexScene extends Phaser.Scene {
     this.scene.add('party', PartyScene);
 
     // Preload assets
+    this.load.image('enna', ImgEnna);
     this.load.image('millie', ImgMillie);
     this.load.image('balloons', ImgBalloons);
     this.load.image('cake', ImgCake);
