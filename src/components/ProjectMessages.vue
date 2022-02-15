@@ -5,6 +5,12 @@
       <p class="mt-4">
         Many aloupeeps sincerely wish Enna Alouette a very happy birthday this year!
       </p>
+      <p class="mt-4 blue--text font-weight-bold">
+        PROTIP: Click on a card to mark it as read. It will persist even across website visits.
+      </p>
+      <p class="mt-4 red--text font-weight-bold">
+        Read messages: {{countRead}} / {{countAll}}
+      </p>
     </div>
     <div class="project-close">
       <v-btn
@@ -23,7 +29,7 @@
         >
           <div class="binder"></div>
           <div class="card-name text-h6 pr-12 py-2">{{item.name}}</div>
-          <div class="card-text text-h6 pr-4 pb-2">{{item.message}}</div>
+          <div class="card-text text-body-1 pr-4 pb-2">{{item.message}}</div>
         </div>
       </div>
     </div>
@@ -40,23 +46,28 @@ export default {
     source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/enna2022.json',
     cards: [],
     read: {},
+    countRead: 0,
+    countAll: 0,
   }),
   methods: {
     toggleRead(key) {
       if (typeof this.read[key] === 'undefined') this.read[key] = false;
       this.read = { ...this.read, [key]: !this.read[key] };
-      localStorage.setItem('read', JSON.stringify(this.read));
+      localStorage.setItem('enna2022_read', JSON.stringify(this.read));
+      this.countRead = Object.values(this.read).filter((v) => !!v).length;
     },
   },
   mounted() {
     // Load data
     (async () => {
-      if (!localStorage.getItem('read')) localStorage.setItem('read', '{}');
-      this.read = JSON.parse(localStorage.getItem('read'));
+      if (!localStorage.getItem('enna2022_read')) localStorage.setItem('enna2022_read', '{}');
+      this.read = JSON.parse(localStorage.getItem('enna2022_read'));
+      this.countRead = Object.values(this.read).filter((v) => !!v).length;
       const fetchSource = await axios.get(this.source).catch(() => null);
       const data = fetchSource && fetchSource.data ? fetchSource.data : {};
       this.cards = Object.values(data.messages)
         .sort((a, b) => a.time - b.time);
+      this.countAll = this.cards.length;
       this.$nextTick(() => {
         twemoji.parse(document.body);
       });
@@ -73,7 +84,7 @@ export default {
     position:absolute;
     top: 0;
     left: 0;
-    width: 380px;
+    width: 280px;
     bottom: 50px;
     padding:0px 10px 0px 0px;
     .project-credits {
@@ -85,7 +96,7 @@ export default {
   .project-content {
     position:absolute;
     top: 0;
-    left: 400px;
+    left: 300px;
     right: 0;
     bottom: 0;
     overflow-y:scroll;
@@ -94,7 +105,7 @@ export default {
     position:absolute;
     left:0;
     bottom:0;
-    width:380px;
+    width:280px;
   }
 }
 
@@ -103,7 +114,7 @@ export default {
   position:relative;
   padding-left:20px;
   min-height:100px;
-  width:32%;
+  width:24%;
   margin:10px 0.5%;
   border:2px solid #858ED1;
   .binder {
@@ -129,13 +140,13 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1264px) {
+@media only screen and (max-width: 1800px) {
   .card {
     width:32%;
     margin:10px 0.5%;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1264px) {
   .card {
     width:48%;
     margin:10px 1%;
