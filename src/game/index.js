@@ -17,12 +17,19 @@ class EnnaBirthday {
         width: 1920,
         height: 937,
       },
-      backgroundColor: Phaser.Display.Color.HexStringToColor('#ffffff').color,
+      backgroundColor: Phaser.Display.Color.HexStringToColor('#858ED1').color,
       plugins,
       scene,
       callbacks: {
         postBoot: () => {
+          // Reference to vue within the Phaser game context
           this.game.vue = vue;
+          // Auto scaling
+          // if (!this.game.device.os.desktop) {}
+          // const {clientWidth, clientHeight } = document.documentElement;
+          // const w = Math.max(clientWidth || 0, window.innerWidth || 0);
+          // const h = Math.max(clientHeight || 0, window.innerHeight || 0);
+          // this.game.scale.setGameSize(1920 * ((w / h) / (1920 / 937)), 937);
         },
       },
     });
