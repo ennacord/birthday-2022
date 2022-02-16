@@ -61,9 +61,10 @@
       <h3 class="purple--text">Aloupeeps Happy Birthday Enna Podcast Special</h3>
       <p class="ma-0">Happy Birthday Podcast for our favorite songbird!</p>
       <ul class="pb-4">
-        <li><strong>Domo Espresso</strong></li>
-        <li><strong>DarkDisasterKid</strong></li>
-        <li><strong>BONER</strong></li>
+        <li><strong>Domo Espresso</strong> - Host</li>
+        <li><strong>DarkDisasterKid</strong> - Host</li>
+        <li><strong>BONER</strong> - Host</li>
+        <li><strong>Elodie</strong> - Radio sounds</li>
       </ul>
 
       <h3 class="purple--text">An Aloupeep Birthday Anthem</h3>
@@ -102,7 +103,7 @@
       <ul class="pb-4">
         <li><strong>BONER</strong> - Project Lead</li>
         <li>
-          Contributors, Aloupeeps in the Video:
+          Baking Aloupeeps:
           <ul>
             <li><strong>AllSoonNoDairy</strong></li>
             <li><strong>Altina</strong></li>
@@ -121,6 +122,15 @@
             <li><strong>DarkDisasterKid</strong></li>
           </ul>
         </li>
+        <li>
+          Singing Happy Birthday:
+          <ul>
+            <li><strong>Nuit [夜]</strong></li>
+            <li><strong>Soul Jam</strong></li>
+            <li><strong>MiikeMQ</strong></li>
+            <li><strong>Professor Nobu</strong></li>
+          </ul>
+        </li>
       </ul>
 
       <h3 class="purple--text">Happy birthday from the Aloupeeps</h3>
@@ -128,6 +138,7 @@
       <ul class="pb-4">
         <li><strong>Altina</strong> - Project Head, Video Editing</li>
         <li><strong>SasuCrow</strong> - Sounds mixing</li>
+        <li><strong>Domo Espresso</strong> - Substitute Head</li>
         <li>
           Voice greetings
           <ul>
