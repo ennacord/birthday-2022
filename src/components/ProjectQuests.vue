@@ -36,20 +36,8 @@ export default {
       mural: 'Check the painting',
       messages: 'Read message cards from Aloupeeps',
       credits: 'Aloupeep with sunglasses',
-      cake: '??? Bonus ????',
     },
   }),
-  mounted() {
-    // Count remaining
-    const remain = Object.entries(this.questStatus)
-      .filter(([project, status]) => !status && project !== 'cake')
-      .length;
-    // If no more remaining, unlock the cake
-    if (!remain) {
-      this.questText.cake = 'Blow the candles on the cake';
-      this.$root.$emit('cakeUnlocked');
-    }
-  },
 };
 </script>
 

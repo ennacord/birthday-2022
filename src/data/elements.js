@@ -197,9 +197,9 @@ module.exports = {
     str: -0.45,
     ox: 0.5,
     oy: 0.5,
-    text: 'Happy Birthday!',
+    text: 'Blow the Candle!',
     project: 'cake',
-    font: 50,
+    font: 30,
     dir: 'top',
   },
   millie: {

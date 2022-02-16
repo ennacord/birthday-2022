@@ -58,7 +58,6 @@ export default {
       mural: false,
       messages: false,
       credits: false,
-      cake: false,
     },
   }),
   watch: {

@@ -17,7 +17,9 @@ class PartyScene extends Phaser.Scene {
 
   lightState = true;
 
-  cakeUnlocked = false;
+  ambientLight = null;
+
+  candleLight = null;
 
   create() {
     const { width, height } = this.sys.game.canvas;
@@ -25,18 +27,9 @@ class PartyScene extends Phaser.Scene {
     const centerY = height / 2;
 
     // Candle Lights
-    this.lights.setAmbientColor(0x151515);
-    const light = this.lights.addLight(centerX, height * 0.74, 900, 0xffdd88, 2);
-    this.tweens.add({
-      targets: [light],
-      x: '+=25',
-      y: '+=5',
-      duration: 3000,
-      ease: 'Back.easeInOut',
-      repeat: -1,
-      yoyo: true,
-    });
-    this.lights.disable();
+    this.lights.setAmbientColor(0x0e0e0e);
+    this.lights.addLight(width * 0.477, height * 0.73, 900, 0xffdd88, 2);
+    this.lights.addLight(width * 0.477, height * 0.73, 50, 0xffffff, 3);
 
     // Animation transition
     this.transition = this.tweens.createTimeline();
@@ -51,7 +44,7 @@ class PartyScene extends Phaser.Scene {
         if (scale) image.setScale(scale);
         container.add(image);
         // Interactive object
-        if (text) this.interactiveElement(container, image, text, project, font);
+        if (text) this.interactiveElement(key, container, image, text, project, font);
         // Transition
         if (key !== 'room') this.transitionIn(container, dir);
         // Add to movable list
@@ -86,20 +79,6 @@ class PartyScene extends Phaser.Scene {
       this.transitionIn(container, 'top');
     });
 
-    // Overlay
-    this.input.topOnly = true;
-    this.overlay = this.add.rectangle(centerX, centerY, 1920, 937, 0x1a1a1a)
-      .setInteractive()
-      .setAlpha(0.75)
-      .setDepth(4000)
-      .on('pointerdown', () => {})
-      .setVisible(false);
-
-    // Recover from Overlay
-    this.game.vue.$root.$on('projectClosed', () => {
-      this.overlay.setVisible(false);
-    });
-
     // Transition Animation
     this.transition
       .on('complete', () => {
@@ -117,80 +96,31 @@ class PartyScene extends Phaser.Scene {
       })
       .play();
 
+    // Overlay
+    this.input.topOnly = true;
+    this.overlay = this.add.rectangle(centerX, centerY, 1920, 937, 0x1a1a1a)
+      .setInteractive()
+      .setAlpha(0.75)
+      .setDepth(4000)
+      .on('pointerdown', () => {})
+      .setVisible(false);
+    this.game.vue.$root.$on('projectClosed', () => {
+      this.overlay.setVisible(false);
+    });
+
     // Confetti
-    const confettiParticles = this.add.particles('confetti')
-      .setDepth(3500);
-    this.confettiEmitter = confettiParticles.createEmitter({
-      frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
-      x: { min: 0, max: 1920 },
-      y: { min: -300, max: -30 },
-      scale: { min: 0.2, max: 0.5 },
-      gravityX: -3,
-      gravityY: 50,
-      frequency: 100,
-      lifespan: 7000,
-      speed: { min: 2, max: 15 },
-    });
-
-    // Special - Millie Toggles Confetti
-    this.movables.millie.image
-      .setInteractive({ pixelPerfect: true })
-      .off('pointerdown')
-      .on('pointerdown', () => {
-        this.confettiState = !this.confettiState;
-        this.confettiEmitter.setVisible(this.confettiState);
-        // if (this.confettiState) this.confettiEmitter.start();
-        // else this.confettiEmitter.stop();
-      });
-
-    // Special - Cake Toggles Lights
-    let tempConfettiState = true;
-    this.movables.cake.image
-      .setInteractive({ pixelPerfect: true })
-      .off('pointerdown')
-      .on('pointerdown', () => {
-        if (!this.cakeUnlocked) return;
-        this.lightState = !this.lightState;
-        if (this.lightState) {
-          Object.values(this.movables).forEach(({ image, sprite }) => {
-            if (image) image.setPipeline('MultiPipeline');
-            if (sprite) {
-              sprite.setPipeline('MultiPipeline');
-              sprite.anims.restart();
-            }
-          });
-          this.lights.disable();
-          this.confettiState = tempConfettiState;
-          this.confettiEmitter.setVisible(this.confettiState);
-        } else {
-          Object.values(this.movables).forEach(({ image, sprite }) => {
-            if (image) image.setPipeline('Light2D');
-            if (sprite) {
-              sprite.setPipeline('Light2D');
-              sprite.stop();
-            }
-          });
-          this.lights.enable();
-          tempConfettiState = this.confettiState;
-          this.confettiState = false;
-          this.confettiEmitter.setVisible(this.confettiState);
-        }
-      });
-
-    // Cake Unlocked
-    this.game.vue.$root.$on('cakeUnlocked', () => {
-      this.cakeUnlocked = true;
-    });
-
-    // Special - Painting Color on Hover
-    this.movables.painting.image
-      .setInteractive({ pixelPerfect: true })
-      .on('pointerover', () => {
-        if (!this.lightState) return;
-        this.movables.painting.image.setTexture('painting-color');
-      })
-      .on('pointerout', () => {
-        this.movables.painting.image.setTexture('painting');
+    this.confettiEmitter = this.add.particles('confetti')
+      .setDepth(3500)
+      .createEmitter({
+        frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
+        x: { min: 0, max: 1920 },
+        y: { min: -300, max: -30 },
+        scale: { min: 0.2, max: 0.5 },
+        gravityX: -3,
+        gravityY: 50,
+        frequency: 100,
+        lifespan: 7000,
+        speed: { min: 2, max: 15 },
       });
   }
 
@@ -225,7 +155,7 @@ class PartyScene extends Phaser.Scene {
     });
   }
 
-  interactiveElement(container, image, text, project, fontSize = 30) {
+  interactiveElement(key, container, image, text, project, fontSize = 30) {
     // Label
     const label = this.createLabel(image.x, image.y, text, fontSize)
       .setDepth(2000 + image.depth);
@@ -234,22 +164,37 @@ class PartyScene extends Phaser.Scene {
     image
       .setInteractive({ pixelPerfect: true })
       .on('pointerover', () => {
-        if (project === 'cake' && !this.cakeUnlocked) return;
-        if (!this.lightState) return;
-        image.setAngle((Math.random() * 3) - 1);
-        label
-          .setAngle((Math.random() * 11) - 5)
-          .setVisible(true);
+        // Cake available if lights are off, but not when on
+        // Everything else available only if lights are on
+        if ((key !== 'cake' && this.lightState) || (key === 'cake' && !this.lightState)) {
+          image.setAngle((Math.random() * 3) - 1);
+          label
+            .setAngle((Math.random() * 11) - 5)
+            .setVisible(true);
+        }
+        // Painting special hover
+        if (key === 'painting' && this.lightState) image.setTexture('painting-color');
       })
       .on('pointerout', () => {
         image.setAngle(0);
         label.setVisible(false);
+        if (key === 'painting') image.setTexture('painting');
       })
       .on('pointerdown', () => {
-        if (!this.lightState) return;
-        this.overlay.setVisible(true);
-        this.game.vue.dialog = true;
-        this.game.vue.openProject = project;
+        if (key === 'cake') {
+          // Cake available if lights off
+          if (!this.lightState) this.blowCakeCandles();
+        } else if (this.lightState && key === 'millie') {
+          // Millie special interaction when lights on, toggles confetti
+          this.toggleConfetti();
+        } else if (this.lightState) {
+          // Everything else available only if lights are on
+          this.overlay.setVisible(true);
+          this.game.vue.dialog = true;
+          this.game.vue.openProject = project;
+          // Special baking relay interaction, lights off into blowing candles
+          if (project === 'bakingrelay') this.lightsOff();
+        }
       });
   }
 
@@ -290,6 +235,39 @@ class PartyScene extends Phaser.Scene {
     })
       .setOrigin(0.5, 0.5)
       .setVisible(false);
+  }
+
+  toggleConfetti() {
+    this.confettiState = !this.confettiState;
+    this.confettiEmitter.setVisible(this.confettiState);
+  }
+
+  lightsOff() {
+    this.lightState = false;
+    Object.values(this.movables).forEach(({ image, sprite }) => {
+      if (image) image.setPipeline('Light2D');
+      if (sprite) {
+        sprite.setPipeline('Light2D');
+        sprite.stop();
+      }
+    });
+    this.lights.enable();
+    this.confettiState = false;
+    this.confettiEmitter.setVisible(this.confettiState);
+  }
+
+  blowCakeCandles() {
+    this.lightState = true;
+    Object.values(this.movables).forEach(({ image, sprite }) => {
+      if (image) image.setPipeline('MultiPipeline');
+      if (sprite) {
+        sprite.setPipeline('MultiPipeline');
+        sprite.anims.restart();
+      }
+    });
+    this.lights.disable();
+    this.confettiState = true;
+    this.confettiEmitter.setVisible(this.confettiState);
   }
 }
 
