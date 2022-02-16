@@ -111,19 +111,19 @@ class PartyScene extends Phaser.Scene {
     });
 
     // Confetti
-    this.confettiEmitter = this.add.particles('confetti')
-      .setDepth(3500)
-      .createEmitter({
-        frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
-        x: { min: 0, max: 1920 },
-        y: { min: -300, max: -30 },
-        scale: { min: 0.2, max: 0.5 },
-        gravityX: -3,
-        gravityY: 50,
-        frequency: 100,
-        lifespan: 7000,
-        speed: { min: 2, max: 15 },
-      });
+    this.confetti = this.add.particles('confetti');
+    this.confettiEmitter = this.confetti.setDepth(3500).createEmitter({
+      frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
+      x: { min: 0, max: 1920 },
+      y: { min: -300, max: -30 },
+      scale: { min: 0.2, max: 0.5 },
+      gravityX: -3,
+      gravityY: 50,
+      frequency: 100,
+      lifespan: 7000,
+      speed: { min: 2, max: 15 },
+      blendMode: 'ADD',
+    });
   }
 
   transitionIn(container, dir) {
@@ -278,6 +278,23 @@ class PartyScene extends Phaser.Scene {
     this.lights.disable();
     this.confettiState = true;
     this.confettiEmitter.setVisible(this.confettiState);
+    // More confetti
+    const { width, height } = this.sys.game.canvas;
+    this.confetti
+      .createEmitter({
+        frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
+        x: width * 0.648,
+        y: height * 0.775,
+        scale: { min: 0.3, max: 0.6 },
+        gravityY: 150,
+        angle: { min: -170, max: -80 },
+        frequency: 1,
+        quantity: 40,
+        lifespan: 9000,
+        speed: { min: 300, max: 400 },
+        maxParticles: 40,
+        blendMode: 'ADD',
+      });
   }
 
   toggleRadio() {
