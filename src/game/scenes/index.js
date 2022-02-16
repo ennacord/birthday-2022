@@ -1,6 +1,8 @@
 import Phaser from 'phaser';
 
 import PartyScene from './party';
+import UpdateFoundScene from './update-found';
+import UpdateDoneScene from './update-done';
 
 import ImgEnna from '../assets/images/enna.png';
 import ImgCake from '../assets/images/cake.png';
@@ -51,6 +53,9 @@ class IndexScene extends Phaser.Scene {
   loadingText = null;
 
   preload() {
+    // Listen to SW Events
+    this.swEvents();
+
     // Google Fonts
     this.googleFonts.preload(this.load);
 
@@ -65,6 +70,8 @@ class IndexScene extends Phaser.Scene {
 
     // Add scenes
     this.scene.add('party', PartyScene);
+    this.scene.add('update-found', UpdateFoundScene);
+    this.scene.add('update-done', UpdateDoneScene);
 
     // Preload assets
     this.load.image('enna', ImgEnna);
@@ -161,6 +168,17 @@ class IndexScene extends Phaser.Scene {
         strokeThickness: 5,
       }).setOrigin(0.5, 0.5);
     }
+  }
+
+  swEvents() {
+    document.addEventListener('swUpdateFound', () => {
+      console.log('swUpdateFound');
+      this.scene.start('update-found');
+    });
+    document.addEventListener('swUpdated', () => {
+      console.log('swUpdated');
+      this.scene.start('update-done');
+    });
   }
 }
 
