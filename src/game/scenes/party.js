@@ -21,6 +21,8 @@ class PartyScene extends Phaser.Scene {
 
   candleLight = null;
 
+  radioAudio = null;
+
   create() {
     const { width, height } = this.sys.game.canvas;
     const centerX = width / 2;
@@ -187,11 +189,19 @@ class PartyScene extends Phaser.Scene {
         } else if (this.lightState && key === 'millie') {
           // Millie special interaction when lights on, toggles confetti
           this.toggleConfetti();
+        } else if (this.lightState && key === 'radio') {
+          // Radio special interaction when lights on, plays Aloucast
+          this.toggleRadio();
+          this.game.vue.openProject = project;
         } else if (this.lightState) {
           // Everything else available only if lights are on
           this.overlay.setVisible(true);
           this.game.vue.dialog = true;
           this.game.vue.openProject = project;
+          if (this.radioAudio) {
+            this.radioAudio.stop();
+            this.radioAudio = null;
+          }
           // Special baking relay interaction, lights off into blowing candles
           if (project === 'bakingrelay') this.lightsOff();
         }
@@ -268,6 +278,28 @@ class PartyScene extends Phaser.Scene {
     this.lights.disable();
     this.confettiState = true;
     this.confettiEmitter.setVisible(this.confettiState);
+  }
+
+  toggleRadio() {
+    if (!this.radioAudio) {
+      // Audio. Randomize tune in/out sounds
+      const tuneIn = this.sound.add(`radio_in_0${Math.floor(Math.random() * 4) + 1}`).setVolume(0.4);
+      this.radioAudio = this.sound.add('aloucast').setVolume(0.8);
+      const tuneOut = this.sound.add(`radio_out_0${Math.floor(Math.random() * 3) + 1}`).setVolume(0.4);
+      // Events
+      tuneIn.on('complete', () => { this.radioAudio.play(); });
+      this.radioAudio.on('complete', () => {
+        this.radioAudio = null;
+        tuneOut.play();
+      });
+      // Start
+      tuneIn.play();
+    } else {
+      const tuneOut = this.sound.add(`radio_out_0${Math.floor(Math.random() * 3) + 1}`).setVolume(0.4);
+      tuneOut.play();
+      this.radioAudio.stop();
+      this.radioAudio = null;
+    }
   }
 }
 

@@ -23,7 +23,9 @@ import ImgRack from '../assets/images/rack.png';
 import ImgRadio from '../assets/images/radio.png';
 import ImgTv from '../assets/images/tv.png';
 import ImgCarpet from '../assets/images/carpet.png';
+
 import Cursor3 from '../assets/cursor/cursor3.png';
+
 import Dancing from '../assets/spritesheets/dancing.png';
 import Geddan from '../assets/spritesheets/geddan.png';
 import Specialist from '../assets/spritesheets/specialist.png';
@@ -32,8 +34,18 @@ import Alousus from '../assets/spritesheets/alousus.png';
 import Dazed from '../assets/spritesheets/dazed.png';
 import Doublepeeps from '../assets/spritesheets/doublepeeps.png';
 import NormalDance from '../assets/spritesheets/normaldance.png';
+
 import confettiPng from '../assets/atlas/confetti.png';
 import confettiJson from '../assets/atlas/confetti.json';
+
+import audioAloucast from '../assets/audio/aloucast.mp3';
+import audioRadioIn1 from '../assets/audio/radio_in_01.mp3';
+import audioRadioIn2 from '../assets/audio/radio_in_02.mp3';
+import audioRadioIn3 from '../assets/audio/radio_in_03.mp3';
+import audioRadioIn4 from '../assets/audio/radio_in_04.mp3';
+import audioRadioOut1 from '../assets/audio/radio_out_01.mp3';
+import audioRadioOut2 from '../assets/audio/radio_out_02.mp3';
+import audioRadioOut3 from '../assets/audio/radio_out_03.mp3';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -87,6 +99,15 @@ class IndexScene extends Phaser.Scene {
     this.load.spritesheet('normaldance', NormalDance, { frameWidth: 1600 / 8, frameHeight: 200 });
 
     this.load.atlas('confetti', confettiPng, confettiJson);
+
+    this.load.audio('aloucast', audioAloucast);
+    this.load.audio('radio_in_01', audioRadioIn1);
+    this.load.audio('radio_in_02', audioRadioIn2);
+    this.load.audio('radio_in_03', audioRadioIn3);
+    this.load.audio('radio_in_04', audioRadioIn4);
+    this.load.audio('radio_out_01', audioRadioOut1);
+    this.load.audio('radio_out_02', audioRadioOut2);
+    this.load.audio('radio_out_03', audioRadioOut3);
   }
 
   async create() {
