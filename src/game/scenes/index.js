@@ -89,9 +89,10 @@ class IndexScene extends Phaser.Scene {
     this.load.image('tv', ImgTv);
     this.load.image('carpet', ImgCarpet);
 
-    this.load.spritesheet('dancing', Dancing, { frameWidth: 7680 / 12, frameHeight: 201 });
-    this.load.spritesheet('geddan', Geddan, { frameWidth: 4320 / 24, frameHeight: 180 });
-    this.load.spritesheet('specialist', Specialist, { frameWidth: 6120 / 34, frameHeight: 180 });
+    this.load.spritesheet('dancing', Dancing, { frameWidth: 3000 / 12, frameHeight: 79 });
+    this.load.spritesheet('geddan', Geddan, { frameWidth: 3000 / 24, frameHeight: 125 });
+    this.load.spritesheet('specialist', Specialist, { frameWidth: 3000 / 34, frameHeight: 88 });
+
     this.load.spritesheet('pwoot', Pwoot, { frameWidth: 2424 / 12, frameHeight: 202 });
     this.load.spritesheet('alousus', Alousus, { frameWidth: 2600 / 13, frameHeight: 200 });
     this.load.spritesheet('dazed', Dazed, { frameWidth: 1600 / 8, frameHeight: 200 });
