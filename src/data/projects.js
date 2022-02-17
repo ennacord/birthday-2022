@@ -26,8 +26,8 @@ module.exports = {
     description: 'An acapella tribute to wish our wonderful songbird a Happy Birthday!',
     warnings: 'Gameplay clips from Enna\'s previous streams',
     lead: 'Soul Jam',
-    credits: '\nVideo: Soul Jam\nArtwork: MinniJay\nArrangement: Soul Jam\nAlternate lyrics: Soul Jam\nMix: DJ CVRRY / Soul Jam\n\nVocals:\naletheia, AllSoonNoDairy, Arkazu, coronetto, DarkDisasterKid, Dippy (Professional Simp), Domo Espresso, EksPtt, hiya! kk, MugList, Ralphy, Sasu Crow, Soul Jam, TG, troosh, Verm',
-    video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
+    credits: '\nVideo: Soul Jam\nArrangement: Soul Jam\nAlternate Lyrics: Soul Jam\nMix: DJ CVRRY / Soul Jam\nVocals: \naletheia / AllSoonNoDairy / Arkazu / coronetto / DarkDisasterKid / Dippy (Professional Simp) / Domo Espresso / EksPtt / hiya! kk / MugList / Ralphy / Sasu Crow / Soul Jam / TG / troosh / Verm\nArtwork: MinniJay\nAloupeep Art: Leef / Keektang / 6InchSenpai / Professor Nobu',
+    video: 'https://www.youtube.com/embed/8EWkFGf4c-E',
   },
   bdayvoices: {
     title: 'Happy birthday from the Aloupeeps',

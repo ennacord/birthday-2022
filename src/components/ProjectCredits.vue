@@ -71,7 +71,6 @@
       <p class="ma-0">An acapella tribute to wish our wonderful songbird a Happy Birthday!</p>
       <ul class="pb-4">
         <li>Video - <strong>Soul Jam</strong></li>
-        <li>Artwork - <strong>MinniJay</strong></li>
         <li>Arrangement - <strong>Soul Jam</strong></li>
         <li>Alternate lyrics - <strong>Soul Jam</strong></li>
         <li>Mix - <strong>DJ CVRRY / Soul Jam</strong></li>
@@ -94,6 +93,15 @@
             <li><strong>TG</strong></li>
             <li><strong>troosh</strong></li>
             <li><strong>Verm</strong></li>
+          </ul>
+        </li>
+        <li>Artwork - <strong>MinniJay</strong></li>
+        <li>Aloupeep Art
+          <ul>
+            <li><strong>Leef</strong></li>
+            <li><strong>Keektang</strong></li>
+            <li><strong>6InchSenpai</strong></li>
+            <li><strong>Professor Nobu</strong></li>
           </ul>
         </li>
       </ul>
