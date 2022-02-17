@@ -15,9 +15,7 @@
     "twemoji": "^13.1.0",
     "vue": "^2.6.14",
     "vue-masonry": "0.13.0",
-    "vue-router": "^3.5.3",
-    "vuetify": "^2.6.2",
-    "vuex": "^3.6.2"
+    "vuetify": "^2.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
