@@ -2,14 +2,12 @@
   <div class="project">
     <div class="project-description">
       <h2>Birthday Cards</h2>
-      <p class="mt-4">
+      <p>
         Many aloupeeps sincerely wish Enna Alouette a very happy birthday this year!
       </p>
-      <p class="mt-4 blue--text font-weight-bold">
+      <p class="blue--text">
         PROTIP: Click on a card to mark it as read. It will persist even across website visits.
-      </p>
-      <p class="mt-4 red--text font-weight-bold">
-        Read messages: {{countRead}} / {{countAll}}
+        <span class="red--text font-weight-bold">Read messages:  {{countRead}} / {{countAll}}</span>
       </p>
     </div>
     <div class="project-close">
@@ -78,34 +76,39 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-  height:80vh;
+  height:86vh;
   position:relative;
   .project-description {
     position:absolute;
     top: 0;
     left: 0;
-    width: 280px;
-    bottom: 50px;
-    padding:0px 10px 0px 0px;
-    .project-credits {
-      strong {
-        white-space:pre-wrap;
-      }
+    right: 0;
+    height: 80px;
+    overflow:hidden;
+    h3 {
+      padding:0;
+      margin:0;
+    }
+    p {
+      padding:0;
+      margin:0;
     }
   }
   .project-content {
     position:absolute;
-    top: 0;
-    left: 300px;
+    top: 90px;
+    left: 0;
     right: 0;
     bottom: 0;
+    background:#c1c5dd;
     overflow-y:scroll;
   }
   .project-close {
     position:absolute;
-    left:0;
-    bottom:0;
-    width:280px;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
   }
 }
 

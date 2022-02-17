@@ -1,17 +1,8 @@
 <template>
   <div class="project">
     <div class="project-description">
-      <h2>{{title}}</h2>
-      <p v-if="description" class="mt-4">{{description}}</p>
-      <p v-if="warnings">
-        Notices: <strong class="red--text text--darken-3">{{warnings}}</strong>
-      </p>
-      <p v-if="lead">
-        Project Lead: <strong>{{lead}}</strong>
-      </p>
-      <p v-if="credits" class="project-credits">
-        Contributors: <strong>{{credits}}</strong>
-      </p>
+      <h3>{{title}}</h3>
+      <p>{{description}}</p>
     </div>
     <div class="project-close">
       <v-btn
@@ -43,49 +34,37 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-  height:80vh;
+  height:86vh;
   position:relative;
   .project-description {
     position:absolute;
     top: 0;
     left: 0;
-    width: 380px;
-    bottom: 50px;
-    overflow-y:scroll;
-    padding:0px 10px 0px 0px;
-    .project-credits {
-      strong {
-        white-space:pre-wrap;
-      }
+    right: 0;
+    height: 60px;
+    overflow:none;
+    h3 {
+      padding:0;
+      margin:0;
+    }
+    p {
+      padding:0;
+      margin:0;
     }
   }
   .project-content {
     position:absolute;
-    top: 0;
-    left: 400px;
+    top: 60px;
+    left: 0;
     right: 0;
     bottom: 0;
   }
   .project-close {
     position:absolute;
-    left:0;
-    bottom:0;
-    width:380px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .project {
-    .project-description { display:none; }
-    .project-content { left:100px; }
-    .project-close {
-      position:absolute;
-      top:40%;
-      left:0;
-      bottom:0;
-      right:auto;
-      width:90px;
-    }
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
   }
 }
 </style>

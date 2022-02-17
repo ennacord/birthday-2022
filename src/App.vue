@@ -66,7 +66,7 @@ export default {
         this.$root.$emit('projectClosed');
         this.openProject = null;
       } else {
-        this.dialogWidth = { credits: 660, quests: 700 }[this.openProject] || '90vw';
+        this.dialogWidth = { credits: 660, quests: 700 }[this.openProject] || '96vw';
       }
     },
     openProject(val) {

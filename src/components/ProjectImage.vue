@@ -2,9 +2,7 @@
   <div class="project">
     <div class="project-description">
       <h2>Drawing Board</h2>
-      <p class="mt-4">
-        Some aloupeeps drew their greetings on a shared community board!
-      </p>
+      <p>Some aloupeeps drew their greetings on a shared community board!</p>
     </div>
     <div class="project-close">
       <v-btn
@@ -44,49 +42,37 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-  height:80vh;
+  height:86vh;
   position:relative;
   .project-description {
     position:absolute;
     top: 0;
     left: 0;
-    width: 380px;
-    bottom: 50px;
-    padding:0px 10px 0px 0px;
-    .project-credits {
-      strong {
-        white-space:pre-wrap;
-      }
+    right: 0;
+    height: 70px;
+    overflow:none;
+    h3 {
+      padding:0;
+      margin:0;
+    }
+    p {
+      padding:0;
+      margin:0;
     }
   }
   .project-content {
     position:absolute;
-    top: 0;
-    left: 400px;
+    top: 70px;
+    left: 0;
     right: 0;
     bottom: 0;
-    overflow:auto;
   }
   .project-close {
     position:absolute;
-    left:0;
-    bottom:0;
-    width:380px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .project {
-    .project-description { display:none; }
-    .project-content { left:100px; }
-    .project-close {
-      position:absolute;
-      top:40%;
-      left:0;
-      bottom:0;
-      right:auto;
-      width:90px;
-    }
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
   }
 }
 </style>
