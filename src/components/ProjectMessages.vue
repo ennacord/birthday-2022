@@ -18,7 +18,7 @@
       </v-btn>
     </div>
     <div class="project-content">
-      <div v-masonry transition-duration="0.3s" item-selector=".card">
+      <div v-masonry="'bdaycards'" transition-duration="0.3s" item-selector=".card" stagger="0s">
         <div
           v-masonry-tile
           :class="[ 'card', read[item.name] ? 'card-read' : '' ]"
@@ -68,6 +68,10 @@ export default {
       this.countAll = this.cards.length;
       this.$nextTick(() => {
         twemoji.parse(document.body);
+        this.$redrawVueMasonry('bdaycards');
+        setTimeout(() => {
+          this.$redrawVueMasonry('bdaycards');
+        }, 1200);
       });
     })();
   },
