@@ -8,7 +8,7 @@ module.exports = [
     str: 1,
     ox: 0.7,
     oy: 0.5,
-    text: 'Birthday Messages',
+    text: 'Birthday Wishes',
     project: 'bdayvoices',
     font: 40,
   },
@@ -77,9 +77,6 @@ module.exports = [
     flip: true,
     ox: 0.5,
     oy: 0.6,
-    text: 'Birthday Dance',
-    project: 'bdaydance',
-    font: 30,
   },
   {
     sprite: 'pwoot',
@@ -105,6 +102,9 @@ module.exports = [
     z: 103,
     scale: 0.6,
     str: 0.3,
+    text: 'Dance Dance',
+    project: 'bdaydance',
+    font: 30,
     flip: true,
   },
   {
