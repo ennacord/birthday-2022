@@ -304,7 +304,9 @@ class PartyScene extends Phaser.Scene {
       this.radioAudio = this.sound.add('aloucast').setVolume(0.8);
       const tuneOut = this.sound.add(`radio_out_0${Math.floor(Math.random() * 3) + 1}`).setVolume(0.4);
       // Events
-      tuneIn.on('complete', () => { this.radioAudio.play(); });
+      tuneIn.on('complete', () => {
+        if (this.radioAudio) this.radioAudio.play();
+      });
       this.radioAudio.on('complete', () => {
         this.radioAudio = null;
         tuneOut.play();
