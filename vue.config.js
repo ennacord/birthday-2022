@@ -24,15 +24,15 @@ module.exports = {
       args[0].title = 'Happy Birthday Enna!';
       // eslint-disable-next-line no-param-reassign
       args[0].meta = {
-        description: 'Aloupeeps celebrate Enna Alouette\'s Birthday in 2022',
+        description: 'Aloupeeps celebrate Enna Alouette\'s Birthday!',
         'og:title': 'Happy Birthday Enna!',
         'og:type': 'website',
-        'og:description': 'Aloupeeps celebrate Enna Alouette\'s Birthday in 2022',
-        // 'og:image': 'https://bday2022.ennaalouette.com/share.png',
+        'og:description': 'Aloupeeps celebrate Enna Alouette\'s Birthday!',
+        'og:image': 'https://birthday.ennaalouette.com/ogimage.png',
         'twitter:card': 'summary_large_image',
         'twitter:title': 'Happy Birthday Enna!',
-        'twitter:description': 'Aloupeeps celebrate Enna Alouette\'s Birthday in 2022',
-        // 'twitter:image': 'https://bday2022.ennaalouette.com/share.png',
+        'twitter:description': 'Aloupeeps celebrate Enna Alouette\'s Birthday!',
+        'twitter:image': 'https://birthday.ennaalouette.com/ogimage.png',
       };
       return args;
     });
