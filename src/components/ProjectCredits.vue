@@ -14,22 +14,24 @@
         their love and sincere birthday wishes to Enna.
       </p>
       <p>
-        The first are foremost "thank you" is for Enna Alouette.
+        The first and foremost "thank you" is for Enna Alouette.
         We have said many times, you are the one who brought us together,
         you are the one making us smile, laugh, and inspired.
+        In this special day, let us be the one giving back to you.
       </p>
       <p>
-        This is the day when we appreciate that Enna graced our plane of existence.
+        This is the day when we appreciate that Enna Alouette graced our world.
         This day may have added 1 to your age, but isn't it a small price
         to pay for the next whole year of fun moments we'll enjoy together?
       </p>
 
       <h3 class="purple--text">Birthday Website</h3>
       <ul class="pb-4">
-        <li><strong>jetrico</strong> - Project Head, Lead Programmer, The Afterword</li>
+        <li><strong>jetrico</strong> - Project Lead, Lead Programmer, The Afterword</li>
         <li><strong>Professor Nobu</strong> - Room Planning, Art Guides</li>
         <li><strong>kurokur0kurO</strong> - Programming assist</li>
         <li><strong>Wikidude</strong> - Management assist</li>
+        <li><strong>Elodie</strong> - Sound Engineer</li>
         <li>
           Artworks
           <ul>
@@ -56,6 +58,9 @@
             <li>Cursor - <strong>Wikidude</strong></li>
           </ul>
         </li>
+        <li>
+          and everyone else on Ennacord giving suggestions, feedback, testing, and reporting bugs
+        </li>
       </ul>
 
       <h3 class="purple--text">Aloupeeps Happy Birthday Enna Podcast Special</h3>
@@ -64,7 +69,7 @@
         <li><strong>Domo Espresso</strong> - Host</li>
         <li><strong>DarkDisasterKid</strong> - Host</li>
         <li><strong>BONER</strong> - Host</li>
-        <li><strong>Elodie</strong> - Radio sounds</li>
+        <li><strong>Elodie</strong> - Sound Engineer</li>
       </ul>
 
       <h3 class="purple--text">An Aloupeep Birthday Anthem</h3>
@@ -77,31 +82,24 @@
         <li>
           Vocals
           <ul>
-            <li><strong>aletheia</strong></li>
-            <li><strong>AllSoonNoDairy</strong></li>
-            <li><strong>Arkazu</strong></li>
-            <li><strong>coronetto</strong></li>
-            <li><strong>DarkDisasterKid</strong></li>
-            <li><strong>Dippy (Professional Simp)</strong></li>
-            <li><strong>Domo Espresso</strong></li>
-            <li><strong>EksPtt</strong></li>
-            <li><strong>hiya! kk</strong></li>
-            <li><strong>MugList</strong></li>
-            <li><strong>Ralphy</strong></li>
-            <li><strong>Sasu Crow</strong></li>
-            <li><strong>Soul Jam</strong></li>
-            <li><strong>TG</strong></li>
-            <li><strong>troosh</strong></li>
-            <li><strong>Verm</strong></li>
+            <li>
+              <strong>
+                aletheia, AllSoonNoDairy, Arkazu, coronetto, DarkDisasterKid,
+                Dippy (Professional Simp), Domo Espresso, EksPtt, hiya! kk, MugList,
+                Ralphy, Sasu Crow, Soul Jam, TG, troosh, Verm
+              </strong>
+            </li>
           </ul>
         </li>
         <li>Artwork - <strong>MinniJay</strong></li>
-        <li>Aloupeep Art
+        <li>
+          Aloupeep Art
           <ul>
-            <li><strong>Leef</strong></li>
-            <li><strong>Keektang</strong></li>
-            <li><strong>6InchSenpai</strong></li>
-            <li><strong>Professor Nobu</strong></li>
+            <li>
+              <strong>
+                Leef, Keektang, 6InchSenpai, Jo-さん
+              </strong>
+            </li>
           </ul>
         </li>
       </ul>
@@ -109,34 +107,41 @@
       <h3 class="purple--text">Birthday Cake Baking Relay</h3>
       <p class="ma-0">A relay type video with the Aloupeeps baking a cake for Enna's Birthday</p>
       <ul class="pb-4">
-        <li><strong>BONER</strong> - Project Lead</li>
+        <li>Project Lead - <strong>BONER</strong></li>
+        <li>Relay Captions - <strong>Professor Nobu, Arkazu</strong></li>
+        <li>Video Editing - <strong>Domo Espresso</strong></li>
+        <li>Intro and Outro Videos - <strong>SoloSnivy</strong></li>
+        <li>Design - <strong>Elodie</strong></li>
         <li>
-          Baking Aloupeeps:
+          Baking Aloupeeps
           <ul>
-            <li><strong>AllSoonNoDairy</strong></li>
-            <li><strong>Altina</strong></li>
-            <li><strong>Arkteezy</strong></li>
-            <li><strong>Bingu</strong></li>
-            <li><strong>BONER</strong></li>
-            <li><strong>Broney Stinson</strong></li>
-            <li><strong>Crono</strong></li>
-            <li><strong>Domo Espresso</strong></li>
-            <li><strong>Jo-さん</strong></li>
-            <li><strong>Nuit [夜]</strong></li>
-            <li><strong>Petras Emergency Food</strong></li>
-            <li><strong>Soul Jam</strong></li>
-            <li><strong>Thapperson Apple</strong></li>
-            <li><strong>Zer0Pendragon6</strong></li>
-            <li><strong>DarkDisasterKid</strong></li>
+            <li>
+              <strong>
+                AllSoonNoDairy, Altina, Arkteezy, Bingu, BONER, Broney Stinson, Crono,
+                DarkDisasterKid, Domo Espresso, Jo-さん, Nuit [夜], Petras Emergency Food,
+                Soul Jam, Thapperson Apple, Zer0Pendragon6
+              </strong>
+            </li>
           </ul>
         </li>
         <li>
-          Singing Happy Birthday:
+          Singing Happy Birthday
+           <ul>
+            <li>
+              <strong>
+                Nuit [夜], Soul Jam, MiikeMQ, Professor Nobu, SasuCrow, jetrico
+              </strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          All music used in this video is used under the YouTube Audio Library License
           <ul>
-            <li><strong>Nuit [夜]</strong></li>
-            <li><strong>Soul Jam</strong></li>
-            <li><strong>MiikeMQ</strong></li>
-            <li><strong>Professor Nobu</strong></li>
+            <li>"Happy Birthday Bouncy - E's Jammy Jams” by E’s Jammy Jams</li>
+            <li>"Happy Birthday Jazz Mambo - E's Jammy Jams” by E’s Jammy Jams</li>
+            <li>"Happy Birthday Jazz Old Timey - E's Jammy Jams” by E’s Jammy Jams</li>
+            <li>"Happy Birthday Jazz Waltz - E's Jammy Jams” by E’s Jammy Jams</li>
+            <li>TBD</li>
           </ul>
         </li>
       </ul>
@@ -144,29 +149,44 @@
       <h3 class="purple--text">Happy birthday from the Aloupeeps</h3>
       <p class="ma-0">The Aloupeeps wishing an Happy Birthday to our dear Songbird.</p>
       <ul class="pb-4">
-        <li><strong>Altina</strong> - Project Head, Video Editing</li>
-        <li><strong>SasuCrow</strong> - Sounds mixing</li>
-        <li><strong>Domo Espresso</strong> - Substitute Head</li>
+        <li>Project Lead - <strong>Altina</strong></li>
         <li>
-          Voice greetings
+          Sound Engineering And Wish of This Songbird Piano Jingles
+          - <strong>SasuCrow</strong>
+        </li>
+        <li>Video Editing - <strong>Domo Espresso</strong></li>
+        <li>Birthday Slides Design - <strong>Elodie, Professor Nobu</strong></li>
+        <li>Intro And Outro Video - <strong>SoloSnivy</strong></li>
+        <li>
+          Artists - In Order of Appearance
           <ul>
-            <li><strong>Airi</strong></li>
-            <li><strong>Altina</strong></li>
-            <li><strong>Corochan</strong></li>
-            <li><strong>Crono</strong></li>
-            <li><strong>Decimater001</strong></li>
-            <li><strong>EmotionalSupportStrappon</strong></li>
-            <li><strong>Frank</strong></li>
-            <li><strong>JeEztli</strong></li>
-            <li><strong>Jo-さん</strong></li>
-            <li><strong>KakaTan</strong></li>
-            <li><strong>Kuroshi</strong></li>
-            <li><strong>MugList</strong></li>
-            <li><strong>Professor Nobu</strong></li>
-            <li><strong>Sasu Crow</strong></li>
-            <li><strong>Shoiti</strong></li>
-            <li><strong>Yui-chan</strong></li>
-            <li><strong>Zer0Pendragon6</strong></li>
+            <li>
+              <strong>
+                @KonKoffee, @6InchSenpai, @baxei2
+              </strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Birthday Messages
+          <ul>
+            <li>
+              <strong>
+                6InchSenpai, Acerola, Airi, Altina, Amat, Boner, Coro-chan, Crono,
+                DarkDisasterKid, Domo Espresso, Dippy (Professional Simp), Decimater001,
+                Elodie, EmotionalSupportStrappon, Frank, Garfield Factory, Haoseng, JeEztli,
+                jetrico, Jo-さん, KakaTan, Keres Crawford, koshka-sova, Kuroshi, Levi,
+                MiikeMQ, MugList, Professor Nobu, Ryuji Scarlet, Sasu Crow, Snu Snu, TG,
+                Thapperson Apple, Verm, Yui-chan, Zer0Pendragon6
+              </strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          All music used in this video is used under the YouTube Audio Library License
+          <ul>
+            <li>“Happy Birthday 80s - Es Jammy Jams” by E’s Jammy Jams</li>
+            <li>"Happy Birthday Jazz Waltz - E's Jammy Jams” by E’s Jammy Jams</li>
           </ul>
         </li>
       </ul>
@@ -185,38 +205,23 @@
         <li>
           Art
           <ul>
-            <li><strong>Keektang</strong></li>
-            <li><strong>Leef</strong></li>
-            <li><strong>6InchSenpai</strong></li>
-            <li><strong>MinniJay</strong></li>
+            <li>
+              <strong>
+                Keektang, Leef, 6InchSenpai, MinniJay
+              </strong>
+            </li>
           </ul>
         </li>
         <li>
           Vocals
           <ul>
-            <li><strong>Airi</strong></li>
-            <li><strong>Arkazu</strong></li>
-            <li><strong>Verm</strong></li>
-            <li><strong>Hiya! Kk</strong></li>
-            <li><strong>koshka-sova</strong></li>
-            <li><strong>AllSoonNoDairy</strong></li>
-            <li><strong>MugList</strong></li>
-            <li><strong>Ralphy</strong></li>
-            <li><strong>EksPtt</strong></li>
-            <li><strong>Sen</strong></li>
-            <li><strong>Dippy</strong></li>
-            <li><strong>Kuroshi</strong></li>
-            <li><strong>Altina</strong></li>
-            <li><strong>troosh</strong></li>
-            <li><strong>MiikeMQ</strong></li>
-            <li><strong>DarkDisasterKid</strong></li>
-            <li><strong>Coronetto</strong></li>
-            <li><strong>TG</strong></li>
-            <li><strong>obviebear</strong></li>
-            <li><strong>CPU Violet</strong></li>
-            <li><strong>Soul Jam</strong></li>
-            <li><strong>Razy</strong></li>
-            <li><strong>Domo Espresso</strong></li>
+            <li>
+              <strong>
+                Airi, Arkazu, Verm, Hiya! Kk, koshka-sova, AllSoonNoDairy, MugList, Ralphy, EksPtt,
+                Sen, Dippy, Kuroshi, Altina, troosh, MiikeMQ, DarkDisasterKid, Coronetto, TG,
+                obviebear, CPU Violet, Soul Jam, Razy, Domo Espresso, SasuCrow,
+              </strong>
+            </li>
           </ul>
         </li>
       </ul>
@@ -231,7 +236,7 @@
       <h3 class="purple--text">Special Thanks to:</h3>
       <ul class="pb-4">
         <li>@everyone in Ennacord</li>
-        <li>Miike - Ennacord Founder</li>
+        <li>MiikeMQ - Ennacord Founder</li>
         <li>Elodie - Announcements</li>
       </ul>
     </div>
