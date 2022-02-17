@@ -101,6 +101,8 @@ module.exports = {
     text: 'Quests',
     project: 'quests',
     font: 32,
+    audio: 'reimu',
+    volume: 0.1,
   },
   couch: {
     x: 0.14,
@@ -124,6 +126,7 @@ module.exports = {
     font: 35,
     dir: 'right',
     audio: 'gsacover',
+    volume: 0.2,
   },
   playbtn: {
     x: 0.85,
@@ -218,5 +221,7 @@ module.exports = {
     project: null,
     font: 30,
     dir: 'bottom',
+    audio: 'millie',
+    volume: 0.7,
   },
 };

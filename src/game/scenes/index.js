@@ -56,6 +56,8 @@ import audioGsaCover from '../assets/audio/hover/gsacover.mp3';
 import audioMessages from '../assets/audio/hover/messages.mp3';
 import audioMural from '../assets/audio/hover/mural.mp3';
 import audioRickroll from '../assets/audio/hover/rickroll.mp3';
+import audioReimu from '../assets/audio/hover/reimu.mp3';
+import audioMillie from '../assets/audio/hover/millie.mp3';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -129,6 +131,8 @@ class IndexScene extends Phaser.Scene {
     this.load.audio('messages', audioMessages);
     this.load.audio('mural', audioMural);
     this.load.audio('rickroll', audioRickroll);
+    this.load.audio('reimu', audioReimu);
+    this.load.audio('millie', audioMillie);
   }
 
   async create() {

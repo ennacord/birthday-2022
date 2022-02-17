@@ -40,7 +40,10 @@ class PartyScene extends Phaser.Scene {
 
     // Create game objects and placements
     Object.entries(ElementsData)
-      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font, dir, audio }]) => {
+      .forEach(([key, {
+        texture, x, y, z, scale, str, ox, oy,
+        text, project, font, dir, audio, volume,
+      }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
         // Image
         const image = this.add.image((width * x) - centerX, (height * y) - centerY, texture || key)
@@ -48,7 +51,7 @@ class PartyScene extends Phaser.Scene {
         if (scale) image.setScale(scale);
         container.add(image);
         // Interactive object
-        if (text) this.interactiveElement(key, container, image, text, project, font, audio);
+        if (text) this.interactiveElement(key, container, image, text, project, font, audio, volume);
         // Transition
         if (key !== 'room') this.transitionIn(container, dir);
         // Add to movable list
@@ -62,7 +65,8 @@ class PartyScene extends Phaser.Scene {
 
     // Animated Aloupeeps
     AloupeepsData.forEach(({
-      sprite, x, y, z, scale, str, flip, ox = 0.5, oy = 0.5, start, text, project, font, audio,
+      sprite, x, y, z, scale, str, flip, ox = 0.5, oy = 0.5,
+      start, text, project, font, audio, volume,
     }, index) => {
       const ax = (width * x) - centerX;
       const ay = (height * y) - centerY;
@@ -78,7 +82,7 @@ class PartyScene extends Phaser.Scene {
         sprite: container.sprite,
       };
       // Interactive object
-      if (text) this.interactiveAloupeep(container, text, project, font, audio);
+      if (text) this.interactiveAloupeep(container, text, project, font, audio, volume);
       // Transition
       this.transitionIn(container, 'top');
     });
@@ -159,7 +163,7 @@ class PartyScene extends Phaser.Scene {
     });
   }
 
-  interactiveElement(key, container, image, text, project, fontSize = 30, audio = null) {
+  interactiveElement(key, container, image, text, project, fontSize = 30, audio = null, volume = 0.4) {
     // Label
     const label = this.createLabel(image.x, image.y, text, fontSize)
       .setDepth(2000 + image.depth);
@@ -181,7 +185,7 @@ class PartyScene extends Phaser.Scene {
         // Hover Audio
         if (audio) {
           if (this.projectAudio) this.projectAudio.stop();
-          this.projectAudio = this.sound.add(audio).setVolume(0.4);
+          this.projectAudio = this.sound.add(audio).setVolume(volume);
           this.projectAudio.on('complete', () => { this.projectAudio = null; });
           this.projectAudio.play();
         }
@@ -222,7 +226,7 @@ class PartyScene extends Phaser.Scene {
       });
   }
 
-  interactiveAloupeep(container, text, project, fontSize = 30, audio = null) {
+  interactiveAloupeep(container, text, project, fontSize = 30, audio = null, volume = 0.4) {
     // Label
     const label = this.createLabel(container.sprite.x, container.sprite.y, text, fontSize)
       .setDepth(2000 + container.sprite.depth);
@@ -239,7 +243,7 @@ class PartyScene extends Phaser.Scene {
         // Hover Audio
         if (audio) {
           if (this.projectAudio) this.projectAudio.stop();
-          this.projectAudio = this.sound.add(audio).setVolume(0.4);
+          this.projectAudio = this.sound.add(audio).setVolume(volume);
           this.projectAudio.on('complete', () => { this.projectAudio = null; });
           this.projectAudio.play();
         }

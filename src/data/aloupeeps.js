@@ -108,6 +108,7 @@ module.exports = [
     font: 30,
     flip: true,
     audio: 'bdaydance',
+    volume: 0.2,
   },
   {
     sprite: 'dazed',
