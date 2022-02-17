@@ -122,13 +122,12 @@ class PartyScene extends Phaser.Scene {
       frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
       x: { min: 0, max: 1920 },
       y: { min: -300, max: -30 },
-      scale: { min: 0.2, max: 0.5 },
+      scale: 0.4,
       gravityX: -3,
       gravityY: 50,
       frequency: 100,
       lifespan: 7000,
-      speed: { min: 2, max: 15 },
-      blendMode: 'ADD',
+      speed: { min: 3, max: 15 },
     });
   }
 
@@ -325,15 +324,14 @@ class PartyScene extends Phaser.Scene {
         frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
         x: width * 0.648,
         y: height * 0.775,
-        scale: { min: 0.3, max: 0.6 },
+        scale: 0.4,
         gravityY: 150,
         angle: { min: -170, max: -80 },
         frequency: 1,
-        quantity: 40,
+        quantity: 20,
         lifespan: 9000,
-        speed: { min: 300, max: 400 },
+        speed: { min: 200, max: 400 },
         maxParticles: 40,
-        blendMode: 'ADD',
       });
     // Confetti sound after some delay
     setTimeout(() => {
