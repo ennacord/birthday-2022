@@ -28,6 +28,7 @@ module.exports = {
     project: 'bakingrelay',
     font: 32,
     dir: 'left',
+    audio: 'bakingrelay',
   },
   carpet: {
     x: 0.5,
@@ -56,6 +57,7 @@ module.exports = {
     text: 'Drawing Board',
     project: 'mural',
     dir: 'top',
+    audio: 'mural',
   },
   gifts: {
     x: 0.67,
@@ -68,6 +70,7 @@ module.exports = {
     project: 'messages',
     font: 40,
     dir: 'top',
+    audio: 'messages',
   },
   banner: {
     x: 0.5,
@@ -120,6 +123,7 @@ module.exports = {
     project: 'gsacover',
     font: 35,
     dir: 'right',
+    audio: 'gsacover',
   },
   playbtn: {
     x: 0.85,
@@ -162,6 +166,7 @@ module.exports = {
     project: 'rickroll',
     font: 37,
     dir: 'right',
+    audio: 'rickroll',
   },
   enna: {
     x: 0.5,

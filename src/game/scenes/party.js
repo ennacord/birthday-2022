@@ -23,6 +23,8 @@ class PartyScene extends Phaser.Scene {
 
   radioAudio = null;
 
+  projectAudio = null;
+
   create() {
     const { width, height } = this.sys.game.canvas;
     const centerX = width / 2;
@@ -38,7 +40,7 @@ class PartyScene extends Phaser.Scene {
 
     // Create game objects and placements
     Object.entries(ElementsData)
-      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font, dir }]) => {
+      .forEach(([key, { texture, x, y, z, scale, str, ox, oy, text, project, font, dir, audio }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
         // Image
         const image = this.add.image((width * x) - centerX, (height * y) - centerY, texture || key)
@@ -46,7 +48,7 @@ class PartyScene extends Phaser.Scene {
         if (scale) image.setScale(scale);
         container.add(image);
         // Interactive object
-        if (text) this.interactiveElement(key, container, image, text, project, font);
+        if (text) this.interactiveElement(key, container, image, text, project, font, audio);
         // Transition
         if (key !== 'room') this.transitionIn(container, dir);
         // Add to movable list
@@ -60,7 +62,7 @@ class PartyScene extends Phaser.Scene {
 
     // Animated Aloupeeps
     AloupeepsData.forEach(({
-      sprite, x, y, z, scale, str, flip, ox = 0.5, oy = 0.5, start, text, project, font,
+      sprite, x, y, z, scale, str, flip, ox = 0.5, oy = 0.5, start, text, project, font, audio,
     }, index) => {
       const ax = (width * x) - centerX;
       const ay = (height * y) - centerY;
@@ -76,7 +78,7 @@ class PartyScene extends Phaser.Scene {
         sprite: container.sprite,
       };
       // Interactive object
-      if (text) this.interactiveAloupeep(container, text, project, font);
+      if (text) this.interactiveAloupeep(container, text, project, font, audio);
       // Transition
       this.transitionIn(container, 'top');
     });
@@ -157,7 +159,7 @@ class PartyScene extends Phaser.Scene {
     });
   }
 
-  interactiveElement(key, container, image, text, project, fontSize = 30) {
+  interactiveElement(key, container, image, text, project, fontSize = 30, audio = null) {
     // Label
     const label = this.createLabel(image.x, image.y, text, fontSize)
       .setDepth(2000 + image.depth);
@@ -176,11 +178,21 @@ class PartyScene extends Phaser.Scene {
         }
         // Painting special hover
         if (key === 'painting' && this.lightState) image.setTexture('painting-color');
+        // Hover Audio
+        if (audio) {
+          if (this.projectAudio) this.projectAudio.stop();
+          this.projectAudio = this.sound.add(audio).setVolume(0.4);
+          this.projectAudio.on('complete', () => { this.projectAudio = null; });
+          this.projectAudio.play();
+        }
       })
       .on('pointerout', () => {
         image.setAngle(0);
         label.setVisible(false);
         if (key === 'painting') image.setTexture('painting');
+        // Stop hover audio
+        if (this.projectAudio) this.projectAudio.stop();
+        this.projectAudio = null;
       })
       .on('pointerdown', () => {
         if (key === 'cake') {
@@ -198,17 +210,19 @@ class PartyScene extends Phaser.Scene {
           this.overlay.setVisible(true);
           this.game.vue.dialog = true;
           this.game.vue.openProject = project;
-          if (this.radioAudio) {
-            this.radioAudio.stop();
-            this.radioAudio = null;
-          }
+          // Stop radio audio
+          if (this.radioAudio) this.radioAudio.stop();
+          this.radioAudio = null;
+          // Stop hover audio
+          if (this.projectAudio) this.projectAudio.stop();
+          this.projectAudio = null;
           // Special baking relay interaction, lights off into blowing candles
           if (project === 'bakingrelay') this.lightsOff();
         }
       });
   }
 
-  interactiveAloupeep(container, text, project, fontSize) {
+  interactiveAloupeep(container, text, project, fontSize = 30, audio = null) {
     // Label
     const label = this.createLabel(container.sprite.x, container.sprite.y, text, fontSize)
       .setDepth(2000 + container.sprite.depth);
@@ -222,16 +236,32 @@ class PartyScene extends Phaser.Scene {
         label
           .setAngle((Math.random() * 11) - 5)
           .setVisible(true);
+        // Hover Audio
+        if (audio) {
+          if (this.projectAudio) this.projectAudio.stop();
+          this.projectAudio = this.sound.add(audio).setVolume(0.4);
+          this.projectAudio.on('complete', () => { this.projectAudio = null; });
+          this.projectAudio.play();
+        }
       })
       .on('pointerout', () => {
         container.sprite.setAngle(0);
         label.setVisible(false);
+        // Stop hover audio
+        if (this.projectAudio) this.projectAudio.stop();
+        this.projectAudio = null;
       })
       .on('pointerdown', () => {
         if (!this.lightState) return;
         this.overlay.setVisible(true);
         this.game.vue.dialog = true;
         this.game.vue.openProject = project;
+        // Stop radio audio
+        if (this.radioAudio) this.radioAudio.stop();
+        this.radioAudio = null;
+        // Stop hover audio
+        if (this.projectAudio) this.projectAudio.stop();
+        this.projectAudio = null;
       });
   }
 
@@ -267,6 +297,12 @@ class PartyScene extends Phaser.Scene {
   }
 
   blowCakeCandles() {
+    const blowSound = this.sound.add('cake').setVolume(0.7);
+    blowSound.on('complete', () => { this.fanfare(); });
+    blowSound.play();
+  }
+
+  fanfare() {
     this.lightState = true;
     Object.values(this.movables).forEach(({ image, sprite }) => {
       if (image) image.setPipeline('MultiPipeline');
@@ -295,6 +331,10 @@ class PartyScene extends Phaser.Scene {
         maxParticles: 40,
         blendMode: 'ADD',
       });
+    // Confetti sound after some delay
+    setTimeout(() => {
+      this.sound.add('confetti').setVolume(0.7).play();
+    }, 300);
   }
 
   toggleRadio() {

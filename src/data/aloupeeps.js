@@ -11,6 +11,7 @@ module.exports = [
     text: 'Birthday Wishes',
     project: 'bdayvoices',
     font: 40,
+    audio: 'bdayvoices',
   },
   {
     sprite: 'geddan',
@@ -106,6 +107,7 @@ module.exports = [
     project: 'bdaydance',
     font: 30,
     flip: true,
+    audio: 'bdaydance',
   },
   {
     sprite: 'dazed',

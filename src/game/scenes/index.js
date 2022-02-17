@@ -47,6 +47,16 @@ import audioRadioOut1 from '../assets/audio/radio_out_01.mp3';
 import audioRadioOut2 from '../assets/audio/radio_out_02.mp3';
 import audioRadioOut3 from '../assets/audio/radio_out_03.mp3';
 
+import audioBakingRelay from '../assets/audio/hover/bakingrelay.mp3';
+import audioBdayDance from '../assets/audio/hover/bdaydance.mp3';
+import audioBdayVoices from '../assets/audio/hover/bdayvoices.mp3';
+import audioCake from '../assets/audio/hover/cake.mp3';
+import audioCofetti from '../assets/audio/hover/confetti.mp3';
+import audioGsaCover from '../assets/audio/hover/gsacover.mp3';
+import audioMessages from '../assets/audio/hover/messages.mp3';
+import audioMural from '../assets/audio/hover/mural.mp3';
+import audioRickroll from '../assets/audio/hover/rickroll.mp3';
+
 class IndexScene extends Phaser.Scene {
   loadingText = null;
 
@@ -109,6 +119,16 @@ class IndexScene extends Phaser.Scene {
     this.load.audio('radio_out_01', audioRadioOut1);
     this.load.audio('radio_out_02', audioRadioOut2);
     this.load.audio('radio_out_03', audioRadioOut3);
+
+    this.load.audio('bakingrelay', audioBakingRelay);
+    this.load.audio('bdaydance', audioBdayDance);
+    this.load.audio('bdayvoices', audioBdayVoices);
+    this.load.audio('cake', audioCake);
+    this.load.audio('confetti', audioCofetti);
+    this.load.audio('gsacover', audioGsaCover);
+    this.load.audio('messages', audioMessages);
+    this.load.audio('mural', audioMural);
+    this.load.audio('rickroll', audioRickroll);
   }
 
   async create() {
