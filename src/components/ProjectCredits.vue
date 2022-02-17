@@ -135,13 +135,18 @@
           </ul>
         </li>
         <li>
-          All music used in this video is used under the YouTube Audio Library License
+          フリーBGM DOVA-SYNDROME OFFICIAL YouTube CHANNEL
+          <ul>
+            <li>全てを創造する者「Dominus Deus」 written by KK</li>
+          </ul>
+        </li>
+        <li>
+          Songs from YouTube Audio Library License
           <ul>
             <li>"Happy Birthday Bouncy - E's Jammy Jams” by E’s Jammy Jams</li>
             <li>"Happy Birthday Jazz Mambo - E's Jammy Jams” by E’s Jammy Jams</li>
             <li>"Happy Birthday Jazz Old Timey - E's Jammy Jams” by E’s Jammy Jams</li>
             <li>"Happy Birthday Jazz Waltz - E's Jammy Jams” by E’s Jammy Jams</li>
-            <li>TBD</li>
           </ul>
         </li>
       </ul>
@@ -219,7 +224,7 @@
               <strong>
                 Airi, Arkazu, Verm, Hiya! Kk, koshka-sova, AllSoonNoDairy, MugList, Ralphy, EksPtt,
                 Sen, Dippy, Kuroshi, Altina, troosh, MiikeMQ, DarkDisasterKid, Coronetto, TG,
-                obviebear, CPU Violet, Soul Jam, Razy, Domo Espresso, SasuCrow,
+                obviebear, CPU Violet, Soul Jam, Razy, Domo Espresso, SasuCrow
               </strong>
             </li>
           </ul>
