@@ -12,14 +12,14 @@ module.exports = {
     description: 'Happy Birthday Podcast for our favorite songbird!',
     lead: 'Domo Espresso, DarkDisasterKid, BONER',
     credits: 'Domo Espresso, DarkDisasterKid, BONER',
-    video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
+    video: null,
   },
   bakingrelay: {
     title: 'Birthday Cake Baking Relay',
     description: 'A relay type video with the Aloupeeps baking a cake for Enna\'s Birthday',
     lead: 'BONER',
     credits: 'AllSoonNoDairy, Altina, Arkteezy, Bingu, Boner, Broney Stinson, Crono, Domo Espresso, Jo-さん, Nuit [夜], Petras Emergency Food, Soul Jam, Thapperson Apple, Zer0Pendragon6, DarkDisasterKid',
-    video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
+    video: 'https://www.youtube.com/embed/EKQGoM-KK9I',
   },
   rickroll: {
     title: 'An Aloupeep Birthday Anthem',
@@ -35,7 +35,7 @@ module.exports = {
     warnings: 'Using this BGM for the video 🎧Happy Birthday Jazz Waltz - E\'s Jammy Jams [Copyright FREE Music]',
     lead: 'Altina (Main Lead, Video Editing), SasuCrow (Sounds mixing)',
     credits: 'Airi, Altina, Corochan, Crono, Decimater001, EmotionalSupportStrappon, Frank, JeEztli , Jo-さん, KakaTan, Kuroshi, MugList, Professor Nobu, Sasu Crow, Shoiti, Yui-chan, Zer0Pendragon6',
-    video: 'https://www.youtube.com/embed/gj4cVOgEGGM',
+    video: 'https://www.youtube.com/embed/EKQGoM-KK9I',
   },
   bdaydance: {
     title: 'Birthday Dance',
