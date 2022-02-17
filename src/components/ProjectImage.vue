@@ -74,4 +74,19 @@ export default {
     width:380px;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .project {
+    .project-description { display:none; }
+    .project-content { left:100px; }
+    .project-close {
+      position:absolute;
+      top:40%;
+      left:0;
+      bottom:0;
+      right:auto;
+      width:90px;
+    }
+  }
+}
 </style>
