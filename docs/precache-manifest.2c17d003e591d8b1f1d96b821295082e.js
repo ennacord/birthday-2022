@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d84fc1657f3024073b18",
-    "url": "/css/app.73bf11c0.css"
+    "revision": "605b6160758145cf2247",
+    "url": "/css/app.2d63401c.css"
   },
   {
     "revision": "b1e9e72e65d9d94ff744",
@@ -140,6 +140,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/millie.a139d96f.png"
   },
   {
+    "revision": "1df87cf271a54b409bec4e89cbadd431",
+    "url": "/img/mural.1df87cf2.jpg"
+  },
+  {
     "revision": "7d304e2f3ed56a9ed3643abadd40e4e6",
     "url": "/img/nina.7d304e2f.png"
   },
@@ -154,6 +158,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b6c3b7f79a10a40da4991e09f8473b13",
     "url": "/img/painting.b6c3b7f7.png"
+  },
+  {
+    "revision": "768b8ee99f0d6adafc53e5f67649a5f0",
+    "url": "/img/pausebtn.768b8ee9.png"
   },
   {
     "revision": "f90c19e28af5e463051a9cc3398b1985",
@@ -188,6 +196,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/specialist.c14dba9e.png"
   },
   {
+    "revision": "625a260710bafb6d39516f28c20ab737",
+    "url": "/img/startgame.625a2607.png"
+  },
+  {
     "revision": "3117240905540fc29e526f7f1f2ffdf7",
     "url": "/img/table.31172409.png"
   },
@@ -200,12 +212,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/wbg.f8a64820.png"
   },
   {
-    "revision": "b5c7d32ecdafb494d2d71e7e01587540",
+    "revision": "a5327e4585feba41b0f9d8a58d94b669",
     "url": "/index.html"
   },
   {
-    "revision": "d84fc1657f3024073b18",
-    "url": "/js/app.7df99bc3.js"
+    "revision": "605b6160758145cf2247",
+    "url": "/js/app.dcaba473.js"
   },
   {
     "revision": "b1e9e72e65d9d94ff744",
@@ -228,8 +240,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/media/bdaydance.70c9840f.mp3"
   },
   {
-    "revision": "d277d42c37c46fc4880ea938264d5311",
-    "url": "/media/bdayvoices.d277d42c.mp3"
+    "revision": "7aeb271f3a74c3a5d3fc6773f70d2f1d",
+    "url": "/media/bdayvoices.7aeb271f.mp3"
+  },
+  {
+    "revision": "086d649ce3efe16a980e0160433aeec1",
+    "url": "/media/bgm01.086d649c.mp3"
   },
   {
     "revision": "db0f283b9e70637feb98bbf66f2241f4",
@@ -246,6 +262,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5830496bdd3b82eb56625043ab8ac5f1",
     "url": "/media/messages.5830496b.mp3"
+  },
+  {
+    "revision": "af12d53ab68d2efbebfc60df7b2067d9",
+    "url": "/media/millie.af12d53a.mp3"
   },
   {
     "revision": "6f401e96d7d63928607a3050bee527d5",
@@ -278,6 +298,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8ee9f030f60891acda7f63644514f2f7",
     "url": "/media/radio_out_03.8ee9f030.mp3"
+  },
+  {
+    "revision": "3f594bdeb40aeaac238e1362f91649f7",
+    "url": "/media/reimu.3f594bde.mp3"
   },
   {
     "revision": "ffd3d2ea4ad6ef096b6cfe6ccfd12013",
