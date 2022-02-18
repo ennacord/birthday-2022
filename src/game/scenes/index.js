@@ -20,6 +20,7 @@ import ImgBalloons from '../assets/images/balloons.png';
 import ImgCouch from '../assets/images/couch.png';
 import ImgChef from '../assets/images/chef.png';
 import ImgPlaybtn from '../assets/images/playbtn.png';
+import ImgPausebtn from '../assets/images/pausebtn.png';
 import ImgRack from '../assets/images/rack.png';
 import ImgRadio from '../assets/images/radio.png';
 import ImgTv from '../assets/images/tv.png';
@@ -61,6 +62,8 @@ import audioRickroll from '../assets/audio/hover/rickroll.mp3';
 import audioReimu from '../assets/audio/hover/reimu.mp3';
 import audioMillie from '../assets/audio/hover/millie.mp3';
 
+import audioBGM01 from '../assets/audio/bgm01.mp3';
+
 class IndexScene extends Phaser.Scene {
   loadingText = null;
 
@@ -99,6 +102,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('couch', ImgCouch);
     this.load.image('chef', ImgChef);
     this.load.image('playbtn', ImgPlaybtn);
+    this.load.image('pausebtn', ImgPausebtn);
     this.load.image('rack', ImgRack);
     this.load.image('radio', ImgRadio);
     this.load.image('tv', ImgTv);
@@ -138,6 +142,8 @@ class IndexScene extends Phaser.Scene {
     this.load.audio('rickroll', audioRickroll);
     this.load.audio('reimu', audioReimu);
     this.load.audio('millie', audioMillie);
+
+    this.load.audio('bgm01', audioBGM01);
   }
 
   async create() {

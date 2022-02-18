@@ -25,10 +25,18 @@ class PartyScene extends Phaser.Scene {
 
   projectAudio = null;
 
+  bgm = null;
+
+  soundsEnabled = true;
+
   create() {
     const { width, height } = this.sys.game.canvas;
     const centerX = width / 2;
     const centerY = height / 2;
+
+    // BGM
+    this.bgm = this.sound.add('bgm01').setVolume(0.1).setLoop(true);
+    this.bgm.play();
 
     // Candle Lights
     this.lights.setAmbientColor(0x0e0e0e);
@@ -114,6 +122,7 @@ class PartyScene extends Phaser.Scene {
       .setVisible(false);
     this.game.vue.$root.$on('projectClosed', () => {
       this.overlay.setVisible(false);
+      if (this.soundsEnabled) this.bgm.resume();
     });
 
     // Confetti
@@ -182,7 +191,7 @@ class PartyScene extends Phaser.Scene {
         // Painting special hover
         if (key === 'painting' && this.lightState) image.setTexture('painting-color');
         // Hover Audio
-        if (audio) {
+        if (audio && this.soundsEnabled) {
           if (this.projectAudio) this.projectAudio.stop();
           this.projectAudio = this.sound.add(audio).setVolume(volume);
           this.projectAudio.on('complete', () => { this.projectAudio = null; });
@@ -208,6 +217,9 @@ class PartyScene extends Phaser.Scene {
           // Radio special interaction when lights on, plays Aloucast
           this.toggleRadio();
           this.game.vue.openProject = project;
+        } else if (key === 'playbtn') {
+          // Toggle BGM and Hover SFX
+          this.toggleSounds();
         } else if (this.lightState) {
           // Everything else available only if lights are on
           this.overlay.setVisible(true);
@@ -219,6 +231,8 @@ class PartyScene extends Phaser.Scene {
           // Stop hover audio
           if (this.projectAudio) this.projectAudio.stop();
           this.projectAudio = null;
+          // Stop BGM
+          this.bgm.pause();
           // Special baking relay interaction, lights off into blowing candles
           if (project === 'bakingrelay') this.lightsOff();
         }
@@ -240,7 +254,7 @@ class PartyScene extends Phaser.Scene {
           .setAngle((Math.random() * 11) - 5)
           .setVisible(true);
         // Hover Audio
-        if (audio) {
+        if (audio && this.soundsEnabled) {
           if (this.projectAudio) this.projectAudio.stop();
           this.projectAudio = this.sound.add(audio).setVolume(volume);
           this.projectAudio.on('complete', () => { this.projectAudio = null; });
@@ -265,6 +279,8 @@ class PartyScene extends Phaser.Scene {
         // Stop hover audio
         if (this.projectAudio) this.projectAudio.stop();
         this.projectAudio = null;
+        // Stop BGM
+        this.bgm.pause();
       });
   }
 
@@ -360,6 +376,17 @@ class PartyScene extends Phaser.Scene {
       tuneOut.play();
       this.radioAudio.stop();
       this.radioAudio = null;
+    }
+  }
+
+  toggleSounds() {
+    this.soundsEnabled = !this.soundsEnabled;
+    if (this.soundsEnabled) {
+      this.movables.playbtn.image.setTexture('playbtn');
+      this.bgm.play();
+    } else {
+      this.movables.playbtn.image.setTexture('pausebtn');
+      this.bgm.stop();
     }
   }
 }

@@ -135,6 +135,9 @@ module.exports = {
     str: 0.9,
     ox: 0.5,
     oy: 0.5,
+    text: 'Toggle Sounds',
+    project: null,
+    font: 35,
     dir: 'right',
   },
   rack: {
