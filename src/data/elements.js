@@ -225,6 +225,6 @@ module.exports = {
     font: 30,
     dir: 'bottom',
     audio: 'millie',
-    volume: 0.7,
+    volume: 1,
   },
 };

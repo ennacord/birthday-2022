@@ -181,7 +181,7 @@ class PartyScene extends Phaser.Scene {
 
   interactiveElement(
     key, container, image, text, project, fontSize = 30,
-    audio = null, volume = 0.4,
+    audio = null, volume = 0.5,
   ) {
     // Label
     const label = this.createLabel(image.x, image.y, text, fontSize)
@@ -250,7 +250,7 @@ class PartyScene extends Phaser.Scene {
       });
   }
 
-  interactiveAloupeep(container, text, project, fontSize = 30, audio = null, volume = 0.4) {
+  interactiveAloupeep(container, text, project, fontSize = 30, audio = null, volume = 0.5) {
     // Label
     const label = this.createLabel(container.sprite.x, container.sprite.y, text, fontSize)
       .setDepth(2000 + container.sprite.depth);
