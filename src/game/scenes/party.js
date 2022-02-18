@@ -34,6 +34,11 @@ class PartyScene extends Phaser.Scene {
     const centerX = width / 2;
     const centerY = height / 2;
 
+    // Version number
+    this.add.text(width - 10, 10, '20220217.1820', { fontSize: 14, color: '#000000' })
+      .setDepth(60000)
+      .setOrigin(1, 0);
+
     // BGM
     this.bgm = this.sound.add('bgm01').setVolume(0.1).setLoop(true);
     this.bgm.play();
