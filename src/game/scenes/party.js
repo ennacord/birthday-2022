@@ -59,7 +59,9 @@ class PartyScene extends Phaser.Scene {
         if (scale) image.setScale(scale);
         container.add(image);
         // Interactive object
-        if (text) this.interactiveElement(key, container, image, text, project, font, audio, volume);
+        if (text) {
+          this.interactiveElement(key, container, image, text, project, font, audio, volume);
+        }
         // Transition
         if (key !== 'room') this.transitionIn(container, dir);
         // Add to movable list
@@ -171,7 +173,10 @@ class PartyScene extends Phaser.Scene {
     });
   }
 
-  interactiveElement(key, container, image, text, project, fontSize = 30, audio = null, volume = 0.4) {
+  interactiveElement(
+    key, container, image, text, project, fontSize = 30,
+    audio = null, volume = 0.4,
+  ) {
     // Label
     const label = this.createLabel(image.x, image.y, text, fontSize)
       .setDepth(2000 + image.depth);

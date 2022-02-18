@@ -1,7 +1,6 @@
 import Phaser from 'phaser';
 
 class StartScene extends Phaser.Scene {
-
   async create() {
     const { width, height } = this.sys.game.canvas;
 
