@@ -17,7 +17,7 @@
           ></ProjectVideo>
         </div>
         <div v-if="openProject === 'mural'">
-          <ProjectImage image="https://100k.ennaalouette.com/img/mural.4f63dd0c.jpg" />
+          <ProjectImage :image="MuralImg" />
         </div>
         <div v-if="openProject === 'messages'">
           <ProjectMessages/>
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import MuralImg from '@/assets/mural.jpg';
 import ProjectList from '@/data/projects';
 import ProjectVideo from '@/components/ProjectVideo.vue';
 import ProjectImage from '@/components/ProjectImage.vue';
@@ -44,6 +45,7 @@ import EnnaBirthday from './game';
 
 export default {
   data: () => ({
+    MuralImg,
     dialog: false,
     openProject: null,
     ProjectList,
