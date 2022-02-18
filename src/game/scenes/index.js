@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 
 import PartyScene from './party';
+import StartScene from './start';
 
 import ImgEnna from '../assets/images/enna.png';
 import ImgCake from '../assets/images/cake.png';
@@ -24,6 +25,7 @@ import ImgRadio from '../assets/images/radio.png';
 import ImgTv from '../assets/images/tv.png';
 import ImgCarpet from '../assets/images/carpet.png';
 
+import ImgGameStart from '../assets/images/startgame.png';
 import Cursor3 from '../assets/cursor/cursor3.png';
 
 import Dancing from '../assets/spritesheets/dancing.png';
@@ -69,7 +71,7 @@ class IndexScene extends Phaser.Scene {
     // Loading text
     const { width, height } = this.sys.game.canvas;
     this.loadingText = this.add.text(width / 2, height / 2, 'Loading....', {
-      fontSize: 30,
+      fontSize: 20,
       color: '#ffffff',
       stroke: '#003366',
       strokeThickness: 5,
@@ -77,6 +79,7 @@ class IndexScene extends Phaser.Scene {
 
     // Add scenes
     this.scene.add('party', PartyScene);
+    this.scene.add('start', StartScene);
 
     // Preload assets
     this.load.image('enna', ImgEnna);
@@ -100,6 +103,8 @@ class IndexScene extends Phaser.Scene {
     this.load.image('radio', ImgRadio);
     this.load.image('tv', ImgTv);
     this.load.image('carpet', ImgCarpet);
+
+    this.load.image('gamestart', ImgGameStart);
 
     this.load.spritesheet('dancing', Dancing, { frameWidth: 3000 / 12, frameHeight: 79 });
     this.load.spritesheet('geddan', Geddan, { frameWidth: 3000 / 24, frameHeight: 125 });
@@ -148,44 +153,8 @@ class IndexScene extends Phaser.Scene {
     // Done all preloading
     this.loadingText.destroy();
 
-    // On desktop, start party!
-    // On mobile, need touch to start and go fullscreen before party
-    if (this.sys.game.device.os.desktop) {
-      // Start PARTY!
-      this.scene.start('party');
-    } else {
-      // When fullscreen and always lock to landscape
-      this.game.scale.once('enterfullscreen', () => {
-        // eslint-disable-next-line no-empty
-        try { this.game.scale.lockOrientation(Phaser.Scale.LANDSCAPE); } catch (error) {}
-        // eslint-disable-next-line no-empty
-        try { ScreenOrientation.lock('landscape'); } catch (error) {}
-        // eslint-disable-next-line no-empty
-        try { window.screen.orientation.lock('landscape'); } catch (error) {}
-      });
-
-      // On click
-      this.input.on('pointerdown', () => {
-        // Attempt fullscreen
-        setTimeout(() => {
-          this.game.scale.startFullscreen();
-        }, 250);
-        // Delay start next scene
-        setTimeout(() => {
-          this.scene.start('party');
-        }, 500);
-      });
-
-      // Click to Start
-      const { width, height } = this.sys.game.canvas;
-      this.loadingText = this.add.text(width / 2, height * 0.7, 'Touch to Start', {
-        fontFamily: 'Londrina Solid',
-        fontSize: 50,
-        color: '#ffffff',
-        stroke: '#003366',
-        strokeThickness: 5,
-      }).setOrigin(0.5, 0.5);
-    }
+    // Proceed to next scene
+    this.scene.start('start');
   }
 }
 
