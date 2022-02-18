@@ -32,6 +32,7 @@
         <li><strong>kurokur0kurO</strong> - Programming assist</li>
         <li><strong>Wikidude</strong> - Management assist</li>
         <li><strong>Elodie</strong> - Sound Engineer</li>
+        <li><strong>Arkazu</strong> - BGM file assist</li>
         <li>
           Artworks
           <ul>
@@ -56,6 +57,12 @@
             <li>Easel &amp; Painting - <strong>MB</strong></li>
             <li>Aloupeeps on the table - <strong>6InchSenpaiΔ</strong></li>
             <li>Cursor - <strong>Wikidude</strong></li>
+          </ul>
+        </li>
+        <li>
+          フリーBGM DOVA-SYNDROME OFFICIAL YouTube CHANNEL
+          <ul>
+            <li>"Someday (Prod. Khaim)" by Khaim</li>
           </ul>
         </li>
         <li>
