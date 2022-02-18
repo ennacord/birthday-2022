@@ -13,7 +13,7 @@ class PartyScene extends Phaser.Scene {
 
   transition = null;
 
-  confettiState = true;
+  confettiState = false;
 
   lightState = true;
 
@@ -145,6 +145,7 @@ class PartyScene extends Phaser.Scene {
       lifespan: 7000,
       speed: { min: 3, max: 15 },
     });
+    this.confettiEmitter.setVisible(this.confettiState);
   }
 
   transitionIn(container, dir) {
