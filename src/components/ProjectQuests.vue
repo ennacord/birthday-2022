@@ -10,6 +10,21 @@
           <span>{{questText[project]}}</span>
         </li>
       </ul>
+      <hr class="my-4" />
+      <ul>
+        <li>
+          <input type="checkbox" onclick="return false;" checked />
+          <span>Play Button on the wall toggles BGM and SFX</span>
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" checked />
+          <span>Millie turns the confetti on or off</span>
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" checked />
+          <span>(Bonus Quest) Blow the candle</span>
+        </li>
+      </ul>
     </div>
     <div class="project-close">
       <v-btn
