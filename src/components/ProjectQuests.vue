@@ -22,6 +22,10 @@
         </li>
         <li>
           <input type="checkbox" onclick="return false;" checked />
+          <span>Aloupeep with sunglasses on the right</span>
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" checked />
           <span>(Bonus Quest) Blow the candle</span>
         </li>
       </ul>
@@ -43,14 +47,13 @@ export default {
   data: () => ({
     questText: {
       aloucast: 'Listen to the Radio',
+      mural: 'Check the painting the Aloupeeps drew together',
+      messages: 'Gifts at the back contain birthday cards',
+      bdaydance: 'Bottom-left Aloupeep is dancing',
+      gsacover: 'Talk to Nina',
+      bdayvoices: 'Right Aloupeeps voicing their warm wishes',
       rickroll: 'Watch the Television',
       bakingrelay: 'Talk to the Chef Aloupeep',
-      bdayvoices: 'Right Aloupeeps voicing their warm wishes',
-      gsacover: 'Talk to Nina',
-      bdaydance: 'Bottom-left Aloupeep is dancing',
-      mural: 'Check the painting the Aloupeeps drew together',
-      messages: 'Read birthday cards from Aloupeeps',
-      credits: 'Aloupeep with sunglasses on the right',
     },
   }),
 };
