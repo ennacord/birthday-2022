@@ -28,19 +28,19 @@
       <h3 class="purple--text">Birthday Website</h3>
       <ul class="pb-4">
         <li><strong>jetrico</strong> - Project Lead, Lead Programmer, The Afterword</li>
-        <li><strong>Professor Nobu</strong> - Room Planning, Art Guides</li>
+        <li><strong>Professor Nobu</strong> - Room Planning, Art Guides, Start Screen</li>
         <li><strong>kurokur0kurO</strong> - Programming assist</li>
         <li><strong>Wikidude</strong> - Management assist</li>
-        <li><strong>Elodie</strong> - Sound Engineer</li>
+        <li><strong>Elodie</strong> - Favicon, Sound Engineer</li>
         <li><strong>Arkazu</strong> - BGM file assist</li>
         <li>
           Artworks
           <ul>
-            <li>Enna - <strong>garfield</strong></li>
+            <li>Enna - <strong>Garfield Factory</strong></li>
             <li>Millie - <strong>jetrico</strong></li>
             <li>Nina - <strong>Professor Nobu</strong></li>
             <li>Reimu - <strong>Frank</strong></li>
-            <li>Cake - <strong>garfield</strong></li>
+            <li>Cake - <strong>Garfield Factory</strong></li>
             <li>Balloons w/ Aloupeeps - <strong>Jo-さん</strong></li>
             <li>Chef Aloupeep - <strong>6InchSenpaiΔ</strong></li>
             <li>Rack &amp; Radio - <strong>Frank</strong></li>
@@ -245,11 +245,44 @@
         <li><strong>kaochiicos</strong></li>
       </ul>
 
+      <h3 class="purple--text">Drawing Board</h3>
+      <ul class="pb-4">
+        <li><strong>jetrico</strong> - Board Admin</li>
+        <li>
+          jetrico, Airi Flanny, Leef, Frank, OrangeHenge, MBisnotmybad,
+          Professor Nobu, luminarun, coronetto, DayJam, SoloSnivy, Renju,
+          Sorekasho, mikofries, Garfield Factory, verm, lettesan, hiya! kk,
+          Jo-さん, Koguma, Domo Espresso, K___K, reirupan, MinniJay, Yui-chan,
+          Leo, mono_luca
+        </li>
+      </ul>
+
+      <h3 class="purple--text">Message Cards</h3>
+      <ul class="pb-4">
+        <li><strong>jetrico</strong> - Message Admin</li>
+        <li><strong>Domo Espresso</strong> - Message Admin</li>
+        <li>
+          Zer0Pendragon6, Crono, Airi, MB, Frank, Myrrh, Katchu Katchu, ZDitto,
+          Yui-chan, guGGy, Jo-さん, Leoje, Cinnamon, メロン, NoName005, sharialene,
+          CT, D12, SunriseValley, Thraxelon, Esteesy, Death by Snu Snu, Elodie Fiorella,
+          Arkazu, Thapperson Apple, Keres Crawford, Breikah, Garfield Factory, Shopowner,
+          AdelLevi, WhiteGuyGraal, Domo Espresso, House, Sola, Bionic608, rimi-rin, Lee,
+          Elgrim, Binns, Aya, Zhumingz, jetrico, Sorekasho, kalmen, miilk, revenant77,
+          eSPer, TinyTurtle, Holo.txt, Renju, KonKoffee, SunshineWongster, verm, Cheliax,
+          Kovaleski, Eve Reese , Pinkerton, Dippy, Riacu, Limpy Boennar, Latte, RyujiScarlet,
+          koshka-sova, IceHism, Acerola Ch., hiya! kk, Kurou, maperu マペル, MiikeMQ, Mr. Y,
+          Rinora, DeaLoux, OrangeHenge, mono_luca, SoloSnivy, def, DarkDisasterKid, erie,
+          robi, MrSDS, Saeren, Nuit [夜], Obviebear, Enna's Ribbon, Arrhur Taveira, Lily Mu,
+          Professor Nobu, Erin, BlackfireHedgehog
+        </li>
+      </ul>
+
       <h3 class="purple--text">Special Thanks to:</h3>
       <ul class="pb-4">
         <li>@everyone in Ennacord</li>
-        <li>MiikeMQ - Ennacord Founder</li>
-        <li>Elodie - Announcements</li>
+        <li><strong>MiikeMQ</strong> - Ennacord Founder</li>
+        <li><strong>Elodie</strong> - Announcements</li>
+        <li><strong>Domo Espresso</strong> - Announcements</li>
       </ul>
     </div>
     <div class="project-close">
