@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e60a2740e824394bc7f1",
-    "url": "/css/app.2d63401c.css"
+    "revision": "560a3e6bf02e8c295ad4",
+    "url": "/css/app.b665a15b.css"
   },
   {
     "revision": "b1e9e72e65d9d94ff744",
@@ -72,8 +72,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/geddan.81fdd05b.png"
   },
   {
-    "revision": "144f1176f400c0d3b1dd8d366e667c4d",
-    "url": "/img/gifts.144f1176.png"
+    "revision": "1b8b67dfe0e084a0b95e7eb2cc282f44",
+    "url": "/img/gifts.1b8b67df.png"
   },
   {
     "revision": "9363b143d475a2c5b0b03d114499c6da",
@@ -196,8 +196,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/specialist.c14dba9e.png"
   },
   {
-    "revision": "625a260710bafb6d39516f28c20ab737",
-    "url": "/img/startgame.625a2607.png"
+    "revision": "c6efbea020c4be811e0eb6bec1913cd3",
+    "url": "/img/startgame.c6efbea0.png"
   },
   {
     "revision": "3117240905540fc29e526f7f1f2ffdf7",
@@ -212,12 +212,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/wbg.f8a64820.png"
   },
   {
-    "revision": "d3bd7a5621a046112025b88020778cea",
+    "revision": "a6012a2b168898dd07294320af2689a5",
     "url": "/index.html"
   },
   {
-    "revision": "e60a2740e824394bc7f1",
-    "url": "/js/app.e5e5eb3b.js"
+    "revision": "560a3e6bf02e8c295ad4",
+    "url": "/js/app.5878540c.js"
   },
   {
     "revision": "b1e9e72e65d9d94ff744",

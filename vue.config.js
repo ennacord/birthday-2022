@@ -66,7 +66,7 @@ module.exports = {
         /(.*).js.map/g,
       ],
     },
-    assetsVersion: '2022_02_17_19_04',
+    assetsVersion: '2022_02_19_00_51',
     manifestOptions: {
       name: 'Enna Birthday',
       short_name: 'Enna Birthday',
