@@ -8,7 +8,7 @@
       <p>
         Right after the 100K project,
         the Aloupeeps immediately started pitching projects for Enna's birthday.
-        Such passionate crowd they are, especially when it comes to their oshi.
+        Such a passionate crowd they are, especially when it comes to their oshi.
         The previous project was already a success, but they wanted to step it up again.
         This time, there are song covers, podcasts, and multiple videos to relay
         their love and sincere birthday wishes to Enna.
@@ -253,7 +253,7 @@
           Professor Nobu, luminarun, coronetto, DayJam, SoloSnivy, Renju,
           Sorekasho, mikofries, Garfield Factory, verm, lettesan, hiya! kk,
           Jo-さん, Koguma, Domo Espresso, K___K, reirupan, MinniJay, Yui-chan,
-          Leo, mono_luca
+          Leoje, mono_luca, Thapperson Apple
         </li>
       </ul>
 
