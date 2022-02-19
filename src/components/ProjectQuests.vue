@@ -2,6 +2,7 @@
   <div class="project">
     <div class="project-title">
       <h2 class="text-center">Quests</h2>
+      <h3 class="text-center">List is in the suggested viewing order</h3>
     </div>
     <div class="project-content">
       <ul>
@@ -69,7 +70,7 @@ export default {
   }
   .project-content {
     position:absolute;
-    top: 50px;
+    top: 80px;
     left:0;
     right:0;
     bottom:110px;
