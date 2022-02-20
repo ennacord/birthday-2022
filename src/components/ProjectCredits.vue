@@ -231,7 +231,7 @@
               <strong>
                 Airi, Arkazu, Verm, Hiya! Kk, koshka-sova, AllSoonNoDairy, MugList, Ralphy, EksPtt,
                 Sen, Dippy, Kuroshi, Altina, troosh, MiikeMQ, DarkDisasterKid, Coronetto, TG,
-                obviebear, CPU Violet, Soul Jam, Razy, Domo Espresso, SasuCrow
+                obviebear, CPU Violet, Soul Jam, Razy, Domo Espresso, SasuCrow, hyuni
               </strong>
             </li>
           </ul>
